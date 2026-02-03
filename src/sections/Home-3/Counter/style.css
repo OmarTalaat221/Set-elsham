@@ -1,0 +1,22 @@
+html[dir="rtl"] .counter-card {
+  text-align: center;
+}
+
+html[dir="rtl"] .counter-card_text {
+  text-align: center;
+}
+
+/* الأرقام دائماً LTR */
+.counter-card_number {
+  direction: ltr !important;
+  display: inline-block;
+}
+
+/* تحسين المظهر */
+.counter-card {
+  transition: transform 0.3s ease;
+}
+
+.counter-card:hover {
+  transform: translateY(-5px);
+}

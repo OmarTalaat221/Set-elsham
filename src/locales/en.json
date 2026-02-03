@@ -1,0 +1,336 @@
+{
+  "home": {
+    "hero": {
+      "shadowText": "Matrix",
+      "vision": "Our Vision",
+      "title": "Quality Wood Manufacturing",
+      "subtitle": "With Professional Global Standards",
+      "description": "We craft excellence from natural wood. With over 7 years of experience in manufacturing and supplying the finest wood and innovative wooden products.",
+      "button": "Discover More"
+    },
+    "about": {
+      "subtitle": "ABOUT US",
+      "title": "We Manufacture Everything You Need From Natural Wood",
+      "description": "Matrix Wood Factory - Over 7 years of experience in manufacturing and supplying the finest natural and processed wood using the latest global technologies.",
+      "feature1": "Manufacturing all types of natural and industrial wood",
+      "feature2": "Modern production lines with international specifications",
+      "feature3": "Specialized team of professional engineers and technicians",
+      "phone": "+20 123 456 7890",
+      "needHelp": "Need Help?",
+      "founder": "Founder of Matrix Factory",
+      "sideText": "We are committed to providing high-quality wood products that meet our customers' needs, while ensuring the best prices and fast delivery.",
+      "button": "More About Company"
+    },
+    "whyChoose": {
+      "subtitle": "OUR SERVICES",
+      "title": "We Provide Excellent Services To Our Valued Customers",
+      "serviceLabel": "Service",
+      "aboutService": "About This Service",
+      "moreDetails": "More Details",
+      "service1": {
+        "tabTitle": "Wood Manufacturing",
+        "title": "Natural Wood Manufacturing",
+        "description": "We manufacture all types of natural wood using the latest technologies and equipment.",
+        "feature": "Using the latest European manufacturing machines"
+      },
+      "service2": {
+        "tabTitle": "Doors & Windows",
+        "title": "Wooden Doors & Windows Manufacturing",
+        "description": "We design and manufacture wooden doors and windows with modern and classic designs.",
+        "feature": "Custom designs according to customer requirements"
+      },
+      "service3": {
+        "tabTitle": "Home Furniture",
+        "title": "Wooden Furniture Manufacturing",
+        "description": "We offer home and office furniture manufacturing services from natural wood.",
+        "feature": "Comprehensive warranty on all products"
+      },
+      "service4": {
+        "tabTitle": "Wood Decorations",
+        "title": "Decoration & Finishing Works",
+        "description": "We execute all wooden decoration works for homes, villas, and companies.",
+        "feature": "Fast execution with highest finishing quality"
+      },
+      "service5": {
+        "tabTitle": "Wholesale Supply",
+        "title": "Wholesale Wood Supply",
+        "description": "We provide wholesale wood supply services for factories, workshops, and companies.",
+        "feature": "Delivery to all governorates"
+      }
+    },
+    "process": {
+      "subtitle": "Our Benefits",
+      "title": "Why Choose Us",
+      "bgText": "BENEFIT",
+      "benefit1": {
+        "title": "Advanced Technology",
+        "description": "We use the latest European manufacturing machines and advanced technologies"
+      },
+      "benefit2": {
+        "title": "Trusted Company",
+        "description": "Over 7 years of experience and trust with our customers"
+      },
+      "benefit3": {
+        "title": "Professional Team",
+        "description": "A complete team of engineers and technicians specialized in wood industry"
+      },
+      "benefit4": {
+        "title": "Competitive Prices",
+        "description": "We offer the best prices in the market while maintaining the highest quality"
+      }
+    },
+    "portfolio": {
+      "subtitle": "Complete Works",
+      "title": "Explore Recent Projects",
+      "viewAll": "View All Projects",
+      "exploreProject": "Explore Project",
+      "project1": {
+        "category": "Decorations",
+        "title": "Artistic Ceiling Map Design",
+        "date": "Completed: January 2024"
+      },
+      "project2": {
+        "category": "Wall Art",
+        "title": "Classic Wall Mural Art",
+        "date": "Completed: February 2024"
+      },
+      "project3": {
+        "category": "Living Rooms",
+        "title": "Luxury Majlis Seating",
+        "date": "Completed: March 2024"
+      },
+      "project4": {
+        "category": "Bedrooms",
+        "title": "Royal Gold Bedroom Set",
+        "date": "Completed: April 2024"
+      },
+      "project5": {
+        "category": "Modern Furniture",
+        "title": "Modern Curved Sofa",
+        "date": "Completed: May 2024"
+      }
+    },
+    "counter": {
+      "projects": {
+        "label": "Projects Completed"
+      },
+      "customers": {
+        "label": "Customer Satisfaction"
+      },
+      "products": {
+        "label": "Product Types"
+      },
+      "experience": {
+        "label": "Years of Experience"
+      }
+    },
+    "testimonials": {
+      "subtitle": "Testimonials",
+      "title": "What Clients Saying About Us",
+      "successCounter": "Happy Clients",
+      "client1": {
+        "title": "Excellent Quality!",
+        "review": "I dealt with Matrix Factory for my complete bedroom setup. Wood quality is excellent and finishing is very professional. Highly recommend.",
+        "name": "Ahmed Mahmoud",
+        "position": "Architect"
+      },
+      "client2": {
+        "title": "Great Service!",
+        "review": "They made me a beech wood kitchen with wonderful design. Very professional team and delivery was on time. Thank you Matrix.",
+        "name": "Sara Ibrahim",
+        "position": "Purchasing Manager"
+      },
+      "client3": {
+        "title": "Best Company!",
+        "review": "High quality products and competitive prices. Worked with them on several projects and results are always satisfying. 100% trusted company.",
+        "name": "Khaled Abdullah",
+        "position": "Contractor"
+      },
+      "client4": {
+        "title": "High Professionalism!",
+        "review": "They executed wooden decorations for my villa with highest quality. Professional technical team and excellent prices. Thank you for the outstanding service.",
+        "name": "Mohamed Hassan",
+        "position": "Businessman"
+      },
+      "client5": {
+        "title": "Amazing Products!",
+        "review": "Furnished the entire office from them. Natural wood and luxury finishing. Very happy with the result and excellent service.",
+        "name": "Nora Ali",
+        "position": "Executive Manager"
+      },
+      "client6": {
+        "title": "Trust & Quality!",
+        "review": "Over 5 years dealing with Matrix Factory. High quality products and commitment to deadlines. Best wood factory I've worked with.",
+        "name": "Omar Said",
+        "position": "Interior Designer"
+      }
+    },
+    "team": {
+      "subtitle": "Our Team",
+      "title": "Meet With Our Expert Team",
+      "viewAll": "View All Team",
+      "member1": {
+        "name": "Ahmed Hassan",
+        "position": "CEO & Founder"
+      },
+      "member2": {
+        "name": "Mohamed Ali",
+        "position": "Production Engineer"
+      },
+      "member3": {
+        "name": "Khaled Mahmoud",
+        "position": "Sales Manager"
+      }
+    },
+    "cta": {
+      "subtitle": "Over 7 Years of Excellence and Quality",
+      "title1": "Your Next Project",
+      "title2": "Starts Here",
+      "button": "Get in Touch"
+    },
+    "blog": {
+      "subtitle": "Daily Updates",
+      "title": "Our Latest News & Blog",
+      "viewAll": "View All News",
+      "moreDetails": "More Details",
+      "post1": {
+        "author": "By: Ahmed",
+        "category": "Wood Tips",
+        "title": "How to Choose the Right Wood for Your Home",
+        "excerpt": "A comprehensive guide to selecting the best types of wood for furniture and home decor with tips from Matrix Factory experts"
+      },
+      "post2": {
+        "author": "By: Mohamed",
+        "category": "Furniture Care",
+        "title": "5 Tips to Maintain Wooden Furniture",
+        "excerpt": "Learn the best ways to protect wooden furniture from damage and moisture and extend its lifespan"
+      },
+      "post3": {
+        "author": "By: Khaled",
+        "category": "Design Trends",
+        "title": "Latest Wood Decor Trends for 2024",
+        "excerpt": "Explore the latest interior design trends using natural wood and modern colors"
+      },
+      "post4": {
+        "author": "By: Ahmed",
+        "category": "Wood Types",
+        "title": "Difference Between Beech, Oak and Aro Wood",
+        "excerpt": "A comprehensive comparison between the most popular wood types used in furniture making and features of each type"
+      },
+      "post5": {
+        "author": "By: Sara",
+        "category": "Home Projects",
+        "title": "Creative Ideas to Renovate Your Home Decor",
+        "excerpt": "Creative ideas for using wood to renovate home decor at minimal cost with best results"
+      },
+      "post6": {
+        "author": "By: Mohamed",
+        "category": "Buying Guide",
+        "title": "How to Identify Wood Quality Before Buying",
+        "excerpt": "Important tips from Matrix experts to know wood quality and avoid commercial fraud when buying"
+      }
+    }
+  },
+  "footer": {
+    "subscribe": {
+      "text": "Subscribe for the latest news and exclusive offers",
+      "placeholder": "Enter your email...",
+      "button": "SUBSCRIBE"
+    },
+    "about": {
+      "title": "About Factory",
+      "description": "Matrix Wood Factory - A leader in manufacturing and supplying the finest natural and processed wood. We offer high-quality products at competitive prices.",
+      "since": "Since 2017",
+      "availableTitle": "We Are Available",
+      "workDays": "Sat - Thu",
+      "workHours": "9:00 AM - 6:00 PM"
+    },
+    "links": {
+      "title": "Useful Links",
+      "aboutUs": "About Us",
+      "services": "Our Services",
+      "products": "Our Products",
+      "blog": "Blog",
+      "faq": "FAQ's",
+      "team": "Our Team",
+      "careers": "Careers",
+      "testimonials": "Testimonials",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    },
+    "address": {
+      "title": "Factory Address",
+      "location": "Industrial Zone, 10th of Ramadan City, Egypt"
+    },
+    "email": {
+      "title": "Email Address",
+      "subtitle": "Get in Touch!"
+    },
+    "phone": {
+      "title": "Phone Number"
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "copyright": {
+      "company": "Matrix Wood Factory",
+      "rights": "All rights reserved",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "contact": "Contact Us"
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "HOME",
+      "about": "ABOUT",
+      "services": "SERVICES",
+      "pages": "PAGES",
+      "blog": "BLOGS",
+      "contact": "CONTACT"
+    },
+    "pages": {
+      "projectPage": "Project Page",
+      "projectDetails": "Project Details",
+      "teamPage": "Team Page",
+      "teamDetails": "Team Details",
+      "shopPage": "Shop Page",
+      "shopDetails": "Shop Details",
+      "cart": "Cart",
+      "checkout": "Checkout",
+      "wishlist": "Wishlist"
+    },
+    "contact": {
+      "callUs": "Call us any time",
+      "phone": "+123 556 8824"
+    },
+    "buttons": {
+      "getInTouch": "GET IN TOUCH"
+    },
+    "sidebar": {
+      "about": "A small business can be better than a big business because of agility and adaptability due to their size and scale.",
+      "address": "Losangle, Street Road 24, New York, USA - 67452",
+      "email": "support@gmail.com",
+      "recentPosts": {
+        "post1": {
+          "title": "Best features of Building construction work",
+          "author": "By Nicholes",
+          "time": "30 min ago"
+        },
+        "post2": {
+          "title": "The beast team is around and how we make it",
+          "author": "By Nicholes",
+          "time": "2 days ago"
+        },
+        "post3": {
+          "title": "A well designed construction website is user accessible",
+          "author": "By Nicholes",
+          "time": "3 week ago"
+        }
+      }
+    },
+    "search": {
+      "placeholder": "Search Here.."
+    }
+  }
+}

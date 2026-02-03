@@ -1,0 +1,39 @@
+/* RTL Support for Blog Section */
+[dir="rtl"] .blog-slider .slick-track {
+  direction: rtl;
+}
+
+[dir="rtl"] .blog-slider .slick-slide {
+  float: right;
+}
+
+[dir="rtl"] .blog-meta {
+  direction: rtl;
+}
+
+[dir="rtl"] .blog-content {
+  text-align: right;
+}
+
+[dir="rtl"] .title-area {
+  text-align: right;
+}
+
+[dir="rtl"] .sec-btn {
+  text-align: left;
+}
+
+/* Fix for Slick Slider RTL */
+.slick-slider[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slider[dir="rtl"] .slick-track {
+  direction: rtl;
+}
+
+[dir="rtl"] .blog-meta span:before,
+[dir="rtl"] .blog-meta a:before {
+  margin-right: 0 !important;
+  margin-left: 10px !important;
+}
