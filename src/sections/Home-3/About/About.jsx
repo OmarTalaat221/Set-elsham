@@ -29,7 +29,7 @@ const About = () => {
             <div className="col-xl-7">
               <div className="about-wrap3">
                 <div className="title-area mb-25">
-                  <span className="sub-title text-theme">
+                  <span className="sub-title text-xl! text-theme">
                     {t("subtitle")}
                     <i
                       className={

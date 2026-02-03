@@ -171,15 +171,18 @@
       "viewAll": "عرض جميع الفريق",
       "member1": {
         "name": "أحمد حسن",
-        "position": "المدير التنفيذي"
+        "position": "المدير التنفيذي",
+        "expertise":"خبرة"
       },
       "member2": {
         "name": "محمد علي",
-        "position": "مهندس إنتاج"
+        "position": "مهندس إنتاج",
+        "expertise":"خبرة"
       },
       "member3": {
         "name": "خالد محمود",
-        "position": "مدير المبيعات"
+        "position": "مدير المبيعات",
+        "expertise":"خبرة"
       }
     },
     "cta": {

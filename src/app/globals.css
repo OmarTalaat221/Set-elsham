@@ -1,1 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 @import "tailwindcss";
+
+:root {
+  --main-color:#202c54;
+  --secondary-color:#1d1d1b;
+}
+
+* {
+  font-family: "Cairo", sans-serif;
+}
+
+html {
+ font-family: "Cairo", sans-serif;
+}

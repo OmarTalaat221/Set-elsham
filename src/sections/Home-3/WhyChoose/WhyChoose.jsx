@@ -32,7 +32,7 @@ const WhyChoose = () => {
         <div className="row justify-content-center">
           <div className="col-lg-6 why-three-extra">
             <div className="title-area text-center">
-              <span className="sub-title text-theme">
+              <span className="sub-title text-xl! text-theme">
                 {t("subtitle")}{" "}
                 <i
                   className={

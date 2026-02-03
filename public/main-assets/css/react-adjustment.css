@@ -189,7 +189,8 @@ body .disable-scroll {
 }
 
 textPath {
-  font-family: "Archivo", sans-serif;
+font-family: "Cairo", sans-serif;
+ /* font-family: "Archivo", sans-serif; */
 }
 
 .circleWrap3 {
@@ -397,7 +398,7 @@ textPath {
 /* home two accordion css */
 .accordion-card .accordion-body,
 .accordion-card .accordion-body p {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 /* Home Four circle css */

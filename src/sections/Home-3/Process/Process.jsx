@@ -73,7 +73,7 @@ const Process = () => {
             <div
               className={`title-area  ${isRTL ? "text-right!" : "text-left content-text-extra-style"}`}
             >
-              <span className="sub-title text-theme">
+              <span className="sub-title text-xl! text-theme">
                 {t("subtitle")}{" "}
                 <i
                   className={

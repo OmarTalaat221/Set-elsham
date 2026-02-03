@@ -40,14 +40,14 @@ const Testimonial = () => {
     <div className="testimonial-area-3 overflow-hidden">
       <div className="container">
         {/* Header */}
-        <div className="row justify-content-between">
+        <div className="row  pb-0 justify-content-between">
           <div className="col-lg-7">
             <div
-              className={`title-area ${
+              className={`title-area  pb-0! mb-0! ${
                 isRTL ? "" : "blog-area-content-text-extra-style"
               }`}
             >
-              <span className="sub-title text-theme">
+              <span className="sub-title text-xl! text-theme">
                 {t("subtitle")}{" "}
                 <i
                   className={
@@ -82,7 +82,7 @@ const Testimonial = () => {
         </div>
 
         {/* Swiper Carousel */}
-        <div className="testi-slider-wrapper">
+        <div className="testi-slider-wrapper ">
           <Swiper
             key={locale} // 👈 مهم جداً - يعيد تحميل الـ Swiper عند تغيير اللغة
             modules={[Autoplay, Pagination, EffectCoverflow]}

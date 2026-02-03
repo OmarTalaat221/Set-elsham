@@ -97,6 +97,7 @@ const HeaderTwo = () => {
             <div className="footer-logo footer-img">
               <Link href={`/${locale}`}>
                 <img
+                // src="/public/assets/image/WhatsApp Image 2026-02-03 at 1.33.20 PM.jpeg"
                   src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770025937/WhatsApp_Image_2026-01-29_at_3.01.26_PM_br2bgm.jpg"
                   alt="logo"
                   width={100}
@@ -242,99 +243,126 @@ const HeaderTwo = () => {
       />
 
       {/* Header */}
-      <header className="nav-header header-layout3">
+      <header className="nav-header px-6 header-layout3">
         <div className={`sticky-wrapper ${isSticky ? "sticky" : ""}`}>
           <div className="menu-area">
-            <div className="container">
+            <div className="container px-10">
               <div className="row align-items-center justify-content-lg-start justify-content-between">
                 <div className="col-auto">
                   <div className="header-logo">
                     <Link href={`/${locale}`}>
-                      <img src="/main-assets/img/logo.svg" alt="logo" />
+                      <img src="/assets/image/WhatsApp_Image_2026-02-03_at_1.33.20_PM-removebg-preview.png"
+                      className="w-20 h-16"
+                      alt="logo" />
                     </Link>
                   </div>
                 </div>
                 <div className="col-auto menu-bar ms-xxl-0">
-                  <nav className="main-menu d-none d-lg-inline-block">
+                  <nav className="main-menu  d-none d-lg-inline-block">
                     <ul>
                       <li>
-                        <Link href={`/${locale}`}>{t("nav.home")}</Link>
+                        <Link className="text-xl!" href={`/${locale}`}>{t("nav.home")}</Link>
                       </li>
                       <li>
-                        <Link href={`/${locale}/pages/innerpage/about`}>
+                        <Link 
+                        className="text-xl!"
+                        href={`/pages/innerpage/about?locale=${locale}`}>
                           {t("nav.about")}
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/${locale}/pages/innerpage/service`}>
+                        <Link 
+                        className="text-xl!"
+                        href={`/${locale}/pages/innerpage/service`}>
                           {t("nav.services")}
                         </Link>
                       </li>
                       <li className="menu-item-has-children">
-                        <Link href="#">{t("nav.pages")}</Link>
+                        <Link 
+                        className="text-xl!"
+                        href="#">{t("nav.pages")}</Link>
                         <ul
-                          className={`sub-menu  ${isRTL ? "text-right!" : "text-left!"}`}
+                          className={`sub-menu flex flex-col gap-3  ${isRTL ? "text-right!" : "text-left!"}`}
                         >
                           <li>
-                            <Link href={`/${locale}/pages/innerpage/project`}>
+                            <Link 
+                            className="text-xl!"
+                            href={`/${locale}/pages/innerpage/project`}>
                               {t("pages.projectPage")}
                             </Link>
                           </li>
                           <li>
                             <Link
+                            className="text-xl!"
                               href={`/${locale}/pages/innerpage/project-details`}
                             >
                               {t("pages.projectDetails")}
                             </Link>
                           </li>
                           <li>
-                            <Link href={`/${locale}/pages/innerpage/team`}>
+                            <Link 
+                            className="text-xl!"
+                            href={`/${locale}/pages/innerpage/team`}>
                               {t("pages.teamPage")}
                             </Link>
                           </li>
                           <li>
                             <Link
-                              href={`/${locale}/pages/innerpage/team-details`}
+                             className="text-xl!"
+                             href={`/${locale}/pages/innerpage/team-details`}
                             >
                               {t("pages.teamDetails")}
                             </Link>
                           </li>
                           <li>
-                            <Link href={`/${locale}/pages/innerpage/shop`}>
+                            <Link 
+                            className="text-xl!"
+                            href={`/${locale}/pages/innerpage/shop`}>
                               {t("pages.shopPage")}
                             </Link>
                           </li>
                           <li>
                             <Link
+                            className="text-xl!"
                               href={`/${locale}/pages/innerpage/shop-details`}
                             >
                               {t("pages.shopDetails")}
                             </Link>
                           </li>
                           <li>
-                            <Link href={`/${locale}/pages/innerpage/cart`}>
+                            <Link 
+                            className="text-xl!"
+                            href={`/${locale}/pages/innerpage/cart`}>
                               {t("pages.cart")}
                             </Link>
                           </li>
                           <li>
-                            <Link href={`/${locale}/pages/innerpage/checkout`}>
+                            <Link 
+                            className="text-xl!"
+                            href={`/${locale}/pages/innerpage/checkout`}>
                               {t("pages.checkout")}
                             </Link>
                           </li>
                           <li>
-                            <Link href={`/${locale}/pages/innerpage/wishlist`}>
+                            <Link 
+                            className="text-xl!"
+                            href={`/${locale}/pages/innerpage/wishlist`}>
                               {t("pages.wishlist")}
                             </Link>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <Link href={`/${locale}/pages/innerpage/blog`}>
+                        <Link 
+                        className="text-xl!"
+                        href={`/${locale}/pages/innerpage/blog`}>
                           {t("nav.blog")}
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/${locale}/pages/innerpage/contact`}>
+                        <Link 
+                        className="text-xl!"
+                        href={`/${locale}/pages/innerpage/contact`}>
                           {t("nav.contact")}
                         </Link>
                       </li>
