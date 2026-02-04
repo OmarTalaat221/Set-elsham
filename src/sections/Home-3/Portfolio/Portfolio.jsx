@@ -268,24 +268,21 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import GalleryViewer from "../../../components/shared/GalleryViewer";
 
 // Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import PortfolioSwiper from "./PortfolioSwiper";
 
 const Portfolio = () => {
   const t = useTranslations("home.portfolio");
   const locale = useLocale();
   const isRTL = locale === "ar";
   const [mounted, setMounted] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [photoIndex, setPhotoIndex] = useState(-1);
   const [swiperRef, setSwiperRef] = useState(null);
 
   useEffect(() => {
@@ -320,17 +317,19 @@ const Portfolio = () => {
     },
   ];
 
+  const handleOpenGallery = (e, index) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setPhotoIndex(index);
+  };
+
   if (!mounted) return null;
 
   return (
     <section
-      className="pt-32 pb-12 overflow-hidden"
+      className="pt-18 pb-12 overflow-hidden"
       id="project-sec"
       dir={isRTL ? "rtl" : "ltr"}
-      // style={{
-      //   ["--theme-color"]: "#202c54",
-      //   ["--dark"]: "#1d1d1b",
-      // }}
     >
       <div className="container mx-auto px-4">
         {/* Header Section */}
@@ -411,31 +410,30 @@ const Portfolio = () => {
           >
             {portfolioItems.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="group relative bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
-                  {/* Image Container */}
-                  <div
-                    className="relative h-[400px] overflow-hidden cursor-pointer"
-                    onClick={() => {
-                      setPhotoIndex(index);
-                      setIsOpen(true);
-                    }}
-                  >
-                    <img
-                      src={item.imgSrc}
-                      alt=""
-                      className="w-full h-[400px]! object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl text-slate-900 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <i className="ri-expand-diagonal-line"></i>
+                <Link href="/pages/innerpage/project-details">
+                  <div className="group relative bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                    {/* Image Container */}
+                    <div className="relative h-[400px] overflow-hidden">
+                      <img
+                        src={item.imgSrc}
+                        alt=""
+                        className="w-full h-[400px]! object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                        <button
+                          onClick={(e) => handleOpenGallery(e, index)}
+                          className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl text-slate-900 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 hover:bg-[var(--theme-color)]! hover:text-[var(--white-color)]!"
+                        >
+                          <i className="ri-eye-line"></i>
+                        </button>
+                      </div>
+                      {/* Floating Number */}
+                      <div className="absolute top-6 left-6 w-12 h-12 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center font-serif text-slate-900 shadow-lg">
+                        {String(index + 1).padStart(2, "0")}
                       </div>
                     </div>
-                    {/* Floating Number */}
-                    <div className="absolute top-6 left-6 w-12 h-12 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center font-serif text-slate-900 shadow-lg">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
                   </div>
-                </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -445,14 +443,20 @@ const Portfolio = () => {
         </div>
       </div>
 
-      {/* Lightbox Component */}
-      {isOpen && (
-        <PortfolioSwiper
-          image={portfolioItems}
-          initialIndex={photoIndex}
-          onClose={() => setIsOpen(false)}
-        />
-      )}
+      {/* Gallery Viewer */}
+      <GalleryViewer
+        images={portfolioItems.map((item) => item.imgSrc)}
+        photoIndex={photoIndex}
+        onClose={() => setPhotoIndex(-1)}
+        onMovePrev={() =>
+          setPhotoIndex(
+            (photoIndex + portfolioItems.length - 1) % portfolioItems.length
+          )
+        }
+        onMoveNext={() =>
+          setPhotoIndex((photoIndex + 1) % portfolioItems.length)
+        }
+      />
     </section>
   );
 };

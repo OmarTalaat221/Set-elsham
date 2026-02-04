@@ -1,13 +1,13 @@
 // PortfolioSwiper.tsx
 "use client";
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Zoom } from 'swiper/modules';
-import { useTranslations } from 'next-intl';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/zoom';
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Zoom } from "swiper/modules";
+import { useTranslations } from "next-intl";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/zoom";
 
 export default function PortfolioSwiper({ image, initialIndex = 0, onClose }) {
   const [activeIndex, setActiveIndex] = useState(initialIndex);
@@ -25,7 +25,8 @@ export default function PortfolioSwiper({ image, initialIndex = 0, onClose }) {
 
       {/* Image Counter */}
       <div className="absolute top-6 left-6 z-10 px-4 py-2 bg-black/50 backdrop-blur-md rounded-full text-white font-medium">
-        {String(activeIndex + 1).padStart(2, '0')} / {String(image.length).padStart(2, '0')}
+        {String(activeIndex + 1).padStart(2, "0")} /{" "}
+        {String(image.length).padStart(2, "0")}
       </div>
 
       {/* Full Screen Swiper */}
@@ -36,12 +37,12 @@ export default function PortfolioSwiper({ image, initialIndex = 0, onClose }) {
           spaceBetween={0}
           slidesPerView={1}
           navigation={{
-            nextEl: '.swiper-button-next-custom',
-            prevEl: '.swiper-button-prev-custom',
+            nextEl: ".swiper-button-next-custom",
+            prevEl: ".swiper-button-prev-custom",
           }}
           pagination={{
             clickable: true,
-            el: '.swiper-pagination-custom',
+            el: ".swiper-pagination-custom",
           }}
           zoom={{
             maxRatio: 5,
@@ -75,7 +76,6 @@ export default function PortfolioSwiper({ image, initialIndex = 0, onClose }) {
 
       {/* Custom Pagination */}
       <div className="swiper-pagination-custom absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex gap-2"></div>
-      
     </div>
   );
 }

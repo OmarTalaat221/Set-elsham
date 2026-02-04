@@ -290,7 +290,7 @@
       "contact": "CONTACT"
     },
     "pages": {
-      "projectPage": "Project Page",
+      "projectPage": "Projects",
       "projectDetails": "Project Details",
       "teamPage": "Team Page",
       "teamDetails": "Team Details",
@@ -333,6 +333,7 @@
       "placeholder": "Search Here.."
     }
   },
+
   "about": {
     "breadcrumb": {
       "home": "HOME",
@@ -346,6 +347,10 @@
           "name": "SERVICES"
         },
         "projects": {
+          "title": "Our Projects",
+          "name": "PROJECTS"
+        },
+        "project": {
           "title": "Our Projects",
           "name": "PROJECTS"
         },
@@ -366,89 +371,67 @@
           "name": "FAQ"
         }
       }
-    },
-    "subtitle": "ABOUT US",
-    "title": "We Manufacture Everything You Need From Natural Wood",
-    "description": "Matrix Wood Factory - A leader in manufacturing and supplying the finest natural and processed wood. We offer high-quality products at competitive prices with over 7 years of experience.",
-    "imageAlt": "Matrix Wood Factory",
-    "counter": {
-      "label": "Years of Experience"
-    },
-    "features": {
-      "feature1": "Manufacturing all types of natural and industrial wood with highest quality",
-      "feature2": "Modern production lines with international specifications and European standards",
-      "feature3": "Specialized team of highly experienced engineers and technicians"
-    },
-    "mission": {
-      "title": "Our Mission",
-      "description": "To provide high-quality wood products that meet our customers' needs, while adhering to the highest standards of quality, safety, and environmental sustainability."
-    },
-    "vision": {
-      "title": "Our Vision",
-      "description": "To be the first choice in the wood industry in the Arab region, through continuous innovation and excellence in service and quality."
-    },
-    "button": "Contact Us",
-
-    "clients": {
-      "subtitle": "Happy Clients",
-      "title": "Our Trusted Partners",
-      "logoAlt": "Client Logo"
-    },
-
-    "whyChooseSection": {
-      "shadowTitle": "Why Choose Us",
-      "subtitle": "Why Choose Us",
-      "title": "High Quality Innovative Design",
-      "imageAlt": "Matrix Wood Factory Features",
-      "cards": {
-        "card1": {
-          "title": "Advanced Technology",
-          "description": "We use the latest European manufacturing machines and laser cutting technologies for ultimate precision in every piece."
-        },
-        "card2": {
-          "title": "Core Planning",
-          "description": "Specialized design and planning team to transform your ideas into unique wooden products that suit your needs."
-        },
-        "card3": {
-          "title": "Guaranteed Results",
-          "description": "Comprehensive warranty on all our products with after-sales follow-up to ensure your complete satisfaction."
-        },
-        "card4": {
-          "title": "Trusted Clients",
-          "description": "Over 300 happy clients trust us to execute their wood projects with the highest quality."
-        },
-        "card5": {
-          "title": "Skilled Team",
-          "description": "Elite engineers and technicians specialized in wood industry with over 7 years of experience."
-        },
-        "card6": {
-          "title": "Save Money",
-          "description": "Competitive prices without compromising quality, with special offers for large projects."
-        }
-      }
-    },
-    "processSection": {
-      "subtitle": "WORK PROCESS",
-      "title": "Our Services That We Provide",
-      "playVideo": "Play Video",
-      "stepLabel": "STEP",
-      "steps": {
-        "step1": {
-          "title": "Meet and Consult About Project",
-          "description": "Comprehensive discussion of project requirements and determining needed specifications and materials"
-        },
-        "step2": {
-          "title": "Product Design and Planning",
-          "description": "Preparing engineering designs, detailed drawings, and complete execution plan"
-        },
-        "step3": {
-          "title": "Testing and Quality Control",
-          "description": "Thorough inspection of materials and products to ensure compliance with highest quality standards"
-        },
-        "step4": {
-          "title": "Final Assembly and Project Handover",
-          "description": "Precise installation of products, finishing touches, and delivering the project ready for use"
-        }
+    }
+  },
+  "project": {
+    "pageTitle": "Our Masterpieces",
+    "pageSubtitle": "PORTFOLIO",
+    "pageDescription": "A showcase of our finest custom woodwork, from royal furniture to artistic interior designs.",
+    "viewDetails": "View Details",
+    "projects": {
+      "project1": {
+        "category": "Classic Salon",
+        "title": "Royal Salon",
+        "description": "Exquisite handcrafted beech wood salon set with intricate gold leaf details and premium upholstery.",
+        "date": "Classic Collection"
+      },
+      "project2": {
+        "category": "Majlis",
+        "title": "Modern U-Shaped Majlis",
+        "description": "Contemporary Arabic Majlis featuring geometric wooden frames and vibrant multicolor cushions.",
+        "date": "Interior Design"
+      },
+      "project3": {
+        "category": "Ceiling Decor",
+        "title": "Illuminated Ceiling Art",
+        "description": "Custom ceiling woodwork with backlit panels and gold ornamentation for a luxurious ambiance.",
+        "date": "Home Decor"
+      },
+      "project4": {
+        "category": "Luxury Bedroom",
+        "title": "The Golden Circle Bedroom",
+        "description": "A majestic bedroom suite featuring a massive hand-carved golden headboard and round bed.",
+        "date": "Custom Order"
+      },
+      "project5": {
+        "category": "Ceiling Art",
+        "title": "Antique Map Ceiling",
+        "description": "Unique circular ceiling design featuring an antique world map print surrounded by wood molding.",
+        "date": "Office Project"
+      },
+      "project6": {
+        "category": "Wall Art",
+        "title": "Arched Wall Mural",
+        "description": "Classical artistic painting framed within a custom wooden archway.",
+        "date": "Villa Project"
+      },
+      "project7": {
+        "category": "Interior Art",
+        "title": "Grand Palace Mural",
+        "description": "Wide-format classical wall art installation with custom wooden framing.",
+        "date": "Commercial Project"
+      },
+      "project8": {
+        "category": "Majlis",
+        "title": "Royal Blue Majlis",
+        "description": "Luxurious blue velvet seating with heavy gold-plated wooden bases.",
+        "date": "Private Villa"
+      },
+      "project9": {
+        "category": "Modern Furniture",
+        "title": "Green Curved Sofa",
+        "description": "Minimalist modern sofa with a curved silhouette and natural oak base.",
+        "date": "New Collection"
       }
     }
   }

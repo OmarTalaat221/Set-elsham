@@ -2182,6 +2182,10 @@ textarea.is-invalid {
   border-bottom: 1px solid var(--theme-color);
 }
 
+[dir="rtl"] .mobile-menu-wrapper .mobile-logo {
+  padding: 0 30px 0 0 !important;
+}
+
 .mobile-menu-wrapper .mobile-logo svg {
   max-width: 185px;
 }
@@ -2200,6 +2204,11 @@ textarea.is-invalid {
   color: var(--theme-color);
   background-color: transparent;
   border-radius: 0;
+}
+
+[dir="rtl"] .mobile-menu-wrapper .menu-toggle {
+  border-left: 0 !important;
+  border-right: 1px solid var(--theme-color) !important;
 }
 
 .mobile-menu-wrapper .menu-toggle i {
@@ -2241,6 +2250,10 @@ textarea.is-invalid {
   padding-bottom: 40px;
   margin-top: 20px;
   text-align: left;
+}
+
+[dir="rtl"] .mobile-menu {
+  text-align: right !important;
 }
 
 .mobile-menu ul {
