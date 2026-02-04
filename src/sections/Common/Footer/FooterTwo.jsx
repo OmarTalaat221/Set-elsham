@@ -48,7 +48,7 @@ const FooterTwo = () => {
             <div className="footer-logo">
               <Link href="/">
                 <img
-                  src="/main-assets/img/logo-white.svg"
+                  src="/public/assets/image/WhatsApp_Image_2026-02-03_at_1.33.20_PM-removebg-preview.png"
                   alt="Matrix Wood Factory"
                 />
               </Link>

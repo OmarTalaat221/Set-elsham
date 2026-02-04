@@ -303,7 +303,7 @@ const Portfolio = () => {
   if (!mounted) return null;
 
   return (
-    <section className="py-24 bg-[#fcfcfc] overflow-hidden" id="project-sec" dir={isRTL ? "rtl" : "ltr"}>
+    <section className="py-24  overflow-hidden" id="project-sec" dir={isRTL ? "rtl" : "ltr"}>
       <div className="container mx-auto px-4">
         
         {/* Header Section */}
