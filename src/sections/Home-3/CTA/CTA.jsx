@@ -16,6 +16,8 @@ const CTA = () => {
           className="cta-wrap3 text-center background-image"
           data-overlay="title"
           data-opacity="6"
+          data-aos="zoom-in"
+          data-aos-delay="100"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dkc5klynm/image/upload/v1769943576/ernesta-vala-zbD8iz5ZJk4-unsplash_cidk1l.jpg')",

@@ -42,7 +42,11 @@ const Counter = () => {
   return (
     <div className="counter-area-1 space-bottom" ref={counterRef}>
       <div className="container">
-        <div className="row justify-content-between gy-40">
+        <div
+          className="row justify-content-between gy-40"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           {counters.map((counter) => (
             <div className="col-auto" key={counter.key}>
               <div className="counter-card">

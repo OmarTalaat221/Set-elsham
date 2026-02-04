@@ -263,8 +263,6 @@
 // };
 
 // export default Portfolio;
-
-
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -273,6 +271,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { useTranslations, useLocale } from "next-intl";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Swiper styles
 import "swiper/css";
@@ -287,68 +286,122 @@ const Portfolio = () => {
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
+  const [swiperRef, setSwiperRef] = useState(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const portfolioItems = [
-    { imgSrc: "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955459/IMG_6128_qcae7s.jpg", key: "project1" },
-    { imgSrc: "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955447/IMG_6131_nbdnaj.jpg", key: "project2" },
-    { imgSrc: "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955331/%D9%A2%D9%A0%D9%A1%D9%A7%D9%A0%D9%A1%D9%A2%D9%A4_%D9%A1%D9%A9%D9%A5%D9%A4%D9%A4%D9%A0_szj9xq.jpg", key: "project3" },
-    { imgSrc: "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955753/IMG_4621_ulnnme.webp", key: "project4" },
-    { imgSrc: "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955313/IMG-20240109-WA0002_luhjts.jpg", key: "project5" },
+    {
+      imgSrc:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955459/IMG_6128_qcae7s.jpg",
+      key: "project1",
+    },
+    {
+      imgSrc:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955447/IMG_6131_nbdnaj.jpg",
+      key: "project2",
+    },
+    {
+      imgSrc:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955331/%D9%A2%D9%A0%D9%A1%D9%A7%D9%A0%D9%A1%D9%A2%D9%A4_%D9%A1%D9%A9%D9%A5%D9%A4%D9%A4%D9%A0_szj9xq.jpg",
+      key: "project3",
+    },
+    {
+      imgSrc:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955753/IMG_4621_ulnnme.webp",
+      key: "project4",
+    },
+    {
+      imgSrc:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955313/IMG-20240109-WA0002_luhjts.jpg",
+      key: "project5",
+    },
   ];
 
   if (!mounted) return null;
 
   return (
-    <section className="py-24  overflow-hidden" id="project-sec" dir={isRTL ? "rtl" : "ltr"}>
+    <section
+      className="pt-32 pb-12 overflow-hidden"
+      id="project-sec"
+      dir={isRTL ? "rtl" : "ltr"}
+      // style={{
+      //   ["--theme-color"]: "#202c54",
+      //   ["--dark"]: "#1d1d1b",
+      // }}
+    >
       <div className="container mx-auto px-4">
-        
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div
+          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              {/* <span className="w-12 h-[2px] bg-amber-600"></span> */}
               <span className="text-theme font-bold uppercase tracking-widest text-xl">
                 {t("subtitle")}
               </span>
               <i
-                  className={
-                    isRTL
-                      ? "ri-arrow-left-down-line"
-                      : "ri-arrow-right-down-line"
-                  }
-                ></i>
+                className={
+                  isRTL ? "ri-arrow-left-down-line" : "ri-arrow-right-down-line"
+                }
+              ></i>
             </div>
             <h2 className="text-4xl md:text-6xl font-serif text-slate-900 leading-tight">
               {t("title")}
             </h2>
           </div>
-          
-          <Link 
-            href="/pages/innerpage/project" 
-            className="group flex items-center gap-2 p-3 bg-[#202c54] text-white font-semibold hover:text-theme transition-colors duration-300"
-          >
-            <span className="">
-              {t("viewAll")}
-            </span>
-            <i className={`${isRTL ? "ri-arrow-left-line" : "ri-arrow-right-line"} text-xl transition-transform group-hover:translate-x-1`}></i>
-          </Link>
+
+          {/* Navigation Buttons */}
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => swiperRef?.slidePrev()}
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-[var(--theme-color)] hover:bg-[var(--theme-color)]! hover:text-[var(--white-color)]! transition-all duration-300 group"
+              aria-label="Previous"
+            >
+              {isRTL ? (
+                <ArrowRight className="w-5 h-5" />
+              ) : (
+                <ArrowLeft className="w-5 h-5" />
+              )}
+            </button>
+            <button
+              onClick={() => swiperRef?.slideNext()}
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[var(--theme-color)] shadow-lg hover:shadow-xl flex items-center justify-center text-white hover:bg-[var(--black-color)] transition-all duration-300"
+              aria-label="Next"
+            >
+              {isRTL ? (
+                <ArrowLeft className="w-5 h-5" />
+              ) : (
+                <ArrowRight className="w-5 h-5" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Portfolio Slider */}
-        <div className="portfolio-slider-wrapper relative">
+        <div
+          className="portfolio-slider-wrapper relative"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <Swiper
             key={locale}
+            onSwiper={setSwiperRef}
             modules={[Autoplay, Pagination, Navigation]}
             slidesPerView={1}
             spaceBetween={30}
             loop={true}
             speed={1200}
-            autoplay={{ delay: 5000, disableOnInteraction: false, reverseDirection: isRTL }}
-            pagination={{ clickable: true, el: '.custom-pagination' }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+              reverseDirection: isRTL,
+            }}
+            pagination={{ clickable: true, el: ".custom-pagination" }}
             breakpoints={{
               640: { slidesPerView: 1.2 },
               1024: { slidesPerView: 2.2 },
@@ -358,13 +411,18 @@ const Portfolio = () => {
           >
             {portfolioItems.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="group relative bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
-                  
+                <div className="group relative bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
                   {/* Image Container */}
-                  <div className="relative h-[400px] overflow-hidden cursor-pointer" onClick={() => { setPhotoIndex(index); setIsOpen(true); }}>
-                    <img 
-                      src={item.imgSrc} 
-                      alt="" 
+                  <div
+                    className="relative h-[400px] overflow-hidden cursor-pointer"
+                    onClick={() => {
+                      setPhotoIndex(index);
+                      setIsOpen(true);
+                    }}
+                  >
+                    <img
+                      src={item.imgSrc}
+                      alt=""
                       className="w-full h-[400px]! object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
@@ -374,14 +432,14 @@ const Portfolio = () => {
                     </div>
                     {/* Floating Number */}
                     <div className="absolute top-6 left-6 w-12 h-12 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center font-serif text-slate-900 shadow-lg">
-                      {String(index + 1).padStart(2, '0')}
+                      {String(index + 1).padStart(2, "0")}
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-          
+
           {/* Custom Pagination Container */}
           <div className="custom-pagination flex justify-center gap-2 !mt-8"></div>
         </div>
@@ -389,20 +447,10 @@ const Portfolio = () => {
 
       {/* Lightbox Component */}
       {isOpen && (
-        // <Lightbox
-        //   mainSrc={portfolioItems[photoIndex].imgSrc}
-        //   nextSrc={portfolioItems[(photoIndex + 1) % portfolioItems.length].imgSrc}
-        //   prevSrc={portfolioItems[(photoIndex + portfolioItems.length - 1) % portfolioItems.length].imgSrc}
-        //   onCloseRequest={() => setIsOpen(false)}
-        //   onMovePrevRequest={() => setPhotoIndex((photoIndex + portfolioItems.length - 1) % portfolioItems.length)}
-        //   onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % portfolioItems.length)}
-        //   imageTitle={t(`${portfolioItems[photoIndex].key}.title`)}
-        //   enableZoom={true}
-        // />
-        <PortfolioSwiper 
-        image={portfolioItems}
-    initialIndex={photoIndex}
-    onClose={() => setIsOpen(false)}
+        <PortfolioSwiper
+          image={portfolioItems}
+          initialIndex={photoIndex}
+          onClose={() => setIsOpen(false)}
         />
       )}
     </section>

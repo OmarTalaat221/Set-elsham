@@ -48,7 +48,8 @@ const FooterTwo = () => {
             <div className="footer-logo">
               <Link href="/">
                 <img
-                  src="/public/assets/image/WhatsApp_Image_2026-02-03_at_1.33.20_PM-removebg-preview.png"
+                  className="w-[200px] h-[55px]"
+                  src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770203475/4_keca0z.png"
                   alt="Matrix Wood Factory"
                 />
               </Link>
@@ -87,7 +88,9 @@ const FooterTwo = () => {
                     {t("about.availableTitle")}
                   </h5>
                   <p className="about-text">
-                    <span className="text-theme">{t("about.workDays")}:</span>{" "}
+                    <span className="text-[var(--white-color)]">
+                      {t("about.workDays")}:
+                    </span>{" "}
                     {t("about.workHours")}
                   </p>
                 </div>

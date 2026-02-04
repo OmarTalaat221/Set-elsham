@@ -74,7 +74,7 @@
 /*------------------- 1.1. Mixin -------------------*/
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
@@ -100,8 +100,8 @@
   --icon-font: remixicon !important;
   --main-container: 1362px;
   --container-gutters: 24px;
-  --section-space: 100px;
-  --section-space-mobile: 80px;
+  --section-space: 60px;
+  --section-space-mobile: 40px;
   --section-title-space: 60px;
   --ripple-ani-duration: 5s;
 }
@@ -2470,6 +2470,7 @@ textarea.is-invalid {
   border: none;
   border-radius: 0px !important;
   text-align: center;
+  width: fit-content !important;
   background-color: var(--theme-color);
   color: var(--white-color);
   font-family: var(--title-font);
@@ -2780,6 +2781,11 @@ textarea.is-invalid {
   background: var(--white-color);
   color: var(--theme-color);
   line-height: 58px;
+}
+
+.play-btn.style2 i:hover {
+  background: var(--theme-color) !important;
+  color: var(--white-color) !important;
 }
 
 .play-btn.style2:after,
@@ -6021,7 +6027,7 @@ ul.wp-block-latest-posts li:last-child {
   font-size: 32px;
   font-weight: 600;
   color: transparent;
-  -webkit-text-stroke: 1px var(--theme-color);
+  -webkit-text-stroke: 1px var(--white-color);
   margin-top: 21px;
   margin-bottom: -0.3em;
 }
@@ -7471,6 +7477,7 @@ ul.wp-block-latest-posts li:last-child {
   content: "";
   position: relative;
   margin-right: 16px;
+  margin-left: 0px;
   font-size: 14px;
   font-weight: 700;
   height: 5px;
@@ -7479,6 +7486,11 @@ ul.wp-block-latest-posts li:last-child {
   background: rgba(255, 255, 255, 0.5);
   display: inline-block;
   transform: translate(0px, -50%);
+}
+
+[dir="rtl"] .breadcumb-menu li:before {
+  margin-left: 16px !important ;
+  margin-right: 0 !important;
 }
 
 .breadcumb-menu li:first-child:before {
@@ -13469,6 +13481,7 @@ li.trackback {
   font-family: var(--body-font);
   margin-bottom: 10px;
   display: flex;
+  align-items: center;
   color: var(--title-color);
 }
 
@@ -13476,12 +13489,22 @@ li.trackback {
   margin-bottom: 0;
 }
 
-.checklist li img,
-.checklist li i,
-.checklist li svg {
+[dir="ltr"] .checklist li img,
+[dir="ltr"] .checklist li i,
+[dir="ltr"] .checklist li svg {
   font-size: 22px;
   margin-right: 10px;
-  margin-top: 2px;
+  /* margin-top: 2px; */
+}
+
+[dir="rtl"] .checklist li img,
+[dir="rtl"] .checklist li i,
+[dir="rtl"] .checklist li svg {
+  font-size: 22px;
+  margin-left: 10px;
+  /* margin-top: 2px; */
+  margin-right: 0;
+  rotate: 180deg;
 }
 
 .checklist li img {
@@ -17066,6 +17089,11 @@ li.trackback {
   left: -10%;
   clip-path: polygon(0 0, 100% 0%, calc(100% - 16px) 100%, 0% 100%);
   z-index: 1;
+}
+
+[dir="rtl"] .process_shape_1-2 {
+  left: auto;
+  right: -10%;
 }
 
 .process_shape_1-3 {

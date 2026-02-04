@@ -49,7 +49,7 @@ const Process = () => {
     position: "absolute",
     top: "50%",
     zIndex: -1,
-    display: isMobile ? "none" : "block", // إخفاء على الموبايل
+    display: isMobile ? "none" : "block",
     ...(isRTL
       ? {
           left: 0,
@@ -69,9 +69,9 @@ const Process = () => {
     <section className="process-area-2 space overflow-hidden">
       <div className="container">
         <div className="row justify-content-between align-items-center gy-40">
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div
-              className={`title-area  ${isRTL ? "text-right!" : "text-left content-text-extra-style"}`}
+              className={`title-area ${isRTL ? "text-right!" : "text-left content-text-extra-style"}`}
             >
               <span className="sub-title text-xl! text-theme">
                 {t("subtitle")}{" "}
@@ -87,39 +87,56 @@ const Process = () => {
             </div>
             <div className="process-thumb2-1">
               <img
-                src="/main-assets/img/normal/process-thumb2-1.png"
+                src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770213269/loggers-cutting-preparing-harvested-timber-stacking-hauling-length-time-lapse-isolated.jpg_h0lsla.jpg"
                 alt={t("title")}
               />
             </div>
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div
-              className="process-grid-list style2"
+              className="process-grid-list-wrapper style2"
               style={{ position: "relative" }}
             >
               <div style={bgTextStyle}>{t("bgText")}</div>
 
-              {benefits.map((benefit, index) => (
-                <div
-                  className="process-grid"
-                  key={benefit.number}
-                  style={getMarginStyle(index)}
-                >
-                  <div className="process-grid-number">{benefit.number}</div>
-                  <div className="process-grid-details">
-                    <h3 className="process-grid-title">
-                      {t(`${benefit.key}.title`)}
-                    </h3>
-                    <p className="process-grid-text">
-                      {t(`${benefit.key}.description`)}
-                    </p>
+              <div className="process-grid-container">
+                {benefits.map((benefit, index) => (
+                  <div
+                    className="process-grid"
+                    key={benefit.number}
+                    style={getMarginStyle(index)}
+                  >
+                    <div className="process-grid-number">{benefit.number}</div>
+                    <div className="process-grid-details">
+                      <h3 className="process-grid-title">
+                        {t(`${benefit.key}.title`)}
+                      </h3>
+                      <p className="process-grid-text">
+                        {t(`${benefit.key}.description`)}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        /* Mobile */
+        @media (max-width: 575px) {
+          .process-grid-container {
+            gap: 15px;
+          }
+
+          .process-grid {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+          }
+        }
+      `}</style>
     </section>
   );
 };

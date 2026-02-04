@@ -1,10 +1,10 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Swiper styles
 import "swiper/css";
@@ -17,6 +17,7 @@ const Testimonial = () => {
   const locale = useLocale();
   const isRTL = locale === "ar";
   const [mounted, setMounted] = useState(false);
+  const [swiperRef, setSwiperRef] = useState(null);
 
   // لتجنب hydration mismatch
   useEffect(() => {
@@ -37,17 +38,19 @@ const Testimonial = () => {
   }
 
   return (
-    <div className="testimonial-area-3 overflow-hidden">
+    <div className="testimonial-area-3 py-16 overflow-hidden">
       <div className="container">
         {/* Header */}
-        <div className="row  pb-0 justify-content-between">
+        <div className="row pb-0 justify-content-between align-items-end">
           <div className="col-lg-7">
             <div
-              className={`title-area  pb-0! mb-0! ${
+              className={`title-area pb-0! mb-0! ${
                 isRTL ? "" : "blog-area-content-text-extra-style"
               }`}
+              data-aos="fade-up"
+              data-aos-delay="100"
             >
-              <span className="sub-title text-xl! text-theme">
+              <span className="sub-title text-theme">
                 {t("subtitle")}{" "}
                 <i
                   className={
@@ -60,31 +63,107 @@ const Testimonial = () => {
               <h2 className="sec-title">{t("title")}</h2>
             </div>
           </div>
+
           <div className="col-lg-auto">
-            <div className="sec-btn btn-wrap">
-              <div className="client-group-thumb">
-                <img
-                  src="/main-assets/img/normal/client_group_1-2.png"
-                  alt="clients"
-                />
+            <div className="d-flex align-items-center gap-3">
+              {/* Counter Section */}
+              <div className="sec-btn btn-wrap d-none d-lg-flex">
+                <div className="client-group-thumb">
+                  <img
+                    src="/main-assets/img/normal/client_group_1-2.png"
+                    alt="clients"
+                  />
+                </div>
+                <div className="testi-counter-wrap">
+                  <h3
+                    className="testi-counter-number"
+                    style={{ direction: "ltr" }}
+                  >
+                    <span className="counter-number">500</span>+
+                  </h3>
+                  <p className="testi-counter-text">{t("successCounter")}</p>
+                </div>
               </div>
-              <div className="testi-counter-wrap">
-                <h3
-                  className="testi-counter-number"
-                  style={{ direction: "ltr" }}
+
+              {/* Navigation Buttons */}
+              <div className="d-flex align-items-center gap-3">
+                <button
+                  onClick={() => swiperRef?.slidePrev()}
+                  className="d-flex align-items-center justify-content-center"
+                  style={{
+                    width: "48px",
+                    height: "48px",
+                    // borderRadius: "50%",
+                    background: "white",
+                    border: "none",
+                    boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+                    color: "var(--theme-color)",
+                    cursor: "pointer",
+                    transition: "all 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--theme-color)";
+                    e.currentTarget.style.color = "white";
+                    e.currentTarget.style.boxShadow =
+                      "0 10px 15px -3px rgb(0 0 0 / 0.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "white";
+                    e.currentTarget.style.color = "var(--theme-color)";
+                    e.currentTarget.style.boxShadow =
+                      "0 4px 6px -1px rgb(0 0 0 / 0.1)";
+                  }}
+                  aria-label="Previous"
                 >
-                  <span className="counter-number">500</span>+
-                </h3>
-                <p className="testi-counter-text">{t("successCounter")}</p>
+                  {isRTL ? (
+                    <ArrowRight className="w-5 h-5" />
+                  ) : (
+                    <ArrowLeft className="w-5 h-5" />
+                  )}
+                </button>
+
+                <button
+                  onClick={() => swiperRef?.slideNext()}
+                  className="d-flex align-items-center justify-content-center"
+                  style={{
+                    width: "48px",
+                    height: "48px",
+                    // borderRadius: "50%",
+                    background: "var(--theme-color)",
+                    border: "none",
+                    boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
+                    color: "white",
+                    cursor: "pointer",
+                    transition: "all 0.3s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--black-color)";
+                    e.currentTarget.style.boxShadow =
+                      "0 10px 15px -3px rgb(0 0 0 / 0.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "var(--theme-color)";
+                    e.currentTarget.style.boxShadow =
+                      "0 4px 6px -1px rgb(0 0 0 / 0.1)";
+                  }}
+                  aria-label="Next"
+                >
+                  {isRTL ? (
+                    <ArrowLeft className="w-5 h-5" />
+                  ) : (
+                    <ArrowRight className="w-5 h-5" />
+                  )}
+                </button>
               </div>
             </div>
           </div>
         </div>
 
         {/* Swiper Carousel */}
-        <div className="testi-slider-wrapper ">
+        <div className="testi-slider-wrapper">
           <Swiper
-            key={locale} // 👈 مهم جداً - يعيد تحميل الـ Swiper عند تغيير اللغة
+            key={locale}
+            onSwiper={setSwiperRef}
             modules={[Autoplay, Pagination, EffectCoverflow]}
             effect="coverflow"
             grabCursor={true}
@@ -96,7 +175,7 @@ const Testimonial = () => {
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
-              reverseDirection: isRTL, // 👈 عكس الاتجاه في RTL
+              reverseDirection: isRTL,
             }}
             pagination={{
               clickable: true,
@@ -118,7 +197,7 @@ const Testimonial = () => {
                 slidesPerView: 2,
                 spaceBetween: 30,
               },
-              1024: {
+              1200: {
                 slidesPerView: 3,
                 spaceBetween: 30,
               },
@@ -167,9 +246,6 @@ const Testimonial = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-
-          {/* Custom Pagination */}
-          {/* <div className="testi-pagination"></div> */}
         </div>
       </div>
     </div>

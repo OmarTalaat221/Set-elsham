@@ -4,12 +4,15 @@ import Link from "next/link";
 import Slider from "react-slick";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { useRef } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import "./blog.css";
 
 const Blog = () => {
   const t = useTranslations("home.blog");
   const locale = useLocale();
   const isRTL = locale === "ar";
+  const sliderRef = useRef(null);
 
   const settings = {
     infinite: true,
@@ -23,12 +26,12 @@ const Blog = () => {
     rtl: isRTL,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: { slidesToShow: 2, slidesToScroll: 1, rtl: isRTL },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 2, slidesToScroll: 1, rtl: isRTL },
+        settings: { slidesToShow: 1, slidesToScroll: 1, rtl: isRTL },
       },
       {
         breakpoint: 480,
@@ -71,20 +74,6 @@ const Blog = () => {
       month: "JUL",
       year: "2024",
     },
-    // {
-    //   key: "post5",
-    //   image: "/main-assets/img/blog/blog_1_2.png",
-    //   day: "12",
-    //   month: "JUL",
-    //   year: "2024",
-    // },
-    // {
-    //   key: "post6",
-    //   image: "/main-assets/img/blog/blog_1_3.png",
-    //   day: "19",
-    //   month: "JUL",
-    //   year: "2024",
-    // },
   ];
 
   // تحويل الشهور للعربي
@@ -123,7 +112,11 @@ const Blog = () => {
       ></div>
       <div className="container">
         {/* Header */}
-        <div className="row justify-content-lg-between justify-content-center align-items-center">
+        <div
+          className="row justify-content-lg-between justify-content-center align-items-end"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           <div className="col-lg-6">
             <div
               className={`title-area ${isRTL ? "text-start" : "blog-area-content-text-extra-style"}`}
@@ -142,23 +135,57 @@ const Blog = () => {
             </div>
           </div>
           <div className="col-md-auto">
-            <div className="sec-btn">
-              <Link href="/pages/innerpage/blog" className="btn">
-                {t("viewAll")}{" "}
-                <i
-                  className={
-                    isRTL ? "ri-arrow-left-up-line" : "ri-arrow-right-up-line"
-                  }
-                ></i>
-              </Link>
+            <div className="d-flex align-items-center gap-3 mb-5 justify-between">
+              {/* Navigation Buttons */}
+              <div className="d-flex align-items-center gap-3">
+                <button
+                  onClick={() => sliderRef.current?.slickPrev()}
+                  className="d-flex align-items-center justify-content-center blog-nav-btn"
+                  aria-label="Previous"
+                >
+                  {isRTL ? (
+                    <ArrowRight className="w-5 h-5" />
+                  ) : (
+                    <ArrowLeft className="w-5 h-5" />
+                  )}
+                </button>
+
+                <button
+                  onClick={() => sliderRef.current?.slickNext()}
+                  className="d-flex align-items-center justify-content-center blog-nav-btn blog-nav-btn-active"
+                  aria-label="Next"
+                >
+                  {isRTL ? (
+                    <ArrowLeft className="w-5 h-5" />
+                  ) : (
+                    <ArrowRight className="w-5 h-5" />
+                  )}
+                </button>
+              </div>
+              {/* View All Button - Hidden on mobile */}
+              {/* <div className="sec-btn d-none d-md-block mb-0!">
+                <Link href="/pages/innerpage/blog" className="btn">
+                  {t("viewAll")}{" "}
+                  <i
+                    className={
+                      isRTL ? "ri-arrow-left-up-line" : "ri-arrow-right-up-line"
+                    }
+                  ></i>
+                </Link>
+              </div> */}
             </div>
           </div>
         </div>
 
         {/* Blog Slider */}
-        <div dir={isRTL ? "rtl" : "ltr"}>
+        <div
+          dir={isRTL ? "rtl" : "ltr"}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <Slider
             {...settings}
+            ref={sliderRef}
             key={locale}
             className="row global-carousel blog-slider slider-shadow"
           >
@@ -211,7 +238,54 @@ const Blog = () => {
             ))}
           </Slider>
         </div>
+
+        {/* View All Button - Mobile Only */}
+        {/* <div className="d-md-none text-center mt-4" data-aos="fade-up">
+          <Link href="/pages/innerpage/blog" className="btn">
+            {t("viewAll")}{" "}
+            <i
+              className={
+                isRTL ? "ri-arrow-left-up-line" : "ri-arrow-right-up-line"
+              }
+            ></i>
+          </Link>
+        </div> */}
       </div>
+
+      <style jsx>{`
+        .blog-nav-btn {
+          width: 48px;
+          height: 48px;
+          background: white;
+          border: none;
+          box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+          color: var(--theme-color);
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+
+        .blog-nav-btn:hover {
+          background: var(--theme-color);
+          color: white;
+          box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+
+        .blog-nav-btn-active {
+          background: var(--theme-color);
+          color: white;
+        }
+
+        .blog-nav-btn-active:hover {
+          background: var(--black-color);
+        }
+
+        @media (max-width: 767px) {
+          .blog-nav-btn {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      `}</style>
     </section>
   );
 };

@@ -150,6 +150,7 @@ h6 {
   border: none;
   border-radius: 0px !important;
   text-align: center;
+  width: fit-content !important;
   background-color: var(--main-color);
   color: var(--white-color);
   font-family: var(--heading-font);

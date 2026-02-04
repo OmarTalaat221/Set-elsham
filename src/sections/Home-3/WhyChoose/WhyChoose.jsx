@@ -30,7 +30,11 @@ const WhyChoose = () => {
       ></div>
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-6 why-three-extra">
+          <div
+            className="col-lg-6 why-three-extra"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             <div className="title-area text-center">
               <span className="sub-title text-xl! text-theme">
                 {t("subtitle")}{" "}
@@ -47,7 +51,7 @@ const WhyChoose = () => {
           </div>
         </div>
         <div className="row gy-50">
-          <div className="col-xl-4">
+          <div className="col-xl-4" data-aos="fade-up" data-aos-delay="200">
             <ul className="why-tab-wrap nav nav-pills" role="tablist">
               {services.map((service, index) => (
                 <li className="nav-item" key={service.id} role="presentation">
@@ -73,7 +77,7 @@ const WhyChoose = () => {
               ))}
             </ul>
           </div>
-          <div className="col-xl-8">
+          <div className="col-xl-8" data-aos="fade-up" data-aos-delay="300">
             <div className="tab-content custom-animation">
               {services.map((service, index) => (
                 <div

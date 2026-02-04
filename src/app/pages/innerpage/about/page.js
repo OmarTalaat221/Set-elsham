@@ -1,5 +1,4 @@
 import AboutThree from "~/sections/About/AboutThree";
-import BlogThree from "~/sections/About/BlogThree";
 import Breadcumb from "~/sections/About/Breadcumb";
 import ClientThree from "~/sections/About/ClientThree";
 import PortfolioThree from "~/sections/About/PortfolioThree";
@@ -11,21 +10,26 @@ import FooterTwo from "~/sections/Common/Footer/FooterTwo";
 import CounterThree from "~/sections/Common/Counter/CounterThree";
 import TestimonialThree from "~/sections/Common/Testimonial/TestimonialThree";
 import Scroll from "~/sections/Common/Scroll";
-import Portfolio from "~/sections/Home-1/Portfolio";
+import Portfolio from "~/sections/Home-3/Portfolio";
+import HeaderTwo from "~/sections/Common/Header/HeaderTwo";
+import Blog from "~/sections/Home-2/Blog";
+import Counter from "~/sections/Home-3/Counter";
+import Testimonial from "~/sections/Home-3/Testimonial";
+import TeamSection from "~/sections/Home-3/Team";
 export default function AboutPage() {
   return (
     <>
-      <HeaderOne />
+      <HeaderTwo />
       <Breadcumb />
       <AboutThree />
       <WhyChooseThree />
       <ProcessThree />
       <Portfolio />
-      <CounterThree />
-      <TestimonialThree />
-      <TeamThree />
+      <Counter />
+      <Testimonial />
+      <TeamSection />
       <ClientThree />
-      <BlogThree />
+      <Blog />
       <FooterTwo />
       <Scroll />
     </>

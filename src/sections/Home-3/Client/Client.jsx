@@ -43,7 +43,7 @@ const Client = () => {
 
   return (
     <div className="client-area-2 text-center space overflow-hidden">
-      <div className="container">
+      <div className="container" data-aos="zoom-in" data-aos-delay="100">
         <Slider
           {...settings}
           key={locale} // 👈 مهم جداً

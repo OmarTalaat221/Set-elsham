@@ -7,7 +7,7 @@ const Hero = () => {
   const locale = useLocale();
 
   return (
-    <div className="hero-wrapper hero-3" id="hero">
+    <div className="hero-wrapper hero-3 pb-12" id="hero">
       <div
         className="hero-bg-3-1 background-image bg-mask"
         style={{
@@ -23,8 +23,8 @@ const Hero = () => {
       <div className="hero-shadow-text">{t("shadowText")}</div>
 
       <div
-        className="hero-bg-shape3-1 shape-mockup jump flex items-center gap-2"
-        style={{ bottom: "2%", left: "3%", position: "absolute" }}
+        className="hero-bg-shape3-1 shape-mockup jump flex items-center gap-2 xl:bottom-[2%] xl:left-[3%] lg:bottom-[-2%] lg:left-[3%] md:bottom-[2%] md:left-[3%] sm:bottom-[2%] sm:left-[3%] bottom-[2%] left-[3%]"
+        style={{ position: "absolute" }}
       >
         <img
           className="w-[90px] h-[330px]! object-cover rotate-[-15deg]"

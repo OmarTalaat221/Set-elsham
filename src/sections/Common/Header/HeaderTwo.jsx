@@ -95,9 +95,9 @@ const HeaderTwo = () => {
           </button>
           <div className="widget widget-about footer-widget">
             <div className="footer-logo footer-img">
-              <Link href={`/${locale}`}>
+              <Link href={`/`}>
                 <img
-                // src="/public/assets/image/WhatsApp Image 2026-02-03 at 1.33.20 PM.jpeg"
+                  // src="/public/assets/image/WhatsApp Image 2026-02-03 at 1.33.20 PM.jpeg"
                   src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770025937/WhatsApp_Image_2026-01-29_at_3.01.26_PM_br2bgm.jpg"
                   alt="logo"
                   width={100}
@@ -141,7 +141,7 @@ const HeaderTwo = () => {
               {/* Post 1 */}
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href={`/${locale}/pages/innerpage/blog-details`}>
+                  <Link href={`/pages/innerpage/blog-details`}>
                     <img
                       src="/main-assets/img/blog/recent-post1.png"
                       alt="Blog Image"
@@ -154,16 +154,16 @@ const HeaderTwo = () => {
                   <h4 className="post-title">
                     <Link
                       className="text-inherit"
-                      href={`/${locale}/pages/innerpage/blog-details`}
+                      href={`/pages/innerpage/blog-details`}
                     >
                       {t("sidebar.recentPosts.post1.title")}
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href={`/${locale}/pages/innerpage/blog`}>
+                    <Link href={`/pages/innerpage/blog`}>
                       {t("sidebar.recentPosts.post1.author")}
                     </Link>
-                    <Link href={`/${locale}/pages/innerpage/blog`}>
+                    <Link href={`/pages/innerpage/blog`}>
                       {t("sidebar.recentPosts.post1.time")}
                     </Link>
                   </div>
@@ -172,7 +172,7 @@ const HeaderTwo = () => {
               {/* Post 2 */}
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href={`/${locale}/pages/innerpage/blog-details`}>
+                  <Link href={`/pages/innerpage/blog-details`}>
                     <img
                       src="/main-assets/img/blog/recent-post2.png"
                       alt="Blog Image"
@@ -185,16 +185,16 @@ const HeaderTwo = () => {
                   <h4 className="post-title">
                     <Link
                       className="text-inherit"
-                      href={`/${locale}/pages/innerpage/blog-details`}
+                      href={`/pages/innerpage/blog-details`}
                     >
                       {t("sidebar.recentPosts.post2.title")}
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href={`/${locale}/pages/innerpage/blog`}>
+                    <Link href={`/pages/innerpage/blog`}>
                       {t("sidebar.recentPosts.post2.author")}
                     </Link>
-                    <Link href={`/${locale}/pages/innerpage/blog`}>
+                    <Link href={`/pages/innerpage/blog`}>
                       {t("sidebar.recentPosts.post2.time")}
                     </Link>
                   </div>
@@ -203,7 +203,7 @@ const HeaderTwo = () => {
               {/* Post 3 */}
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href={`/${locale}/pages/innerpage/blog-details`}>
+                  <Link href={`/pages/innerpage/blog-details`}>
                     <img
                       src="/main-assets/img/blog/recent-post4.png"
                       alt="Blog Image"
@@ -216,16 +216,16 @@ const HeaderTwo = () => {
                   <h4 className="post-title">
                     <Link
                       className="text-inherit"
-                      href={`/${locale}/pages/innerpage/blog-details`}
+                      href={`/pages/innerpage/blog-details`}
                     >
                       {t("sidebar.recentPosts.post3.title")}
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href={`/${locale}/pages/innerpage/blog`}>
+                    <Link href={`/pages/innerpage/blog`}>
                       {t("sidebar.recentPosts.post3.author")}
                     </Link>
-                    <Link href={`/${locale}/pages/innerpage/blog`}>
+                    <Link href={`/pages/innerpage/blog`}>
                       {t("sidebar.recentPosts.post3.time")}
                     </Link>
                   </div>
@@ -250,10 +250,12 @@ const HeaderTwo = () => {
               <div className="row align-items-center justify-content-lg-start justify-content-between">
                 <div className="col-auto">
                   <div className="header-logo">
-                    <Link href={`/${locale}`}>
-                      <img src="/assets/image/WhatsApp_Image_2026-02-03_at_1.33.20_PM-removebg-preview.png"
-                      className="w-20 h-16"
-                      alt="logo" />
+                    <Link href={`/`}>
+                      <img
+                        src="/assets/image/WhatsApp_Image_2026-02-03_at_1.33.20_PM-removebg-preview.png"
+                        className="w-20 h-16"
+                        alt="logo"
+                      />
                     </Link>
                   </div>
                 </div>
@@ -261,108 +263,120 @@ const HeaderTwo = () => {
                   <nav className="main-menu  d-none d-lg-inline-block">
                     <ul>
                       <li>
-                        <Link className="text-xl!" href={`/${locale}`}>{t("nav.home")}</Link>
+                        <Link className="text-lg!" href={`/`}>
+                          {t("nav.home")}
+                        </Link>
                       </li>
                       <li>
-                        <Link 
-                        className="text-xl!"
-                        href={`/pages/innerpage/about?locale=${locale}`}>
+                        <Link
+                          className="text-lg!"
+                          href={`/pages/innerpage/about`}
+                        >
                           {t("nav.about")}
                         </Link>
                       </li>
                       <li>
-                        <Link 
-                        className="text-xl!"
-                        href={`/${locale}/pages/innerpage/service`}>
+                        <Link
+                          className="text-lg!"
+                          href={`/pages/innerpage/service`}
+                        >
                           {t("nav.services")}
                         </Link>
                       </li>
                       <li className="menu-item-has-children">
-                        <Link 
-                        className="text-xl!"
-                        href="#">{t("nav.pages")}</Link>
+                        <Link className="text-lg!" href="#">
+                          {t("nav.pages")}
+                        </Link>
                         <ul
                           className={`sub-menu flex flex-col gap-3  ${isRTL ? "text-right!" : "text-left!"}`}
                         >
                           <li>
-                            <Link 
-                            className="text-xl!"
-                            href={`/${locale}/pages/innerpage/project`}>
+                            <Link
+                              className="text-lg!"
+                              href={`/pages/innerpage/project`}
+                            >
                               {t("pages.projectPage")}
                             </Link>
                           </li>
                           <li>
                             <Link
-                            className="text-xl!"
-                              href={`/${locale}/pages/innerpage/project-details`}
+                              className="text-lg!"
+                              href={`/pages/innerpage/project-details`}
                             >
                               {t("pages.projectDetails")}
                             </Link>
                           </li>
                           <li>
-                            <Link 
-                            className="text-xl!"
-                            href={`/${locale}/pages/innerpage/team`}>
+                            <Link
+                              className="text-lg!"
+                              href={`/pages/innerpage/team`}
+                            >
                               {t("pages.teamPage")}
                             </Link>
                           </li>
                           <li>
                             <Link
-                             className="text-xl!"
-                             href={`/${locale}/pages/innerpage/team-details`}
+                              className="text-lg!"
+                              href={`/pages/innerpage/team-details`}
                             >
                               {t("pages.teamDetails")}
                             </Link>
                           </li>
                           <li>
-                            <Link 
-                            className="text-xl!"
-                            href={`/${locale}/pages/innerpage/shop`}>
+                            <Link
+                              className="text-lg!"
+                              href={`/pages/innerpage/shop`}
+                            >
                               {t("pages.shopPage")}
                             </Link>
                           </li>
                           <li>
                             <Link
-                            className="text-xl!"
-                              href={`/${locale}/pages/innerpage/shop-details`}
+                              className="text-lg!"
+                              href={`/pages/innerpage/shop-details`}
                             >
                               {t("pages.shopDetails")}
                             </Link>
                           </li>
                           <li>
-                            <Link 
-                            className="text-xl!"
-                            href={`/${locale}/pages/innerpage/cart`}>
+                            <Link
+                              className="text-lg!"
+                              href={`/pages/innerpage/cart`}
+                            >
                               {t("pages.cart")}
                             </Link>
                           </li>
                           <li>
-                            <Link 
-                            className="text-xl!"
-                            href={`/${locale}/pages/innerpage/checkout`}>
+                            <Link
+                              className="text-lg!"
+                              href={`/pages/innerpage/checkout`}
+                            >
                               {t("pages.checkout")}
                             </Link>
                           </li>
                           <li>
-                            <Link 
-                            className="text-xl!"
-                            href={`/${locale}/pages/innerpage/wishlist`}>
+                            <Link
+                              className="text-lg!"
+                              href={`/pages/innerpage/wishlist`}
+                            >
                               {t("pages.wishlist")}
                             </Link>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <Link 
-                        className="text-xl!"
-                        href={`/${locale}/pages/innerpage/blog`}>
+                        <Link
+                          className="text-lg!"
+                          href={`/pages/innerpage/blog`}
+                        >
                           {t("nav.blog")}
                         </Link>
                       </li>
                       <li>
-                        <Link 
-                        className="text-xl!"
-                        href={`/${locale}/pages/innerpage/contact`}>
+                        <Link
+                          className="text-lg!"
+                          href={`/pages/innerpage/contact`}
+                        >
                           {t("nav.contact")}
                         </Link>
                       </li>
@@ -403,7 +417,7 @@ const HeaderTwo = () => {
                       </div>
                     </div>
                     <Link
-                      href={`/${locale}/pages/innerpage/about`}
+                      href={`/pages/innerpage/about`}
                       className="btn d-xxl-flex d-none"
                     >
                       {t("buttons.getInTouch")}{" "}

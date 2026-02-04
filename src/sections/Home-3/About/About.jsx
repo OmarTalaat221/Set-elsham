@@ -26,7 +26,7 @@ const About = () => {
       <div className="about-area-3 space overflow-hidden" id="about-sec">
         <div className="container">
           <div className="row gy-80 gx-100 align-items-end">
-            <div className="col-xl-7">
+            <div className="col-xl-7" data-aos="fade-up" data-aos-delay="100">
               <div className="about-wrap3">
                 <div className="title-area mb-25">
                   <span className="sub-title text-xl! text-theme">
@@ -117,7 +117,11 @@ const About = () => {
               </div>
 
               {/* video */}
-              <div className="about-thumb3 mt-70">
+              <div
+                className="about-thumb3 mt-70"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
                 <div className="video-wrap about-img-1">
                   <img
                     src="https://res.cloudinary.com/dkc5klynm/image/upload/v1769679989/pexels-shvetsa-5711226_omxdpy.jpg"
@@ -130,7 +134,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-xl-5 col-md-8">
+            <div className="col-xl-5" data-aos="fade-up" data-aos-delay="200">
               <div className="about-thumb3 mb-30">
                 <div
                   className="about-img-2 pt-[10px]"
@@ -140,6 +144,7 @@ const About = () => {
                   }}
                 >
                   <img
+                    className="max-h-[600px] object-cover"
                     src="https://res.cloudinary.com/dkc5klynm/image/upload/v1769679994/pexels-shvetsa-5711815_hublle.jpg"
                     alt="wood products"
                   />
