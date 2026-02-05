@@ -66,6 +66,7 @@ const ContactArea = () => {
                   >
                     <i className="ri-phone-line"></i>
                     <Link
+                      dir={"ltr"}
                       className="contact-page-card_link"
                       href={`tel:${t(`offices.${office.key}.phone`).replace(/\s/g, "")}`}
                     >
