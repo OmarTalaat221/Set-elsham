@@ -260,7 +260,7 @@
     },
     "address": {
       "title": "Factory Address",
-      "location": "Industrial Zone, 10th of Ramadan City, Egypt"
+      "location": "Main Office - Riyadh"
     },
     "email": {
       "title": "Email Address",
@@ -703,7 +703,7 @@
       "subtitle": "Contact Information",
       "address": {
         "label": "Factory Address",
-        "value": "Industrial Zone, 10th of Ramadan City, Egypt"
+        "value": "Main Office - Riyadh"
       },
       "phone": {
         "label": "Phone",
