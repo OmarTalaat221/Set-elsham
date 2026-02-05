@@ -3191,6 +3191,14 @@ a.text-theme:hover,
     font-size: 22px;
   }
 }
+
+.sidebar-area {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
 /* Medium devices */
 @media (max-width: 991px) {
   .sidebar-area {

@@ -1,16 +1,14 @@
-import BlogFive from "~/sections/BlogDetails/BlogFour/BlogFive";
-import BreadcumbThree from "~/sections/BlogDetails/BreadcumbThree";
-import HeaderOne from "~/sections/Common/Header/HeaderOne";
 import FooterTwo from "~/sections/Common/Footer/FooterTwo";
 import Scroll from "~/sections/Common/Scroll";
 import HeaderTwo from "~/sections/Common/Header/HeaderTwo";
 import Breadcumb from "~/sections/About/Breadcumb";
+import BlogDetail from "~/sections/BlogDetails/BlogFour/BlogFive";
 export default function BlogDetailsPage() {
   return (
     <>
       <HeaderTwo />
-      <Breadcumb title="Blog Details" />
-      <BlogFive />
+      <Breadcumb pageKey="blogDetails" />
+      <BlogDetail />
       <FooterTwo />
       <Scroll />
     </>

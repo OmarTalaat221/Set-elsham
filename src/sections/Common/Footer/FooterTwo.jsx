@@ -15,7 +15,7 @@ const FooterTwo = () => {
     { key: "services", href: "/pages/innerpage/service" },
     { key: "products", href: "/pages/innerpage/project" },
     { key: "blog", href: "/pages/innerpage/blog" },
-    { key: "team", href: "/pages/innerpage/team" },
+    // { key: "team", href: "/pages/innerpage/team" },
   ];
 
   // روابط مفيدة - العمود الثاني
@@ -108,13 +108,13 @@ const FooterTwo = () => {
                         </li>
                       ))}
                     </ul>
-                    <ul className="menu">
+                    {/* <ul className="menu">
                       {usefulLinks2.map((link, index) => (
                         <li key={index}>
                           <Link href={link.href}>{t(`links.${link.key}`)}</Link>
                         </li>
                       ))}
-                    </ul>
+                    </ul> */}
                   </div>
                 </div>
               </div>

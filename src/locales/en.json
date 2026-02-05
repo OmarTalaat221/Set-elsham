@@ -732,6 +732,7 @@
     "subtitle": "Latest Articles",
     "title": "Wood Industry News & Tips",
     "readMore": "Read More",
+    "recentPosts": "Recent Posts",
     "months": {
       "jan": "JAN",
       "feb": "FEB",
@@ -748,46 +749,46 @@
     },
     "blogs": {
       "blog1": {
-        "title": "Complete Guide to Wood Types and Their Uses",
-        "excerpt": "Discover the characteristics of different wood types including oak, beech, pine, and walnut. Learn which wood is best for furniture, flooring, and decorative projects.",
+        "title": "Best Wood Factory in Egypt – Matrix vs Traditional Workshops",
+        "excerpt": "A comprehensive comparison between Matrix Factory and traditional workshops in terms of quality and technology.",
         "author": "By Ahmed Hassan",
-        "category": "Wood Types",
-        "content": "Understanding wood types is crucial for any woodworking project. Oak offers durability and beautiful grain patterns, making it perfect for high-end furniture. Beech wood provides excellent strength and takes stains well, ideal for cabinets and flooring. Pine is cost-effective and great for beginners, while walnut offers luxury and sophistication for premium projects. Each wood type has unique characteristics that determine its best use in construction and furniture making."
+        "category": "Comparisons",
+        "content": "<h2>Matrix vs Traditional Workshops 🪵</h2><p>When choosing a wood factory, quality is key. <strong>Matrix Factory</strong> features:</p><ul><li>Latest European CNC machines</li><li>Chemical & thermal wood treatment</li><li>Specialized engineering team</li><li>Real product warranty</li></ul><p><strong>Traditional workshops</strong> rely on manual work with economical materials.</p><h3>Why Matrix?</h3><ul><li>✅ 100% Natural wood</li><li>📐 High precision manufacturing</li><li>✨ Luxury finishing</li><li>👷 Professional team</li></ul><p><strong>Result:</strong> Products that last generations, not temporary solutions.</p>"
       },
       "blog2": {
-        "title": "Essential Wood Maintenance Tips for Long-Lasting Furniture",
-        "excerpt": "Learn professional techniques to protect your wooden furniture from humidity, scratches, and daily wear. Expert tips for cleaning, polishing, and preserving wood beauty.",
-        "author": "By Sarah Miller",
+        "title": "Tips to Maintain Wooden Furniture",
+        "excerpt": "Learn the best ways to protect your wooden furniture from humidity and scratches.",
+        "author": "By Sarah Ahmed",
         "category": "Maintenance",
-        "content": "Proper maintenance can extend your wooden furniture's life by decades. Regular dusting with microfiber cloths prevents buildup that can scratch surfaces. Apply quality wood polish quarterly to maintain luster and create protective barriers. Control indoor humidity between 40-60% to prevent warping. Address spills immediately to prevent staining. Use coasters and placemats to protect surfaces from heat and moisture. Annual professional treatment ensures deep cleaning and restoration of your valuable wooden pieces."
+        "content": "<h2>How to Maintain Your Wooden Furniture? 🪑</h2><p>Proper maintenance extends furniture life for decades:</p><ul><li><strong>Cleaning:</strong> Use dry microfiber cloth</li><li><strong>Polishing:</strong> Every 3 months with quality polish</li><li><strong>Humidity:</strong> Keep at 40-60%</li><li><strong>Protection:</strong> Use heat protectors</li></ul><p>Follow these tips and your furniture stays new for years!</p>"
       },
       "blog3": {
-        "title": "Modern Wood Design Trends Transforming Interiors in 2024",
-        "excerpt": "Explore the latest interior design trends featuring sustainable wood, minimalist aesthetics, and innovative finishes that are defining contemporary spaces.",
-        "author": "By Michael Chen",
-        "category": "Design Trends",
-        "content": "2024 brings exciting wood design trends emphasizing sustainability and natural beauty. Live-edge furniture celebrates wood's organic forms, while mixed materials combine wood with metal and glass for contemporary appeal. Reclaimed wood adds character and environmental consciousness. Light wood tones dominate modern spaces, creating airy, Scandinavian-inspired interiors. Smart integration of wood elements in minimalist designs proves that less is more when quality materials take center stage."
+        "title": "Latest Wood Decor Trends 2024",
+        "excerpt": "Explore the latest design trends using natural wood.",
+        "author": "By Mohamed Khaled",
+        "category": "Design",
+        "content": "<h2>Wood Decor Trends 2024 ✨</h2><p>This year focuses on:</p><ul><li><strong>Natural Furniture:</strong> Live edge wood</li><li><strong>Mixing:</strong> Wood + Metal + Glass</li><li><strong>Colors:</strong> Light Scandinavian tones</li><li><strong>Sustainability:</strong> Reclaimed wood</li></ul><p>Simplicity with high quality is the key!</p>"
       },
       "blog4": {
-        "title": "CNC Technology Revolutionizing Wood Manufacturing",
-        "excerpt": "How computer-controlled cutting machines are enabling unprecedented precision and creativity in custom woodwork, from intricate patterns to complex 3D designs.",
-        "author": "By David Wilson",
+        "title": "CNC Technology in Wood Manufacturing",
+        "excerpt": "How CNC technology revolutionized wood and custom furniture industry.",
+        "author": "By David Ali",
         "category": "Technology",
-        "content": "CNC technology has transformed wood manufacturing, enabling precision impossible with traditional methods. Modern CNC routers create intricate patterns, perfect joints, and complex 3D carvings with minimal waste. This technology allows mass customization, making unique designs affordable. Precision cutting reduces material waste by up to 30%, while automated processes ensure consistency across production runs. From architectural elements to custom furniture, CNC machining opens new possibilities for creative woodworking while maintaining exceptional quality standards."
+        "content": "<h2>CNC Revolution in Woodworking 🔧</h2><p>CNC technology changed everything:</p><ul><li>Precision impossible with traditional methods</li><li>Complex patterns and 3D carvings</li><li>30% waste reduction</li><li>Custom designs at affordable prices</li></ul><p>At <strong>Matrix</strong> we use the latest European CNC machines!</p>"
       },
       "blog5": {
-        "title": "Sustainable Wood Sourcing: Environmental Best Practices",
-        "excerpt": "Understanding certified sustainable forestry, eco-friendly wood alternatives, and how responsible sourcing protects forests while meeting construction needs.",
-        "author": "By Emma Green",
+        "title": "Sustainable Wood Sourcing",
+        "excerpt": "Understanding the importance of sustainable wood and how to choose it.",
+        "author": "By Eman Mahmoud",
         "category": "Sustainability",
-        "content": "Sustainable wood sourcing ensures forest preservation for future generations. Look for FSC or PEFC certifications guaranteeing responsible forest management. Choose local wood species to reduce transportation emissions. Consider bamboo and reclaimed wood as eco-friendly alternatives. Sustainable practices include selective harvesting, replanting programs, and protecting biodiversity. By choosing certified sustainable wood, you support responsible forestry while obtaining quality materials. This approach benefits both your projects and the environment, creating a win-win situation for conscious builders."
+        "content": "<h2>Sustainable Wood 🌲</h2><p>To protect the environment, choose:</p><ul><li>FSC or PEFC certified wood</li><li>Local species to reduce emissions</li><li>Bamboo as eco-friendly alternative</li><li>Reclaimed wood</li></ul><p>Sustainability = Quality + Environmental responsibility</p>"
       },
       "blog6": {
-        "title": "Cost-Effective Wood Selection for Home Renovation Projects",
-        "excerpt": "Smart strategies for choosing quality wood within budget constraints, including alternatives, seasonal buying tips, and maximizing value in renovation projects.",
+        "title": "How to Choose Wood for Your Budget",
+        "excerpt": "Smart strategies for choosing quality wood at reasonable prices.",
         "author": "By Robert Taylor",
         "category": "Buying Guide",
-        "content": "Strategic wood selection can significantly reduce renovation costs without compromising quality. Consider engineered wood for stability and cost-effectiveness in non-visible areas. Buy during off-season for better prices. Mix premium woods in focal points with economical alternatives elsewhere. Reclaimed wood offers character at competitive prices. Buy directly from mills to eliminate middleman costs. Understanding wood grades helps select appropriate quality for each application. Proper planning and smart sourcing can reduce wood costs by 30-40% while maintaining project quality."
+        "content": "<h2>Smart Wood Selection 💰</h2><p>Save money without sacrificing quality:</p><ul><li>Buy off-season</li><li>Mix premium with economical wood</li><li>Buy directly from factory</li><li>Understand wood quality grades</li></ul><p>Good planning saves 30-40% of costs!</p>"
       }
     }
   }

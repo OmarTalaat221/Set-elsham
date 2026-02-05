@@ -1,128 +1,330 @@
-'use client';
+"use client";
 import Link from "next/link";
-import { useState } from "react";
-import PopupVideo from "../../Common/PopupVideo/PopupVideo";
+import { useEffect, Suspense } from "react";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import { useSearchParams } from "next/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const BlogFive = () => {
-  const [popup, setPopup] = useState(false);
-  const [isActive, setIsActive] = useState(false);
-  const openPopup = () => {
-    setPopup(true);
-    const iframe = document.getElementById("youtube-video");
-    if (iframe) {
-      iframe.src = "https://www.youtube.com/embed/Mp8IXI1kzvQ?si=UQVMsmBriHPfD6Vf";
-    }
-    setIsActive(true);
-    document.body.style.overflow = 'hidden';
-  };
+// ============ المحتوى الثابت ============
+
+const blogContents = {
+  blog1: {
+    ar: `
+      <h2>ماتريكس vs الورش التقليدية 🪵</h2>
+      <p>عند اختيار مصنع الأخشاب، الجودة هي الأساس. <strong>مصنع ماتريكس</strong> يتميز بـ:</p>
+      <ul>
+        <li>استخدام أحدث ماكينات CNC الأوروبية</li>
+        <li>معالجة كيميائية وحرارية للأخشاب</li>
+        <li>فريق مهندسين متخصصين</li>
+        <li>ضمان حقيقي على المنتجات</li>
+      </ul>
+      <p><strong>الورش التقليدية</strong> تعتمد على العمل اليدوي فقط مع استخدام خامات اقتصادية.</p>
+      <h3>لماذا ماتريكس؟</h3>
+      <ul>
+        <li>✅ أخشاب طبيعية 100%</li>
+        <li>📐 دقة تصنيع عالية</li>
+        <li>✨ تشطيبات فاخرة</li>
+        <li>👷 فريق محترف</li>
+      </ul>
+      <p><strong>النتيجة:</strong> منتجات تدوم للأجيال وليست حلول مؤقتة.</p>
+    `,
+    en: `
+      <h2>Matrix vs Traditional Workshops 🪵</h2>
+      <p>When choosing a wood factory, quality is key. <strong>Matrix Factory</strong> features:</p>
+      <ul>
+        <li>Latest European CNC machines</li>
+        <li>Chemical & thermal wood treatment</li>
+        <li>Specialized engineering team</li>
+        <li>Real product warranty</li>
+      </ul>
+      <p><strong>Traditional workshops</strong> rely on manual work with economical materials.</p>
+      <h3>Why Matrix?</h3>
+      <ul>
+        <li>✅ 100% Natural wood</li>
+        <li>📐 High precision manufacturing</li>
+        <li>✨ Luxury finishing</li>
+        <li>👷 Professional team</li>
+      </ul>
+      <p><strong>Result:</strong> Products that last generations, not temporary solutions.</p>
+    `,
+  },
+  blog2: {
+    ar: `
+      <h2>كيف تحافظ على أثاثك الخشبي؟</h2>
+      <p>الصيانة الصحيحة تطيل عمر الأثاث لعقود:</p>
+      <ul>
+        <li><strong>التنظيف:</strong> استخدم قماش ميكروفايبر جاف</li>
+        <li><strong>التلميع:</strong> كل 3 أشهر بملمع خشب عالي الجودة</li>
+        <li><strong>الرطوبة:</strong> حافظ على نسبة 40-60%</li>
+        <li><strong>الحماية:</strong> استخدم واقيات من الحرارة</li>
+      </ul>
+      <p>اتبع هذه النصائح وسيبقى أثاثك جديداً لسنوات!</p>
+    `,
+    en: `
+      <h2>How to Maintain Your Wooden Furniture?</h2>
+      <p>Proper maintenance extends furniture life for decades:</p>
+      <ul>
+        <li><strong>Cleaning:</strong> Use dry microfiber cloth</li>
+        <li><strong>Polishing:</strong> Every 3 months with quality polish</li>
+        <li><strong>Humidity:</strong> Keep at 40-60%</li>
+        <li><strong>Protection:</strong> Use heat protectors</li>
+      </ul>
+      <p>Follow these tips and your furniture stays new for years!</p>
+    `,
+  },
+  blog3: {
+    ar: `
+      <h2>اتجاهات الديكور الخشبي 2024 ✨</h2>
+      <p>هذا العام يركز على:</p>
+      <ul>
+        <li><strong>الأثاث الطبيعي:</strong> حواف خشبية غير مصقولة</li>
+        <li><strong>المزج:</strong> خشب + معدن + زجاج</li>
+        <li><strong>الألوان:</strong> درجات فاتحة على الطراز الاسكندنافي</li>
+        <li><strong>الاستدامة:</strong> خشب معاد تدويره</li>
+      </ul>
+      <p>البساطة مع الجودة العالية هي المفتاح!</p>
+    `,
+    en: `
+      <h2>Wood Decor Trends 2024 ✨</h2>
+      <p>This year focuses on:</p>
+      <ul>
+        <li><strong>Natural Furniture:</strong> Live edge wood</li>
+        <li><strong>Mixing:</strong> Wood + Metal + Glass</li>
+        <li><strong>Colors:</strong> Light Scandinavian tones</li>
+        <li><strong>Sustainability:</strong> Reclaimed wood</li>
+      </ul>
+      <p>Simplicity with high quality is the key!</p>
+    `,
+  },
+  blog4: {
+    ar: `
+      <h2>ثورة CNC في صناعة الأخشاب 🔧</h2>
+      <p>تقنية CNC غيّرت كل شيء:</p>
+      <ul>
+        <li>دقة مستحيلة بالطرق التقليدية</li>
+        <li>أنماط معقدة ونقوش ثلاثية الأبعاد</li>
+        <li>تقليل الهدر بنسبة 30%</li>
+        <li>تصاميم مخصصة بأسعار معقولة</li>
+      </ul>
+      <p>في <strong>ماتريكس</strong> نستخدم أحدث ماكينات CNC الأوروبية!</p>
+    `,
+    en: `
+      <h2>CNC Revolution in Woodworking 🔧</h2>
+      <p>CNC technology changed everything:</p>
+      <ul>
+        <li>Precision impossible with traditional methods</li>
+        <li>Complex patterns and 3D carvings</li>
+        <li>30% waste reduction</li>
+        <li>Custom designs at affordable prices</li>
+      </ul>
+      <p>At <strong>Matrix</strong> we use the latest European CNC machines!</p>
+    `,
+  },
+  blog5: {
+    ar: `
+      <h2>الأخشاب المستدامة 🌲</h2>
+      <p>للحفاظ على البيئة، اختر:</p>
+      <ul>
+        <li>أخشاب بشهادة FSC أو PEFC</li>
+        <li>أنواع محلية لتقليل الانبعاثات</li>
+        <li>الخيزران كبديل صديق للبيئة</li>
+        <li>الخشب المعاد تدويره</li>
+      </ul>
+      <p>الاستدامة = جودة + مسؤولية بيئية</p>
+    `,
+    en: `
+      <h2>Sustainable Wood 🌲</h2>
+      <p>To protect the environment, choose:</p>
+      <ul>
+        <li>FSC or PEFC certified wood</li>
+        <li>Local species to reduce emissions</li>
+        <li>Bamboo as eco-friendly alternative</li>
+        <li>Reclaimed wood</li>
+      </ul>
+      <p>Sustainability = Quality + Environmental responsibility</p>
+    `,
+  },
+  blog6: {
+    ar: `
+      <h2>اختيار الخشب بذكاء 💰</h2>
+      <p>وفّر المال دون التضحية بالجودة:</p>
+      <ul>
+        <li>اشترِ في غير الموسم</li>
+        <li>امزج الخشب الفاخر مع الاقتصادي</li>
+        <li>اشترِ مباشرة من المصنع</li>
+        <li>افهم درجات جودة الخشب</li>
+      </ul>
+      <p>التخطيط الجيد يوفر 30-40% من التكاليف!</p>
+    `,
+    en: `
+      <h2>Smart Wood Selection 💰</h2>
+      <p>Save money without sacrificing quality:</p>
+      <ul>
+        <li>Buy off-season</li>
+        <li>Mix premium with economical wood</li>
+        <li>Buy directly from factory</li>
+        <li>Understand wood quality grades</li>
+      </ul>
+      <p>Good planning saves 30-40% of costs!</p>
+    `,
+  },
+};
+
+// ============ Component ============
+
+const BlogDetailContent = () => {
+  const t = useTranslations("blogPage");
+  const locale = useLocale();
+  const isRTL = locale === "ar";
+  const searchParams = useSearchParams();
+
+  const blogId = searchParams?.get("id") || "blog1";
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
+
+  const blogs = [
+    {
+      id: "blog1",
+      image:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769957558/jennifer-salavarrieta-FN1XoGL68-I-unsplash_nyu4jy.jpg",
+      day: "17",
+      month: t("months.jun"),
+      year: "2024",
+    },
+    {
+      id: "blog2",
+      image:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769957506/jeriden-villegas-VLPUm5wP5Z0-unsplash_hrmeus.jpg",
+      day: "06",
+      month: t("months.jul"),
+      year: "2024",
+    },
+    {
+      id: "blog3",
+      image:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769957531/samuel-cruz-cVB7mVf5_KA-unsplash_bckukl.jpg",
+      day: "12",
+      month: t("months.aug"),
+      year: "2024",
+    },
+    {
+      id: "blog4",
+      image:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1769957916/javad-esmaeili-lIrl53eeWmE-unsplash_e1q6dm.jpg",
+      day: "05",
+      month: t("months.sep"),
+      year: "2024",
+    },
+    {
+      id: "blog5",
+      image:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1770294374/pexels-cottonbro-7492877_zwuyua.jpg",
+      day: "15",
+      month: t("months.oct"),
+      year: "2024",
+    },
+    {
+      id: "blog6",
+      image:
+        "https://res.cloudinary.com/dkc5klynm/image/upload/v1770294439/pexels-mikael-blomkvist-8961334_qjzeic.jpg",
+      day: "24",
+      month: t("months.nov"),
+      year: "2024",
+    },
+  ];
+
+  const currentBlog = blogs.find((blog) => blog.id === blogId) || blogs[0];
+  const recentPosts = blogs.filter((blog) => blog.id !== blogId).slice(0, 4);
+
+  // الحصول على المحتوى حسب اللغة
+  const content = blogContents[blogId]?.[locale] || blogContents.blog1[locale];
+
   return (
-    <>
-      <section className="blog-area space-top space-extra-bottom">
-        <div className="container">
-          <div className="row gx-60">
-            <div className="col-xxl-8 col-lg-7">
-              <div className="blog-single">
-                <div className="blog-img">
-                  <img src="/main-assets/img/blog/blog_details1_1.png" alt="img" />
-                  <div className="blog-date">
-                    <Link href="/pages/innerpage/blog">
-                      <span>22</span>MAR
-                    </Link>
-                    <div className="year">2024</div>
-                  </div>
+    <section
+      className="blog-area space-top space-extra-bottom"
+      dir={isRTL ? "rtl" : "ltr"}
+    >
+      <div className="container">
+        <div className="row gx-60">
+          {/* Main Blog Content */}
+          <div className="col-xxl-8 col-lg-7">
+            <div className="blog-single" data-aos="fade-up">
+              {/* Blog Image */}
+              <div className="blog-img" data-aos="zoom-in" data-aos-delay="100">
+                <img
+                  src={currentBlog.image}
+                  alt={t(`blogs.${blogId}.title`)}
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <div className="blog-date">
+                  <Link href="/pages/innerpage/blog">
+                    <span>{currentBlog.day}</span>
+                    {currentBlog.month}
+                  </Link>
+                  <div className="year">{currentBlog.year}</div>
                 </div>
-                <div className="blog-content">
-                  <div className="blog-meta">
-                    <Link href="/pages/innerpage/blog-details">By Rebecca</Link>
-                    <Link href="/pages/innerpage/blog">506 Views</Link>
-                    <Link href="/pages/innerpage/blog">Construction</Link>
-                    <Link href="/pages/innerpage/blog">02 Comment</Link>
-                  </div>
-                  <h3 className="blog-title">Construction Process Streamlines</h3>
-                  <p className="mb-20">
-                    Construction standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make
-                    a type specimen book.
-                  </p>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                    blanditiis praesentium voluptatum deleniti atque corrupti quos
-                    dolores et quas molestias excepturi sint occaecati cupiditate
-                    non provident, similique sunt in culpa qui officia deserunt
-                    mollitia animi, id est laborum et dolorum fuga harum quidem
-                    rerum facilis est et expedita distinctio.
-                  </p>
-                  <blockquote>
-                    <p>
-                      “Tortor posuere ac ut consequat tellusi elem isis etum sag
-                      ittis vitae atleo duis ut diam odio ut sem nulla phar.”
-                    </p>
-                    <cite>Aleesha brown</cite>
-                    <span className="desig">Company, CEO</span>
-                  </blockquote>
-                  <h3 className="blog-inner-title">
-                    Growth and meaning of mechanical technology
-                  </h3>
-                  <p className="mb-30">
-                    Construction standard dummy text ever since the when an
-                    unknown printer took a galley vero eos et accusamus et iusto
-                    odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                    deleniti atque corrupti quos dolores et quas molestias
-                    excepturi sint occaecati cupiditate non provident expedita
-                    distinctio.
-                  </p>
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="blog-img">
-                        <img src="/main-assets/img/blog/blog_details1_2.png" alt="img" />
-                      </div>
-                    </div>
-                    <div className="col-sm-6">
-                      <div className="blog-img">
-                        <img src="/main-assets/img/blog/blog_details1_3.png" alt="img" />
-                      </div>
-                    </div>
-                  </div>
-                  <h3 className="blog-inner-title">
-                    Engineering and mechanics money for a better future.
-                  </h3>
-                  <p className="mb-30">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                    blanditiis praesentium voluptatum deleniti atque corrupti quos
-                    dolores et quas molestias excepturi sint occaecation.
-                  </p>
-                  <div className="checklist style2 mb-35">
-                    <ul>
-                      <li>Powerful Product Strategy</li>
-                      <li>Quality Control System</li>
-                      <li>Professional Team Works</li>
-                    </ul>
-                  </div>
+              </div>
 
-                  <div className="blog-img" data-overlay="black" data-opacity="5">
-                    <img src="/main-assets/img/blog/blog_details1_4.png" alt="Blog Image" />
-                    <a
-                      onClick={openPopup}
-                      className="play-btn style3"
-                    >
-                      <i className="ri-play-fill"></i>
-                    </a>
-                  </div>
-                  <p className="mt-35">
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                    blanditiis praesentium voluptatum deleniti atque corrupti quos
-                    dolores et quas molestias excepturi sint occaecati cupiditate
-                    non provident.
-                  </p>
+              {/* Blog Content */}
+              <div className="blog-content">
+                {/* Meta */}
+                <div
+                  className="blog-meta"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <Link href="/pages/innerpage/blog">
+                    {t(`blogs.${blogId}.author`)}
+                  </Link>
+                  <Link href="/pages/innerpage/blog">
+                    {t(`blogs.${blogId}.category`)}
+                  </Link>
                 </div>
-                <div className="share-links clearfix">
+
+                {/* Title */}
+                <h3
+                  className="blog-title"
+                  data-aos="fade-up"
+                  data-aos-delay="250"
+                >
+                  {t(`blogs.${blogId}.title`)}
+                </h3>
+
+                {/* Rich Text Content */}
+                <div
+                  className="blog-rich-content"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  dangerouslySetInnerHTML={{ __html: content }}
+                />
+
+                {/* Social Share */}
+                <div
+                  className="share-links clearfix mt-50"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
                   <div className="row justify-content-between">
                     <div className="col-md-auto">
                       <div className="tagcloud">
-                        <Link href="/pages/innerpage/blog">Factory</Link>
-                        <Link href="/pages/innerpage/blog">Metallurgy</Link>
-                        <Link href="/pages/innerpage/blog">Construction</Link>
-                        <Link href="/pages/innerpage/blog">Industry</Link>
+                        <Link href="/pages/innerpage/blog">
+                          {t(`blogs.${blogId}.category`)}
+                        </Link>
+                        <Link href="/pages/innerpage/blog">
+                          {isRTL ? "أخشاب" : "Wood"}
+                        </Link>
+                        <Link href="/pages/innerpage/blog">
+                          {isRTL ? "تصنيع" : "Manufacturing"}
+                        </Link>
                       </div>
                     </div>
                     <div className="col-md-auto text-xl-end">
@@ -143,345 +345,96 @@ const BlogFive = () => {
                     </div>
                   </div>
                 </div>
-
-                <div className="blog-author bg-smoke">
-                  <div className="auhtor-img">
-                    <img
-                      src="/main-assets/img/blog/blog-author.png"
-                      alt="Blog Author Image"
-                    />
-                  </div>
-                  <div className="media-body">
-                    <h3 className="author-name">
-                      <Link href="/pages/innerpage/team-details">John Maxwell</Link>
-                    </h3>
-                    <span className="author-desig">CEO of Construz</span>
-                    <p className="author-text">
-                      Blanditiis praesentium voluptatum deleniti atque corrupti
-                      quos dolores at vero eos accusamus iusto odio dignissimos
-                      ducimus blanditiis praesentium.
-                    </p>
-                    <div className="social-btn style4">
-                      <Link href="https://www.twitter.com/">
-                        <i className="ri-twitter-x-line"></i>
-                      </Link>
-                      <Link href="https://instagram.com/">
-                        <i className="ri-instagram-line"></i>
-                      </Link>
-                      <Link href="https://facebook.com/">
-                        <i className="ri-facebook-fill"></i>
-                      </Link>
-                      <Link href="https://linkedin.com/">
-                        <i className="ri-linkedin-fill"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
               </div>
-              <div className="comments-wrap">
-                <h3 className="blog-inner-title mt-n2">03 Comments</h3>
-                <ul className="comment-list">
-                  <li className="comment-item">
-                    <div className="post-comment">
-                      <div className="comment-avater">
-                        <img
-                          src="/main-assets/img/blog/blog_comment1.png"
-                          alt="Comment Author"
-                        />
-                      </div>
-                      <div className="comment-content">
-                        <h3 className="name">Abraham John</h3>
-                        <span className="commented-on">Feb 03, 2024</span>
-                        <p className="text">
-                          Construction praesentium voluptatum deleniti atque
-                          corrupti quos dolores at vero eos accusamus iusto odio
-                          dignissimos.
-                        </p>
-                        <div className="reply_and_edit">
-                          <Link href="/pages/innerpage/blog-details" className="reply-btn">
-                            Reply <i className="ri-arrow-right-up-line"></i>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <ul className="children">
-                      <li className="comment-item">
-                        <div className="post-comment">
-                          <div className="comment-avater">
-                            <img
-                              src="/main-assets/img/blog/blog_comment2.png"
-                              alt="Comment Author"
-                            />
-                          </div>
-                          <div className="comment-content">
-                            <h3 className="name">John Smith</h3>
-                            <span className="commented-on">Feb 04, 2024</span>
-                            <p className="text">
-                              Accusamus iusto odio dignissimos ducimus blanditiis
-                              praesentium voluptatum deleniti atque corrupti quos
-                              dolores
-                            </p>
-                            <div className="reply_and_edit">
-                              <Link href="/pages/innerpage/blog-details" className="reply-btn">
-                                Reply <i className="ri-arrow-right-up-line"></i>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="comment-item">
-                    <div className="post-comment">
-                      <div className="comment-avater">
-                        <img
-                          src="/main-assets/img/blog/blog_comment3.png"
-                          alt="Comment Author"
-                        />
-                      </div>
-                      <div className="comment-content">
-                        <h3 className="name">Zenelia Lozhe</h3>
-                        <span className="commented-on">Jun 04, 2024</span>
-                        <p className="text">
-                          Collaboratively empower multifunctional e-commerce for
-                          prospective applications. Seamlessly productivate
-                          plug-and-play markets whereas synergistic scenarios.
-                        </p>
-                        <div className="reply_and_edit">
-                          <Link href="/pages/innerpage/blog-details" className="reply-btn">
-                            Reply <i className="ri-arrow-right-up-line"></i>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <h3 className="blog-inner-title mt-n2 mb-15">Leave a Reply</h3>
-                <p>
-                  Your email address will not be published. Required fields are
-                  marked *
-                </p>
-                <div className="comment-form mb-30 mt-30">
-                  <div className="row">
-                    <div className="col-xl-4 form-group">
-                      <input
-                        type="text"
-                        placeholder="Full Name"
-                        className="form-control style-white"
-                      />
-                    </div>
-                    <div className="col-xl-4 form-group">
-                      <input
-                        type="email"
-                        placeholder="Email Address"
-                        className="form-control style-white"
-                      />
-                    </div>
-                    <div className="col-xl-4 form-group">
-                      <input
-                        type="text"
-                        placeholder="Website"
-                        className="form-control style-white"
-                      />
-                    </div>
-                    <div className="col-12 form-group">
-                      <textarea
-                        placeholder="Your Comment..."
-                        className="form-control style-white"
-                      ></textarea>
-                    </div>
-                    <div className="col-12 form-group mb-0">
-                      <button className="btn">
-                        Submit Now <i className="ri-arrow-right-up-line"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-xxl-4 col-lg-5">
-              <aside className="sidebar-area">
-                <div className="widget widget_search">
-                  <h3 className="widget_title">Search Here</h3>
-                  <form className="search-form">
-                    <input type="text" placeholder="Search..." />
-                    <button type="submit">
-                      <i className="ri-search-line"></i>
-                    </button>
-                  </form>
-                </div>
-
-                <div className="widget widget_categories">
-                  <h3 className="widget_title">Categories</h3>
-                  <ul>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        Construction <span>12</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        Architecture <span>7</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        Business <span>5</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        Engineering <span>3</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        Building <span>2</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="widget">
-                  <h3 className="widget_title">Recent Posts</h3>
-                  <div className="recent-post-wrap">
-                    <div className="recent-post">
-                      <div className="media-img">
-                        <Link href="/pages/innerpage/blog-details">
-                          <img
-                            src="/main-assets/img/blog/recent-post1.png"
-                            alt="Blog Image"
-                          />
-                        </Link>
-                      </div>
-                      <div className="media-body">
-                        <h4 className="post-title">
-                          <Link className="text-inherit" href="/pages/innerpage/blog-details">
-                            Best features of Building construction work
-                          </Link>
-                        </h4>
-                        <div className="recent-post-meta">
-                          <Link href="/pages/innerpage/blog">By Nicholes</Link>
-                          <Link href="/pages/innerpage/blog">30 min ago</Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="recent-post">
-                      <div className="media-img">
-                        <Link href="/pages/innerpage/blog-details">
-                          <img
-                            src="/main-assets/img/blog/recent-post2.png"
-                            alt="Blog Image"
-                          />
-                        </Link>
-                      </div>
-                      <div className="media-body">
-                        <h4 className="post-title">
-                          <Link className="text-inherit" href="/pages/innerpage/blog-details">
-                            The beast team is a around and how we make it
-                          </Link>
-                        </h4>
-                        <div className="recent-post-meta">
-                          <Link href="/pages/innerpage/blog">By Nicholes</Link>
-                          <Link href="/pages/innerpage/blog">2 days ago</Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="recent-post">
-                      <div className="media-img">
-                        <Link href="/pages/innerpage/blog-details">
-                          <img
-                            src="/main-assets/img/blog/recent-post3.png"
-                            alt="Blog Image"
-                          />
-                        </Link>
-                      </div>
-                      <div className="media-body">
-                        <h4 className="post-title">
-                          <Link className="text-inherit" href="/pages/innerpage/blog-details">
-                            Construction site security guideline
-                          </Link>
-                        </h4>
-                        <div className="recent-post-meta">
-                          <Link href="/pages/innerpage/blog">By Nicholes</Link>
-                          <Link href="/pages/innerpage/blog">5 days ago</Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="recent-post">
-                      <div className="media-img">
-                        <Link href="/pages/innerpage/blog-details">
-                          <img
-                            src="/main-assets/img/blog/recent-post4.png"
-                            alt="Blog Image"
-                          />
-                        </Link>
-                      </div>
-                      <div className="media-body">
-                        <h4 className="post-title">
-                          <Link className="text-inherit" href="/pages/innerpage/blog-details">
-                            A well designed construction website is user
-                            accessible
-                          </Link>
-                        </h4>
-                        <div className="recent-post-meta">
-                          <Link href="/pages/innerpage/blog">By Nicholes</Link>
-                          <Link href="/pages/innerpage/blog">3 week ago</Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="widget widget_categories">
-                  <h3 className="widget_title">Archives</h3>
-                  <ul>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        January 26, 2024 <span>1</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        December 17, 2023 <span>2</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/pages/innerpage/blog">
-                        November 02, 2023 <span>1</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="widget widget_tag_cloud">
-                  <h3 className="widget_title">Popular Tags</h3>
-                  <div className="tagcloud">
-                    <Link href="/pages/innerpage/blog">Architecture</Link>
-                    <Link href="/pages/innerpage/blog">Building</Link>
-                    <Link href="/pages/innerpage/blog">Home</Link>
-                    <Link href="/pages/innerpage/blog">Factory</Link>
-                    <Link href="/pages/innerpage/blog">Construction</Link>
-                    <Link href="/pages/innerpage/blog">Business</Link>
-                    <Link href="/pages/innerpage/blog">Design</Link>
-                    <Link href="/pages/innerpage/blog">Industry</Link>
-                  </div>
-                </div>
-
-                <div className="widget widget_banner">
-                  <Link href="#">
-                    <img src="/main-assets/img/widget/widget-add.png" alt="img" />
-                  </Link>
-                </div>
-              </aside>
             </div>
           </div>
+
+          {/* Sidebar */}
+          <div className="col-xxl-4 col-lg-5">
+            <aside
+              className="sidebar-area"
+              style={{
+                position: "sticky",
+                top: "100px",
+                alignSelf: "flex-start",
+              }}
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <div className="widget">
+                <h3 className="widget_title">
+                  {isRTL ? "أحدث المقالات" : "Recent Posts"}
+                </h3>
+                <div className="recent-post-wrap">
+                  {recentPosts.map((post, index) => (
+                    <div
+                      className="recent-post"
+                      key={post.id}
+                      data-aos="fade-up"
+                      data-aos-delay={100 + index * 50}
+                    >
+                      <div className="media-img">
+                        <Link
+                          href={`/pages/innerpage/blog-details?id=${post.id}`}
+                        >
+                          <img
+                            src={post.image}
+                            alt={t(`blogs.${post.id}.title`)}
+                            style={{
+                              width: "100px",
+                              height: "80px",
+                              objectFit: "cover",
+                              borderRadius: "5px",
+                            }}
+                          />
+                        </Link>
+                      </div>
+                      <div className="media-body">
+                        <h4 className="post-title">
+                          <Link
+                            className="text-inherit"
+                            href={`/pages/innerpage/blog-details?id=${post.id}`}
+                          >
+                            {t(`blogs.${post.id}.title`)}
+                          </Link>
+                        </h4>
+                        <div className="recent-post-meta">
+                          <Link href="/pages/innerpage/blog">
+                            {t(`blogs.${post.id}.author`)}
+                          </Link>
+                          <Link href="/pages/innerpage/blog">
+                            {post.day} {post.month} {post.year}
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
-      </section>
-      <PopupVideo popup={popup} setPopup={setPopup} isActive={isActive} setIsActive={setIsActive}></PopupVideo>
-    </>
+      </div>
+    </section>
   );
 };
 
-export default BlogFive;
+const BlogDetailLoading = () => (
+  <div className="blog-area space-top space-extra-bottom">
+    <div className="container">
+      <div className="text-center py-5">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const BlogDetail = () => (
+  <Suspense fallback={<BlogDetailLoading />}>
+    <BlogDetailContent />
+  </Suspense>
+);
+
+export default BlogDetail;

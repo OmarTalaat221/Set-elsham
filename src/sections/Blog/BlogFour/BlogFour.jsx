@@ -183,7 +183,7 @@ const BlogFour = () => {
                     data-aos-delay={300 + (index % 3) * 100}
                     data-aos-duration="500"
                   >
-                    <Link href="/pages/innerpage/blog#">
+                    <Link href="/pages/innerpage/blog-details">
                       <span>{blog.day}</span>
                       {blog.month}
                     </Link>
@@ -222,7 +222,7 @@ const BlogFour = () => {
                     data-aos-delay={350 + (index % 3) * 100}
                     data-aos-duration="500"
                   >
-                    <Link href="/pages/innerpage/blog#">
+                    <Link href="/pages/innerpage/blog-details">
                       {t(`blogs.${blog.id}.title`)}
                     </Link>
                   </h3>
@@ -240,7 +240,7 @@ const BlogFour = () => {
 
                   {/* Button */}
                   <Link
-                    href="/pages/innerpage/blog#"
+                    href="/pages/innerpage/blog-details"
                     className="btn"
                     style={cardStyles.btn}
                     data-aos="fade-up"
