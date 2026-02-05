@@ -280,6 +280,15 @@ const HeaderTwo = () => {
                           {t("pages.projectPage")}
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          className="text-lg!"
+                          href={`/pages/innerpage/blog`}
+                        >
+                          {t("nav.blog")}
+                        </Link>
+                      </li>
+
                       {/* <li>
                         <Link
                           className="text-lg!"

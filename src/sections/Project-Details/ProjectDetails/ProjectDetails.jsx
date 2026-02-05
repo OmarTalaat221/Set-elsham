@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { useSearchParams } from "next/navigation";
@@ -31,14 +31,15 @@ const projectImagesData = {
     "https://res.cloudinary.com/dkc5klynm/image/upload/v1769955313/IMG-20240109-WA0002_luhjts.jpg",
 };
 
-const ProjectDetails = () => {
+// Component الداخلي الذي يستخدم searchParams
+const ProjectDetailsContent = () => {
   const t = useTranslations("projectDetails");
   const tProjects = useTranslations("project.projects");
   const locale = useLocale();
   const isRTL = locale === "ar";
   const searchParams = useSearchParams();
 
-  const projectId = searchParams.get("id") || "project1";
+  const projectId = searchParams?.get("id") || "project1";
 
   const [popup, setPopup] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -209,7 +210,7 @@ const ProjectDetails = () => {
                     <div className="service-card style4">
                       <div className="service-card_icon">
                         <img
-                          src="/main-assets/img/icon/service-icon1-1.png"
+                          src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770292106/4_ejlj7h.png"
                           alt="wood"
                         />
                       </div>
@@ -234,7 +235,7 @@ const ProjectDetails = () => {
                     <div className="service-card style4">
                       <div className="service-card_icon">
                         <img
-                          src="/main-assets/img/icon/service-icon1-2.png"
+                          src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770292390/Untitled_design_-_2026-02-05T135213.033_u05qxk.png"
                           alt="cnc"
                         />
                       </div>
@@ -259,7 +260,7 @@ const ProjectDetails = () => {
                     <div className="service-card style4">
                       <div className="service-card_icon">
                         <img
-                          src="/main-assets/img/icon/service-icon1-3.png"
+                          src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770292106/5_felcpa.png"
                           alt="finish"
                         />
                       </div>
@@ -426,6 +427,31 @@ const ProjectDetails = () => {
         setIsActive={setIsActive}
       />
     </div>
+  );
+};
+
+// Loading Component
+const ProjectDetailsLoading = () => {
+  return (
+    <div className="project-details-area space-top overflow-hidden">
+      <div className="container">
+        <div className="text-center py-5">
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <p className="mt-3">Loading project details...</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Main Component مع Suspense
+const ProjectDetails = () => {
+  return (
+    <Suspense fallback={<ProjectDetailsLoading />}>
+      <ProjectDetailsContent />
+    </Suspense>
   );
 };
 
