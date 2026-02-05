@@ -4,15 +4,17 @@ import ProjectDetails from "~/sections/Project-Details/ProjectDetails";
 import HeaderOne from "~/sections/Common/Header/HeaderOne";
 import FooterTwo from "~/sections/Common/Footer/FooterTwo";
 import Scroll from "~/sections/Common/Scroll";
+import HeaderTwo from "~/sections/Common/Header/HeaderTwo";
+import Breadcumb from "~/sections/About/Breadcumb";
 export default function ProjectDetailsPage() {
-    return (
-        <div style={{overflow: 'hidden'}}>
-            <HeaderOne />
-            <BreadcumbEight />
-            <ProjectDetails />
-            <ContactSix />
-            <FooterTwo />
-            <Scroll />
-        </div>
-    );
+  return (
+    <div style={{ overflow: "hidden" }}>
+      <HeaderTwo />
+      <Breadcumb pageKey="projectDetails" />
+      <ProjectDetails />
+      <ContactSix />
+      <FooterTwo />
+      <Scroll />
+    </div>
+  );
 }

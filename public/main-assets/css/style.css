@@ -16575,7 +16575,7 @@ li.trackback {
 }
 
 .portfolio-card.style2 .portfolio-card-thumb .icon-btn:hover {
-  background: var(--title-color);
+  background: var(--theme-color);
   color: var(--white-color);
 }
 

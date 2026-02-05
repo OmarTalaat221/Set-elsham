@@ -98,7 +98,7 @@ const HeaderTwo = () => {
               <Link href={`/`}>
                 <img
                   // src="/public/assets/image/WhatsApp Image 2026-02-03 at 1.33.20 PM.jpeg"
-                  src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770025937/WhatsApp_Image_2026-01-29_at_3.01.26_PM_br2bgm.jpg"
+                  src="https://res.cloudinary.com/dkc5klynm/image/upload/v1770203475/4_keca0z.png"
                   alt="logo"
                   width={100}
                   height={50}
@@ -137,8 +137,7 @@ const HeaderTwo = () => {
                 <i className="ri-linkedin-fill"></i>
               </Link>
             </div>
-            <div className="recent-post-wrap mt-40">
-              {/* Post 1 */}
+            {/* <div className="recent-post-wrap mt-40">
               <div className="recent-post">
                 <div className="media-img">
                   <Link href={`/pages/innerpage/blog-details`}>
@@ -169,7 +168,6 @@ const HeaderTwo = () => {
                   </div>
                 </div>
               </div>
-              {/* Post 2 */}
               <div className="recent-post">
                 <div className="media-img">
                   <Link href={`/pages/innerpage/blog-details`}>
@@ -200,7 +198,6 @@ const HeaderTwo = () => {
                   </div>
                 </div>
               </div>
-              {/* Post 3 */}
               <div className="recent-post">
                 <div className="media-img">
                   <Link href={`/pages/innerpage/blog-details`}>
@@ -231,7 +228,7 @@ const HeaderTwo = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

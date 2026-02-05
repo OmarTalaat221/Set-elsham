@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import GalleryViewer from "../../../components/shared/GalleryViewer";
 
 const projectImages = [
@@ -51,6 +53,15 @@ const Project = () => {
   const isRTL = locale === "ar";
   const [photoIndex, setPhotoIndex] = useState(-1);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }, []);
+
   const handleOpenGallery = (e, index) => {
     e.preventDefault();
     e.stopPropagation();
@@ -63,20 +74,40 @@ const Project = () => {
       dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="container">
-        <div className="row justify-content-center text-center mb-5">
+        {/* Header Section */}
+        <div
+          className="row justify-content-center text-center mb-5"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <div className="col-lg-8">
-            <span className="sub-title">{t("pageSubtitle")}</span>
-            <h2 className="sec-title">{t("pageTitle")}</h2>
-            <p>{t("pageDescription")}</p>
+            <span className="sub-title" data-aos="fade-up" data-aos-delay="100">
+              {t("pageSubtitle")}
+            </span>
+            <h2 className="sec-title" data-aos="fade-up" data-aos-delay="200">
+              {t("pageTitle")}
+            </h2>
+            <p data-aos="fade-up" data-aos-delay="300">
+              {t("pageDescription")}
+            </p>
           </div>
         </div>
 
+        {/* Projects Grid */}
         <div className="row gy-40 justify-content-center">
           {projectImages.map((project, index) => (
-            <div className="col-md-6 col-lg-4" key={index}>
+            <div
+              className="col-md-6 col-lg-4"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={100 + (index % 3) * 100}
+              data-aos-duration="800"
+            >
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <Link href="/pages/innerpage/project-details">
+                  <Link
+                    href={`/pages/innerpage/project-details?id=${project.key}`}
+                  >
                     <img
                       src={project.src}
                       alt={t(`projects.${project.key}.title`)}
@@ -97,7 +128,9 @@ const Project = () => {
                     {t(`projects.${project.key}.category`)}
                   </span>
                   <h4 className="portfolio-card-title">
-                    <Link href="/pages/innerpage/project-details">
+                    <Link
+                      href={`/pages/innerpage/project-details?id=${project.key}`}
+                    >
                       {t(`projects.${project.key}.title`)}
                     </Link>
                   </h4>
@@ -105,7 +138,7 @@ const Project = () => {
                     {t(`projects.${project.key}.date`)}
                   </p>
                   <Link
-                    href="/pages/innerpage/project-details"
+                    href={`/pages/innerpage/project-details?id=${project.key}`}
                     className="btn-with-icon"
                   >
                     {t("viewDetails")}
@@ -120,22 +153,29 @@ const Project = () => {
             </div>
           ))}
 
-          <div className="pagination justify-content-center">
+          {/* Pagination */}
+          <div
+            className="pagination justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <ul>
               <li>
-                <a className="active" href="/pages/innerpage/blog">
+                <a className="active" href="#">
                   01
                 </a>
               </li>
               <li>
-                <a href="/pages/innerpage/blog">02</a>
+                <a href="#">02</a>
               </li>
               <li>
-                <a href="/pages/innerpage/blog">03</a>
+                <a href="#">03</a>
               </li>
               <li>
-                <a href="/pages/innerpage/blog">
-                  <i className="ri-arrow-right-line"></i>
+                <a href="#">
+                  <i
+                    className={`ri-arrow-${isRTL ? "left" : "right"}-line`}
+                  ></i>
                 </a>
               </li>
             </ul>

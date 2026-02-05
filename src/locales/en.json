@@ -350,6 +350,10 @@
           "title": "Our Projects",
           "name": "PROJECTS"
         },
+        "projectDetails": {
+          "title": "Project Details",
+          "name": "PROJECT DETAILS"
+        },
         "project": {
           "title": "Our Projects",
           "name": "PROJECTS"
@@ -369,6 +373,91 @@
         "faq": {
           "title": "FAQ",
           "name": "FAQ"
+        }
+      }
+    },
+
+    "subtitle": "ABOUT US",
+    "title": "We Manufacture Everything You Need From Natural Wood",
+    "description": "Matrix Wood Factory - A leader in manufacturing and supplying the finest natural and processed wood. We offer high-quality products at competitive prices with over 7 years of experience.",
+    "imageAlt": "Matrix Wood Factory",
+    "counter": {
+      "label": "Years of Experience"
+    },
+    "features": {
+      "feature1": "Manufacturing all types of natural and industrial wood with highest quality",
+      "feature2": "Modern production lines with international specifications and European standards",
+      "feature3": "Specialized team of highly experienced engineers and technicians"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide high-quality wood products that meet our customers' needs, while adhering to the highest standards of quality, safety, and environmental sustainability."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the first choice in the wood industry in the Arab region, through continuous innovation and excellence in service and quality."
+    },
+    "button": "Contact Us",
+
+    "clients": {
+      "subtitle": "Happy Clients",
+      "title": "Our Trusted Partners",
+      "logoAlt": "Client Logo"
+    },
+
+    "whyChooseSection": {
+      "shadowTitle": "Why Choose Us",
+      "subtitle": "Why Choose Us",
+      "title": "High Quality Innovative Design",
+      "imageAlt": "Matrix Wood Factory Features",
+      "cards": {
+        "card1": {
+          "title": "Advanced Technology",
+          "description": "We use the latest European manufacturing machines and laser cutting technologies for ultimate precision in every piece."
+        },
+        "card2": {
+          "title": "Core Planning",
+          "description": "Specialized design and planning team to transform your ideas into unique wooden products that suit your needs."
+        },
+        "card3": {
+          "title": "Guaranteed Results",
+          "description": "Comprehensive warranty on all our products with after-sales follow-up to ensure your complete satisfaction."
+        },
+        "card4": {
+          "title": "Trusted Clients",
+          "description": "Over 300 happy clients trust us to execute their wood projects with the highest quality."
+        },
+        "card5": {
+          "title": "Skilled Team",
+          "description": "Elite engineers and technicians specialized in wood industry with over 7 years of experience."
+        },
+        "card6": {
+          "title": "Save Money",
+          "description": "Competitive prices without compromising quality, with special offers for large projects."
+        }
+      }
+    },
+    "processSection": {
+      "subtitle": "WORK PROCESS",
+      "title": "Our Services That We Provide",
+      "playVideo": "Play Video",
+      "stepLabel": "STEP",
+      "steps": {
+        "step1": {
+          "title": "Meet and Consult About Project",
+          "description": "Comprehensive discussion of project requirements and determining needed specifications and materials"
+        },
+        "step2": {
+          "title": "Product Design and Planning",
+          "description": "Preparing engineering designs, detailed drawings, and complete execution plan"
+        },
+        "step3": {
+          "title": "Testing and Quality Control",
+          "description": "Thorough inspection of materials and products to ensure compliance with highest quality standards"
+        },
+        "step4": {
+          "title": "Final Assembly and Project Handover",
+          "description": "Precise installation of products, finishing touches, and delivering the project ready for use"
         }
       }
     }
@@ -433,6 +522,206 @@
         "description": "Minimalist modern sofa with a curved silhouette and natural oak base.",
         "date": "New Collection"
       }
+    }
+  },
+  "projectDetails": {
+    "projectInfo": {
+      "title": "Project Info",
+      "client": "Client",
+      "category": "Category",
+      "location": "Location",
+      "date": "Date",
+      "status": "Status",
+      "budget": "Budget",
+      "duration": "Duration"
+    },
+    "overview": {
+      "title": "Project Overview",
+      "description1": "This project represents one of the finest works of Matrix Wood Factory, where we combined traditional craftsmanship with modern technology to create a masterpiece that reflects luxury and elegance. Our team of specialized engineers and craftsmen worked with precision and dedication to achieve the client's vision.",
+      "description2": "We used the finest types of natural wood including beech, oak, and walnut, processed with the latest European technologies to ensure durability and beauty that lasts for years. Every detail was carefully studied and executed to the highest international quality standards."
+    },
+    "services": {
+      "service1": {
+        "title": "Premium Natural Wood",
+        "description": "Using the finest imported and local natural wood with international quality certificates"
+      },
+      "service2": {
+        "title": "Precision CNC Carving",
+        "description": "Advanced laser carving technologies for ultimate precision in details and decorations"
+      },
+      "service3": {
+        "title": "Luxury Finishing",
+        "description": "Multi-layer finishing with the finest paints and protective materials"
+      }
+    },
+    "quote": {
+      "text": "The quality of wood used and the precision of execution in this project exceeded all our expectations. Matrix Factory proved they are true experts in this field and their attention to every small detail made the final result exceptional.",
+      "author": "Ahmed Al-Rashid",
+      "position": "Project Owner"
+    },
+    "videoSection": {
+      "description": "Watch our team in action as they transform raw wood into stunning masterpieces. From initial design to final finishing, every step is executed with precision and passion for excellence."
+    },
+    "features": {
+      "title": "Features of Project",
+      "bgText": "FEATURES",
+      "feature1": {
+        "title": "Premium Materials",
+        "description": "Only the finest imported natural wood with quality certificates and warranties"
+      },
+      "feature2": {
+        "title": "Expert Craftsmanship",
+        "description": "Handcrafted by master artisans with decades of experience in woodworking"
+      },
+      "feature3": {
+        "title": "Modern Technology",
+        "description": "CNC machines and laser cutting for precision that meets international standards"
+      },
+      "feature4": {
+        "title": "Quality Assurance",
+        "description": "Rigorous quality control at every stage with comprehensive warranty coverage"
+      }
+    },
+    "relatedProjects": {
+      "title": "Related Projects",
+      "subtitle": "Explore More",
+      "viewDetails": "View Details"
+    },
+    "projects": {
+      "project1": {
+        "client": "Al-Faisal Palace",
+        "category": "Royal Furniture",
+        "location": "Riyadh, Saudi Arabia",
+        "date": "March 2024",
+        "status": "Completed",
+        "budget": "$85,000",
+        "duration": "3 Months"
+      },
+      "project2": {
+        "client": "Emirates Tower Hotel",
+        "category": "Luxury Interior",
+        "location": "Dubai, UAE",
+        "date": "January 2024",
+        "status": "Completed",
+        "budget": "$120,000",
+        "duration": "4 Months"
+      },
+      "project3": {
+        "client": "Al-Noor Villa",
+        "category": "Ceiling Decor",
+        "location": "Cairo, Egypt",
+        "date": "February 2024",
+        "status": "Completed",
+        "budget": "$45,000",
+        "duration": "2 Months"
+      },
+      "project4": {
+        "client": "Royal Gardens Residence",
+        "category": "Master Bedroom",
+        "location": "Jeddah, Saudi Arabia",
+        "date": "December 2023",
+        "status": "Completed",
+        "budget": "$95,000",
+        "duration": "3.5 Months"
+      },
+      "project5": {
+        "client": "Heritage Business Center",
+        "category": "Office Decor",
+        "location": "Amman, Jordan",
+        "date": "November 2023",
+        "status": "Completed",
+        "budget": "$65,000",
+        "duration": "2.5 Months"
+      },
+      "project6": {
+        "client": "Al-Yasmin Palace",
+        "category": "Wall Art",
+        "location": "Kuwait City, Kuwait",
+        "date": "October 2023",
+        "status": "Completed",
+        "budget": "$55,000",
+        "duration": "2 Months"
+      },
+      "project7": {
+        "client": "Grand Plaza Mall",
+        "category": "Commercial Interior",
+        "location": "Doha, Qatar",
+        "date": "September 2023",
+        "status": "Completed",
+        "budget": "$150,000",
+        "duration": "5 Months"
+      },
+      "project8": {
+        "client": "Sheikh Mansour Villa",
+        "category": "Arabic Majlis",
+        "location": "Abu Dhabi, UAE",
+        "date": "August 2023",
+        "status": "Completed",
+        "budget": "$78,000",
+        "duration": "3 Months"
+      },
+      "project9": {
+        "client": "Modern Living Studio",
+        "category": "Modern Furniture",
+        "location": "Beirut, Lebanon",
+        "date": "July 2023",
+        "status": "Completed",
+        "budget": "$42,000",
+        "duration": "1.5 Months"
+      }
+    }
+  },
+  "contact": {
+    "form": {
+      "subtitle": "Get Free Quote",
+      "title": "Have a project in mind?",
+      "fields": {
+        "name": "Your Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "selectService": "Select Service",
+        "message": "Write your message..."
+      },
+      "services": {
+        "woodManufacturing": "Wood Manufacturing",
+        "doorsWindows": "Doors & Windows",
+        "furniture": "Home Furniture",
+        "decorations": "Wood Decorations",
+        "wholesale": "Wholesale Supply",
+        "customProject": "Custom Project"
+      },
+      "button": "Submit Now",
+      "success": "Your message has been sent successfully!",
+      "error": "An error occurred, please try again."
+    },
+    "info": {
+      "title": "Get in Touch",
+      "subtitle": "Contact Information",
+      "address": {
+        "label": "Factory Address",
+        "value": "Industrial Zone, 10th of Ramadan City, Egypt"
+      },
+      "phone": {
+        "label": "Phone",
+        "value1": "+20 123 456 7890",
+        "value2": "+20 109 876 5432"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@matrix-wood.com"
+      },
+      "workHours": {
+        "label": "Working Hours",
+        "days": "Saturday - Thursday",
+        "hours": "9:00 AM - 6:00 PM",
+        "friday": "Friday: Closed"
+      }
+    },
+    "cta": {
+      "title": "Start Your Project With Us Today",
+      "subtitle": "We Turn Your Ideas Into Reality",
+      "description": "Whether you're looking for custom furniture manufacturing or luxury wooden decorations, our team of experts is ready to turn your vision into reality.",
+      "button": "Get Free Consultation"
     }
   }
 }
