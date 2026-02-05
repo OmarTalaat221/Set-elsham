@@ -4765,9 +4765,19 @@ a.text-theme:hover,
   /* Small devices */
 }
 
+[dir="rtl"] .widget:after {
+  left: auto;
+  right: 40px;
+}
+
 @media (max-width: 767px) {
   .widget:after {
     left: 30px;
+  }
+
+  [dir="rtl"] .widget:after {
+    left: auto;
+    right: 40px;
   }
 }
 
@@ -11316,6 +11326,8 @@ li.trackback {
   font-size: 18px;
   color: var(--body-color);
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
 }
 
 .contact-page-card .contact-page-card-text:last-child {
@@ -11325,6 +11337,11 @@ li.trackback {
 .contact-page-card .contact-page-card-text i {
   font-size: 18px;
   margin-right: 10px;
+}
+
+[dir="rtl"] .contact-page-card .contact-page-card-text i {
+  margin-right: 0;
+  margin-left: 10px;
 }
 
 .contact-page-card .contact-page-card_link {

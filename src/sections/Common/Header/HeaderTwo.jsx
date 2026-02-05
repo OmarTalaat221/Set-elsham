@@ -289,6 +289,15 @@ const HeaderTwo = () => {
                         </Link>
                       </li>
 
+                      <li>
+                        <Link
+                          className="text-lg!"
+                          href={`/pages/innerpage/contact`}
+                        >
+                          {t("nav.contact")}
+                        </Link>
+                      </li>
+
                       {/* <li>
                         <Link
                           className="text-lg!"
@@ -384,14 +393,6 @@ const HeaderTwo = () => {
                           href={`/pages/innerpage/blog`}
                         >
                           {t("nav.blog")}
-                        </Link>
-                      </li> */}
-                      {/* <li>
-                        <Link
-                          className="text-lg!"
-                          href={`/pages/innerpage/contact`}
-                        >
-                          {t("nav.contact")}
                         </Link>
                       </li> */}
                     </ul>

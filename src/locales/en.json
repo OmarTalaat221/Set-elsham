@@ -791,5 +791,27 @@
         "content": "<h2>Smart Wood Selection 💰</h2><p>Save money without sacrificing quality:</p><ul><li>Buy off-season</li><li>Mix premium with economical wood</li><li>Buy directly from factory</li><li>Understand wood quality grades</li></ul><p>Good planning saves 30-40% of costs!</p>"
       }
     }
+  },
+  "contactPage": {
+    "offices": {
+      "office1": {
+        "title": "Main Office - Riyadh",
+        "phone": "+966 11 234 5678",
+        "email": "riyadh@matrixwood.com",
+        "hours": "Sun - Thu 9:00 AM - 6:00 PM"
+      },
+      "office2": {
+        "title": "Jeddah Branch",
+        "phone": "+966 12 345 6789",
+        "email": "jeddah@matrixwood.com",
+        "hours": "Sun - Thu 10:00 AM - 7:00 PM"
+      },
+      "office3": {
+        "title": "Dammam Branch",
+        "phone": "+966 13 456 7890",
+        "email": "dammam@matrixwood.com",
+        "hours": "Sun - Thu 9:30 AM - 5:30 PM"
+      }
+    }
   }
 }
