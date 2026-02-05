@@ -12,15 +12,15 @@ const FooterTwo = () => {
   // روابط مفيدة - العمود الأول
   const usefulLinks1 = [
     { key: "aboutUs", href: "/pages/innerpage/about" },
-    { key: "services", href: "/pages/innerpage/service" },
     { key: "products", href: "/pages/innerpage/project" },
     { key: "blog", href: "/pages/innerpage/blog" },
-    // { key: "team", href: "/pages/innerpage/team" },
+    { key: "careers", href: "/pages/innerpage/contact" },
   ];
 
   // روابط مفيدة - العمود الثاني
   const usefulLinks2 = [
-    { key: "careers", href: "/pages/innerpage/contact" },
+    { key: "services", href: "/pages/innerpage/service" },
+    // { key: "team", href: "/pages/innerpage/team" },
     { key: "testimonials", href: "/pages/innerpage/testimonials" },
     { key: "privacy", href: "/pages/innerpage/privacy" },
     { key: "terms", href: "/pages/innerpage/terms" },
