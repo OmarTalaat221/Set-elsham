@@ -146,6 +146,17 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
               </Link>
             </li>
 
+            <li>
+              <Link href={`/blog`} onClick={handleMobileMenuClose}>
+                {t("nav.blog")}
+              </Link>
+            </li>
+
+            <li>
+              <Link href={`/contact`} onClick={handleMobileMenuClose}>
+                {t("nav.contact")}
+              </Link>
+            </li>
             {/* Services with submenu
             <li
               className={`menu-item-has-children submenu-item-has-children ${isServicesMenuOpen ? "active-class" : ""}`}
