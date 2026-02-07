@@ -83,7 +83,7 @@ const Hero = () => {
           <i
             className={
               locale === "ar"
-                ? "ri-arrow-right-s-line text-white text-xl"
+                ? "ri-arrow-left-s-line text-white text-xl"
                 : "ri-arrow-left-s-line text-white text-xl"
             }
           ></i>
@@ -95,7 +95,7 @@ const Hero = () => {
           <i
             className={
               locale === "ar"
-                ? "ri-arrow-left-s-line text-white text-xl"
+                ? "ri-arrow-right-s-line text-white text-xl"
                 : "ri-arrow-right-s-line text-white text-xl"
             }
           ></i>
