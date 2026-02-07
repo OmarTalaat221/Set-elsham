@@ -61,7 +61,7 @@ const Hero = () => {
                       "url('/main-assets/img/hero/hero_bg_mask_3_1.png')",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
-                    filter: "brightness(0.7)", // يقلل السطوع للصورة فقط
+                    filter: "brightness(0.7)",
                   }}
                 ></div>
 
