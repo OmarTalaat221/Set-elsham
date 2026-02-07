@@ -89,7 +89,10 @@ const About = () => {
                     <div className="icon-btn">
                       <i className="ri-phone-fill"></i>
                     </div>
-                    <div className="media-body">
+                    <div
+                      className="media-body text-start"
+                      style={{ direction: "ltr" }}
+                    >
                       <Link className="link" href="tel:+201234567890">
                         {t("phone")}
                       </Link>

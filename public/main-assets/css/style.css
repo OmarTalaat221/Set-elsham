@@ -11533,6 +11533,9 @@ li.trackback {
   text-align: center;
   flex: none;
   transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-grid-wrap .icon img {

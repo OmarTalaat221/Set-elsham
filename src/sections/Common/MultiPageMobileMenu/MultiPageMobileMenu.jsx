@@ -145,7 +145,7 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
 
             <li>
               <Link
-                href={`/pages/innerpage/projects`}
+                href={`/pages/innerpage/project`}
                 onClick={handleMobileMenuClose}
               >
                 {t("pages.projectPage")}
