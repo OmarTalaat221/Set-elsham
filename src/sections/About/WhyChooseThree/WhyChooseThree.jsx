@@ -37,10 +37,10 @@ const WhyChooseThree = () => {
         <div className="title-area text-center">
           <div className="shadow-title">{t("shadowTitle")}</div>
           <span className="sub-title">
-            <img
+            {/* <img
               src="/main-assets/img/icon/section-subtitle-icon.svg"
               alt="icon"
-            />
+            /> */}
             {t("subtitle")}
           </span>
           <h2 className="sec-title">{t("title")}</h2>
