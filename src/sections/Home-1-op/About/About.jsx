@@ -6,7 +6,10 @@ const About = () => {
       <div
         className="section-animation-shape1-1 shape-mockup animation-infinite"
         data-bottom="0"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape2.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape2.png')",
+        }}
       ></div>
       <div
         className="about_shape_1-1 shape-mockup jump-reverse"
@@ -28,10 +31,16 @@ const About = () => {
                 </h3>
                 <p className="about-counter-text">Happy Customers</p>
                 <div className="about-counter-shape">
-                  <img src="/main-assets/img/normal/about_shape_1-1.png" alt="img" />
+                  <img
+                    src="/main-assets/img/normal/about_shape_1-1.png"
+                    alt="img"
+                  />
                 </div>
                 <div className="client-group-thumb">
-                  <img src="/main-assets/img/normal/client_group_1-1.png" alt="img" />
+                  <img
+                    src="/main-assets/img/normal/client_group_1-1.png"
+                    alt="img"
+                  />
                 </div>
               </div>
             </div>
@@ -40,7 +49,10 @@ const About = () => {
             <div className="about-content-wrap1">
               <div className="title-area mb-25">
                 <span className="sub-title">
-                  <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                  <img
+                    src="/main-assets/img/icon/section-subtitle-icon.svg"
+                    alt="img"
+                  />
                   ABOUT US
                 </span>
                 <h2 className="sec-title">
@@ -71,7 +83,10 @@ const About = () => {
               </div>
               <div className="about-grid-wrap">
                 <div className="icon">
-                  <img src="/main-assets/img/icon/about-grid-icon1-1.svg" alt="img" />
+                  <img
+                    src="/main-assets/img/icon/about-grid-icon1-1.svg"
+                    alt="img"
+                  />
                 </div>
                 <div className="about-grid-details">
                   <h4 className="title">Our Mission</h4>
@@ -83,7 +98,10 @@ const About = () => {
               </div>
               <div className="about-grid-wrap">
                 <div className="icon">
-                  <img src="/main-assets/img/icon/about-grid-icon1-2.svg" alt="img" />
+                  <img
+                    src="/main-assets/img/icon/about-grid-icon1-2.svg"
+                    alt="img"
+                  />
                 </div>
                 <div className="about-grid-details">
                   <h4 className="title">Our Vision</h4>
@@ -94,7 +112,7 @@ const About = () => {
                 </div>
               </div>
               <div className="btn-group mt-60">
-                <Link href="/pages/innerpage/about" className="btn style3">
+                <Link href="/about" className="btn style3">
                   Explore Our Company <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>

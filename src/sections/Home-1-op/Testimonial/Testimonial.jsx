@@ -4,7 +4,9 @@ const Testimonial = () => {
   return (
     <div
       className="testimonial-area-1 overflow-hidden space bg-smoke"
-      style={{ backgroundImage: "url('/main-assets/img/bg/testimonial-bg1-1.png')" }}
+      style={{
+        backgroundImage: "url('/main-assets/img/bg/testimonial-bg1-1.png')",
+      }}
     >
       <div
         className="testimonial_shape_1-1 shape-mockup jump d-xxl-block d-none"
@@ -18,7 +20,10 @@ const Testimonial = () => {
           <div className="col-xl-6">
             <div className="title-area">
               <span className="sub-title">
-                <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/section-subtitle-icon.svg"
+                  alt="img"
+                />
                 Testimonials
               </span>
               <h2 className="sec-title">Our happy customers</h2>
@@ -33,7 +38,10 @@ const Testimonial = () => {
                     <img src="/main-assets/img/icon/quote.svg" alt="img" />
                   </div>
                   <div className="testi-card-thumb">
-                    <img src="/main-assets/img/testimonial/testi_1_1.png" alt="img" />
+                    <img
+                      src="/main-assets/img/testimonial/testi_1_1.png"
+                      alt="img"
+                    />
                   </div>
                   <div className="testi-card_content">
                     <h4 className="testi-card_title">Best Company!</h4>
@@ -57,7 +65,10 @@ const Testimonial = () => {
                     <img src="/main-assets/img/icon/quote.svg" alt="img" />
                   </div>
                   <div className="testi-card-thumb">
-                    <img src="/main-assets/img/testimonial/testi_1_2.png" alt="img" />
+                    <img
+                      src="/main-assets/img/testimonial/testi_1_2.png"
+                      alt="img"
+                    />
                   </div>
                   <div className="testi-card_content">
                     <h4 className="testi-card_title">Best Company!</h4>
@@ -81,7 +92,10 @@ const Testimonial = () => {
                     <img src="/main-assets/img/icon/quote.svg" alt="img" />
                   </div>
                   <div className="testi-card-thumb">
-                    <img src="/main-assets/img/testimonial/testi_1_1.png" alt="img" />
+                    <img
+                      src="/main-assets/img/testimonial/testi_1_1.png"
+                      alt="img"
+                    />
                   </div>
                   <div className="testi-card_content">
                     <h4 className="testi-card_title">Best Company!</h4>
@@ -116,7 +130,10 @@ const Testimonial = () => {
                 </button>
               </div>
               <div className="client-group-thumb">
-                <img src="/main-assets/img/normal/client_group_1-2.png" alt="img" />
+                <img
+                  src="/main-assets/img/normal/client_group_1-2.png"
+                  alt="img"
+                />
               </div>
               <div className="testi-counter-wrap">
                 <h3 className="testi-counter-number">
@@ -130,7 +147,8 @@ const Testimonial = () => {
             <div
               className="testimonial-card"
               style={{
-                backgroundImage: "url('/main-assets/img/bg/testimonial-card-bg1-1.png')",
+                backgroundImage:
+                  "url('/main-assets/img/bg/testimonial-card-bg1-1.png')",
               }}
             >
               <h3 className="testimonial-card-title">
@@ -141,7 +159,7 @@ const Testimonial = () => {
                 the first true generator.
               </p>
               <div className="btn-group">
-                <Link href="/pages/innerpage/contact" className="btn style6">
+                <Link href="/contact" className="btn style6">
                   Contact with Us <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>

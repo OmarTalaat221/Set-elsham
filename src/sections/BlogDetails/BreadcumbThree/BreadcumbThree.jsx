@@ -4,12 +4,17 @@ const BreadcumbThree = () => {
   return (
     <div
       className="breadcumb-wrapper"
-      style={{ backgroundImage: "url('/main-assets/img/bg/breadcrumb-bg.png')" }}
+      style={{
+        backgroundImage: "url('/main-assets/img/bg/breadcrumb-bg.png')",
+      }}
     >
       <div
         className="section-animation-shape1-1 shape-mockup animation-infinite"
         data-top="0"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape1.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape1.png')",
+        }}
       ></div>
       {/* bg animated image */}
       <div className="container">
@@ -28,7 +33,7 @@ const BreadcumbThree = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pages/innerpage/blog">OUR BLOG</Link>
+                  <Link href="/blog">OUR BLOG</Link>
                 </li>
                 <li className="active">Construction Process Streamlines</li>
               </ul>

@@ -6,12 +6,18 @@ const AboutTwo = () => {
       <div
         className="section-animation-shape1-1 shape-mockup animation-infinite"
         data-top="0"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape1.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape1.png')",
+        }}
       ></div>
       <div
         className="section-animation-shape1-2 shape-mockup animation-infinite"
         data-bottom="0"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape2.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape2.png')",
+        }}
       ></div>
       <div className="container">
         <div className="row gx-60 align-items-center flex-row-reverse">
@@ -22,7 +28,10 @@ const AboutTwo = () => {
               </div>
               <div className="about-counter-wrap style2 jump-reverse">
                 <div className="about-counter-wrap-bg">
-                  <img src="/main-assets/img/normal/about_shape_2-2.png" alt="img" />
+                  <img
+                    src="/main-assets/img/normal/about_shape_2-2.png"
+                    alt="img"
+                  />
                 </div>
                 <div className="about-counter-icon">
                   <img
@@ -40,7 +49,10 @@ const AboutTwo = () => {
           <div className="col-xl-6">
             <div className="title-area mb-25">
               <span className="sub-title">
-                <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/section-subtitle-icon.svg"
+                  alt="img"
+                />
                 ABOUT US
               </span>
               <h2 className="sec-title">
@@ -54,18 +66,27 @@ const AboutTwo = () => {
             <div className="checklist mb-35">
               <ul>
                 <li>
-                  <img src="/main-assets/img/icon/about-checklsit-icon1-1.svg" alt="img" />
+                  <img
+                    src="/main-assets/img/icon/about-checklsit-icon1-1.svg"
+                    alt="img"
+                  />
                   Providing Solutions For Construction, Management
                 </li>
                 <li>
-                  <img src="/main-assets/img/icon/about-checklsit-icon1-1.svg" alt="img" />
+                  <img
+                    src="/main-assets/img/icon/about-checklsit-icon1-1.svg"
+                    alt="img"
+                  />
                   Engineers design and build the structure
                 </li>
               </ul>
             </div>
             <div className="about-grid-wrap">
               <div className="icon">
-                <img src="/main-assets/img/icon/about-grid-icon1-1.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/about-grid-icon1-1.svg"
+                  alt="img"
+                />
               </div>
               <div className="about-grid-details">
                 <h4 className="title">Our Mission</h4>
@@ -77,7 +98,10 @@ const AboutTwo = () => {
             </div>
             <div className="about-grid-wrap">
               <div className="icon">
-                <img src="/main-assets/img/icon/about-grid-icon1-2.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/about-grid-icon1-2.svg"
+                  alt="img"
+                />
               </div>
               <div className="about-grid-details">
                 <h4 className="title">Our Vision</h4>
@@ -88,7 +112,7 @@ const AboutTwo = () => {
               </div>
             </div>
             <div className="btn-group mt-60">
-              <Link href="/pages/innerpage/about" className="btn style3">
+              <Link href="/about" className="btn style3">
                 Explore Our Company <i className="ri-arrow-right-up-line"></i>
               </Link>
             </div>

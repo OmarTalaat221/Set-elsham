@@ -11,10 +11,10 @@ const FooterTwo = () => {
 
   // روابط مفيدة - العمود الأول
   const usefulLinks1 = [
-    { key: "aboutUs", href: "/pages/innerpage/about" },
-    { key: "products", href: "/pages/innerpage/project" },
-    { key: "blog", href: "/pages/innerpage/blog" },
-    { key: "careers", href: "/pages/innerpage/contact" },
+    { key: "aboutUs", href: "/about" },
+    { key: "products", href: "/project" },
+    { key: "blog", href: "/blog" },
+    { key: "careers", href: "/contact" },
   ];
 
   // روابط مفيدة - العمود الثاني
@@ -28,10 +28,10 @@ const FooterTwo = () => {
 
   // روابط السوشيال ميديا
   const socialLinks = [
-    { icon: "ri-facebook-fill", href: "https://facebook.com/matrixwood" },
-    { icon: "ri-instagram-line", href: "https://instagram.com/matrixwood" },
-    { icon: "ri-twitter-x-line", href: "https://twitter.com/matrixwood" },
-    { icon: "ri-whatsapp-line", href: "https://wa.me/201234567890" },
+    { icon: "ri-facebook-fill", href: "https://facebook.com/" },
+    { icon: "ri-instagram-line", href: "https://instagram.com/" },
+    { icon: "ri-twitter-x-line", href: "https://twitter.com/" },
+    { icon: "ri-whatsapp-line", href: "https://wa.me/+966548885001" },
   ];
 
   return (
@@ -129,9 +129,7 @@ const FooterTwo = () => {
                     {t("email.subtitle")}
                   </p>
                   <p className="footer-text">
-                    <Link href="mailto:info@matrixwood.com">
-                      info@matrixwood.com
-                    </Link>
+                    <Link href="mailto:info@mtrix.sa">info@mtrix.sa</Link>
                   </p>
                 </div>
               </div>
@@ -141,10 +139,10 @@ const FooterTwo = () => {
                 <div className="widget footer-widget">
                   <h3 className="widget_title">{t("phone.title")}</h3>
                   <p className="footer-text" style={{ direction: "ltr" }}>
-                    <Link href="tel:+201234567890">+20 123 456 7890</Link>
+                    <Link href="tel:+966540442677">+966 54 044 2677</Link>
                   </p>
                   <p className="footer-text" style={{ direction: "ltr" }}>
-                    <Link href="tel:+201098765432">+20 109 876 5432</Link>
+                    <Link href="tel:+966580669091">+966 58 066 9091</Link>
                   </p>
                   <h3 className="widget_title">{t("social.title")}</h3>
                   <div className="social-btn style2">
@@ -184,9 +182,7 @@ const FooterTwo = () => {
                   <Link href="/pages/innerpage/privacy">
                     {t("copyright.privacy")}
                   </Link>
-                  <Link href="/pages/innerpage/contact">
-                    {t("copyright.contact")}
-                  </Link>
+                  <Link href="/contact">{t("copyright.contact")}</Link>
                 </div>
               </div>
             </div>

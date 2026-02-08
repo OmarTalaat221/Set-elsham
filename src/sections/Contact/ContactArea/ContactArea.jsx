@@ -74,6 +74,24 @@ const ContactArea = () => {
                     </Link>
                   </div>
 
+                  {/* Check if there's a second phone number */}
+                  {/* {t(`offices.${office.key}.phone2`, { defaultValue: "" }) && (
+                    <div
+                      className="contact-page-card-text"
+                      data-aos="fade-right"
+                      data-aos-delay={index * 100 + 175}
+                    >
+                      <i className="ri-phone-line"></i>
+                      <Link
+                        dir={"ltr"}
+                        className="contact-page-card_link"
+                        href={`tel:${t(`offices.${office.key}.phone2`).replace(/\s/g, "")}`}
+                      >
+                        {t(`offices.${office.key}.phone2`)}
+                      </Link>
+                    </div>
+                  )} */}
+
                   <div
                     className="contact-page-card-text"
                     data-aos="fade-right"
@@ -95,6 +113,16 @@ const ContactArea = () => {
                   >
                     <i className="ri-time-line"></i>
                     {t(`offices.${office.key}.hours`)}
+                  </div>
+
+                  {/* Address */}
+                  <div
+                    className="contact-page-card-text"
+                    data-aos="fade-right"
+                    data-aos-delay={index * 100 + 275}
+                  >
+                    <i className="ri-map-pin-line"></i>
+                    {t(`offices.${office.key}.address`)}
                   </div>
                 </div>
 

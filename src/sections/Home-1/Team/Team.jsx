@@ -7,7 +7,8 @@ const Team = () => {
         className="section-animation-shape1-1 shape-mockup animation-infinite background-image"
         style={{
           bottom: "0px",
-          backgroundImage: "url('/main-assets/img/shape/global-line-shape2.png')",
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape2.png')",
         }}
       ></div>
       <div className="container">
@@ -15,7 +16,10 @@ const Team = () => {
           <div className="col-lg-7 col-md-7">
             <div className="title-area text-left content-text-extra-style">
               <span className="sub-title">
-                <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/section-subtitle-icon.svg"
+                  alt="img"
+                />
                 Our Team
               </span>
               <h2 className="sec-title">Meet our leadership</h2>
@@ -23,7 +27,7 @@ const Team = () => {
           </div>
           <div className="col-md-auto">
             <div className="sec-btn">
-              <Link href="/pages/innerpage/about" className="btn">
+              <Link href="/about" className="btn">
                 View All Members <i className="ri-arrow-right-up-line"></i>
               </Link>
             </div>
@@ -35,11 +39,16 @@ const Team = () => {
           <div className="col-lg-4 col-md-6">
             <div
               className="team-card custom-team-card"
-              style={{ backgroundImage: 'url("/main-assets/img/bg/team-card-bg1-1.png")' }}
+              style={{
+                backgroundImage:
+                  'url("/main-assets/img/bg/team-card-bg1-1.png")',
+              }}
             >
               <div className="team-card_content">
                 <h4 className="team-card_title">
-                  <Link href="/pages/innerpage/team-details">Penelopa Miller</Link>
+                  <Link href="/pages/innerpage/team-details">
+                    Penelopa Miller
+                  </Link>
                 </h4>
                 <span className="team-card_desig">Head of Production</span>
                 <div className="team-social_wrap">
@@ -72,7 +81,10 @@ const Team = () => {
           <div className="col-lg-4 col-md-6">
             <div
               className="team-card custom-team-card"
-              style={{ backgroundImage: "url('/main-assets/img/bg/team-card-bg1-1.png')" }}
+              style={{
+                backgroundImage:
+                  "url('/main-assets/img/bg/team-card-bg1-1.png')",
+              }}
             >
               <div className="team-card_content">
                 <h4 className="team-card_title">
@@ -109,7 +121,10 @@ const Team = () => {
           <div className="col-lg-4 col-md-6">
             <div
               className="team-card custom-team-card"
-              style={{ backgroundImage: 'url("/main-assets/img/bg/team-card-bg1-1.png")' }}
+              style={{
+                backgroundImage:
+                  'url("/main-assets/img/bg/team-card-bg1-1.png")',
+              }}
             >
               <div className="team-card_content">
                 <h4 className="team-card_title">

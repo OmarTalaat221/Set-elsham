@@ -11,8 +11,6 @@ const Hero = () => {
   const sliderRef2 = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
 
-
-
   const shape1Style = {
     backgroundImage: "url('/main-assets/img/shape/global-line-shape1.png')",
   };
@@ -29,7 +27,7 @@ const Hero = () => {
     autoplay: true,
     autoplaySpeed: 7000,
     arrows: false,
-    afterChange: current => setActiveSlide(current),
+    afterChange: (current) => setActiveSlide(current),
     responsive: [
       {
         breakpoint: 767,
@@ -57,7 +55,7 @@ const Hero = () => {
     autoplay: true,
     autoplaySpeed: 7000,
     arrows: false,
-    afterChange: current => setActiveSlide(current),
+    afterChange: (current) => setActiveSlide(current),
     responsive: [
       {
         breakpoint: 767,
@@ -107,25 +105,40 @@ const Hero = () => {
                 <div className="row">
                   <div className="col-lg-12">
                     <h1
-                      className={`hero-title slider-custom-anim-left ${activeSlide == 0 ? 'slider-animated' : ''}`}
-                      style={{ animationDelay: '0.1s' }}
+                      className={`hero-title slider-custom-anim-left ${activeSlide == 0 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.1s" }}
                     >
                       RECONSTRUCTION <span className="year">2024</span>
                     </h1>
                   </div>
                   <div className="col-lg-7">
-                    <div className={`hero-thumb text-center slideinleft ${activeSlide == 0 ? 'slider-animated' : ''}`} style={{ animationDelay: '0.4s' }} >
-                      <img src="/main-assets/img/hero/hero_shape_1_1.png" alt="img" />
+                    <div
+                      className={`hero-thumb text-center slideinleft ${activeSlide == 0 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.4s" }}
+                    >
+                      <img
+                        src="/main-assets/img/hero/hero_shape_1_1.png"
+                        alt="img"
+                      />
                     </div>
                   </div>
                   <div className="col-lg-5">
-                    <p className={`hero-text slider-custom-anim-left ${activeSlide == 0 ? 'slider-animated' : ''}`} style={{ animationDelay: '0.2s' }}>We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites.</p>
-                    <div className={`hero-tag slideinup ${activeSlide == 0 ? 'slider-animated' : ''}`} style={{ animationDelay: '0.4s' }}>
+                    <p
+                      className={`hero-text slider-custom-anim-left ${activeSlide == 0 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.2s" }}
+                    >
+                      We craft unique digital experiences. With more than 7
+                      years of expertise we design and code clean websites.
+                    </p>
+                    <div
+                      className={`hero-tag slideinup ${activeSlide == 0 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.4s" }}
+                    >
                       <div className="about-two__video-box">
                         <div className="round-text">
                           <CircleTextTwo />
                         </div>
-                        <Link href="/pages/innerpage/contact" className="hero-tag_icon">
+                        <Link href="/contact" className="hero-tag_icon">
                           <i className="ri-arrow-right-up-line"></i>
                         </Link>
                       </div>
@@ -142,35 +155,40 @@ const Hero = () => {
                 <div className="row">
                   <div className="col-lg-12">
                     <h1
-                      className={`hero-title slider-custom-anim-left ${activeSlide == 1 ? 'slider-animated' : ''}`}
-                      style={{ animationDelay: '0.1s' }}
+                      className={`hero-title slider-custom-anim-left ${activeSlide == 1 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.1s" }}
                     >
                       ELITE RENOVATION <span className="year">2024</span>
                     </h1>
                   </div>
                   <div className="col-lg-7">
                     <div
-                      className={`hero-thumb text-center slideinleft ${activeSlide == 1 ? 'slider-animated' : ''}`}
-                      style={{ animationDelay: '0.4s' }}
+                      className={`hero-thumb text-center slideinleft ${activeSlide == 1 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.4s" }}
                     >
-                      <img src="/main-assets/img/hero/hero_thumb_2_1.png" alt="img" />
+                      <img
+                        src="/main-assets/img/hero/hero_thumb_2_1.png"
+                        alt="img"
+                      />
                     </div>
                   </div>
                   <div className="col-lg-5">
                     <p
-                      className={`hero-text slider-custom-anim-left ${activeSlide == 1 ? 'slider-animated' : ''}`} style={{ animationDelay: '0.2s' }}
+                      className={`hero-text slider-custom-anim-left ${activeSlide == 1 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.2s" }}
                     >
                       We craft unique digital experiences. With more than 7
                       years of expertise we design and code clean websites.
                     </p>
                     <div
-                      className={`hero-tag slideinup ${activeSlide == 1 ? 'slider-animated' : ''}`} style={{ animationDelay: '0.4s' }}
+                      className={`hero-tag slideinup ${activeSlide == 1 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.4s" }}
                     >
                       <div className="about-two__video-box">
                         <div className="round-text">
                           <CircleTextTwo />
                         </div>
-                        <Link href="/pages/innerpage/contact" className="hero-tag_icon">
+                        <Link href="/contact" className="hero-tag_icon">
                           <i className="ri-arrow-right-up-line"></i>
                         </Link>
                       </div>
@@ -187,35 +205,40 @@ const Hero = () => {
                 <div className="row">
                   <div className="col-lg-12">
                     <h1
-                      className={`hero-title slider-custom-anim-left ${activeSlide == 2 ? 'slider-animated' : ''}`}
-                      style={{ animationDelay: '0.1s' }}
+                      className={`hero-title slider-custom-anim-left ${activeSlide == 2 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.1s" }}
                     >
                       INDUSTRY SOLUTION <span className="year">2024</span>
                     </h1>
                   </div>
                   <div className="col-lg-7">
                     <div
-                      className={`hero-thumb text-center slideinleft ${activeSlide == 2 ? 'slider-animated' : ''}`}
-                      style={{ animationDelay: '0.4s' }}
+                      className={`hero-thumb text-center slideinleft ${activeSlide == 2 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.4s" }}
                     >
-                      <img src="/main-assets/img/hero/hero_thumb_2_2.png" alt="img" />
+                      <img
+                        src="/main-assets/img/hero/hero_thumb_2_2.png"
+                        alt="img"
+                      />
                     </div>
                   </div>
                   <div className="col-lg-5">
                     <p
-                      className={`hero-text slider-custom-anim-left ${activeSlide == 2 ? 'slider-animated' : ''}`} style={{ animationDelay: '0.2s' }}
+                      className={`hero-text slider-custom-anim-left ${activeSlide == 2 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.2s" }}
                     >
                       We craft unique digital experiences. With more than 7
                       years of expertise we design and code clean websites.
                     </p>
                     <div
-                      className={`hero-tag slideinup ${activeSlide == 2 ? 'slider-animated' : ''}`} style={{ animationDelay: '0.4s' }}
+                      className={`hero-tag slideinup ${activeSlide == 2 ? "slider-animated" : ""}`}
+                      style={{ animationDelay: "0.4s" }}
                     >
                       <div className="about-two__video-box">
                         <div className="round-text">
                           <CircleTextTwo />
                         </div>
-                        <Link href="/pages/innerpage/contact" className="hero-tag_icon">
+                        <Link href="/contact" className="hero-tag_icon">
                           <i className="ri-arrow-right-up-line"></i>
                         </Link>
                       </div>

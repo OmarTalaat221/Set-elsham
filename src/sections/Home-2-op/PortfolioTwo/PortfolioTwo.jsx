@@ -8,7 +8,10 @@ const PortfolioTwo = () => {
           <div className="col-lg-7">
             <div className="title-area text-lg-start text-center">
               <span className="sub-title">
-                <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/section-subtitle-icon.svg"
+                  alt="img"
+                />
                 Recent Work
               </span>
               <h2 className="sec-title">CHECK OUR LATEST PROJECTS</h2>
@@ -16,7 +19,7 @@ const PortfolioTwo = () => {
           </div>
           <div className="col-lg-auto">
             <div className="sec-btn">
-              <Link href="/pages/innerpage/project" className="btn">
+              <Link href="/project" className="btn">
                 View All Projects <i className="ri-arrow-right-up-line"></i>
               </Link>
             </div>
@@ -31,7 +34,10 @@ const PortfolioTwo = () => {
             <div className="col-lg-4">
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <img src="/main-assets/img/project/project2_1.png" alt="img" />
+                  <img
+                    src="/main-assets/img/project/project2_1.png"
+                    alt="img"
+                  />
                   <span className="portfolio-card-number">01</span>
                   <Link
                     className="icon-btn popup-image"
@@ -43,12 +49,12 @@ const PortfolioTwo = () => {
                 <div className="portfolio-card-details">
                   <span className="portfolio-card-subtitle">Building</span>
                   <h4 className="portfolio-card-title">
-                    <Link href="/pages/innerpage/project-details">Building Construction</Link>
+                    <Link href="/project-details">Building Construction</Link>
                   </h4>
                   <p className="portofolio-card-text">
                     Building since 09,01,2024
                   </p>
-                  <Link href="/pages/innerpage/project-details" className="btn-with-icon">
+                  <Link href="/project-details" className="btn-with-icon">
                     VIEW DETAILS
                     <span className="btn-icon">
                       <i className="ri-arrow-right-up-line"></i>
@@ -60,7 +66,10 @@ const PortfolioTwo = () => {
             <div className="col-lg-4">
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <img src="/main-assets/img/project/project2_2.png" alt="img" />
+                  <img
+                    src="/main-assets/img/project/project2_2.png"
+                    alt="img"
+                  />
                   <span className="portfolio-card-number">02</span>
                   <Link
                     className="icon-btn popup-image"
@@ -72,12 +81,12 @@ const PortfolioTwo = () => {
                 <div className="portfolio-card-details">
                   <span className="portfolio-card-subtitle">Construction</span>
                   <h4 className="portfolio-card-title">
-                    <Link href="/pages/innerpage/project-details">General Construction</Link>
+                    <Link href="/project-details">General Construction</Link>
                   </h4>
                   <p className="portofolio-card-text">
                     Building since 09,01,2024
                   </p>
-                  <Link href="/pages/innerpage/project-details" className="btn-with-icon">
+                  <Link href="/project-details" className="btn-with-icon">
                     VIEW DETAILS
                     <span className="btn-icon">
                       <i className="ri-arrow-right-up-line"></i>
@@ -89,7 +98,10 @@ const PortfolioTwo = () => {
             <div className="col-lg-4">
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <img src="/main-assets/img/project/project2_3.png" alt="img" />
+                  <img
+                    src="/main-assets/img/project/project2_3.png"
+                    alt="img"
+                  />
                   <span className="portfolio-card-number">03</span>
                   <Link
                     className="icon-btn popup-image"
@@ -101,12 +113,12 @@ const PortfolioTwo = () => {
                 <div className="portfolio-card-details">
                   <span className="portfolio-card-subtitle">Remodeling</span>
                   <h4 className="portfolio-card-title">
-                    <Link href="/pages/innerpage/project-details">Renovation & Remodeling</Link>
+                    <Link href="/project-details">Renovation & Remodeling</Link>
                   </h4>
                   <p className="portofolio-card-text">
                     Building since 09,01,2024
                   </p>
-                  <Link href="/pages/innerpage/project-details" className="btn-with-icon">
+                  <Link href="/project-details" className="btn-with-icon">
                     VIEW DETAILS
                     <span className="btn-icon">
                       <i className="ri-arrow-right-up-line"></i>
@@ -118,7 +130,10 @@ const PortfolioTwo = () => {
             <div className="col-lg-4">
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <img src="/main-assets/img/project/project2_1.png" alt="img" />
+                  <img
+                    src="/main-assets/img/project/project2_1.png"
+                    alt="img"
+                  />
                   <span className="portfolio-card-number">01</span>
                   <Link
                     className="icon-btn popup-image"
@@ -130,12 +145,12 @@ const PortfolioTwo = () => {
                 <div className="portfolio-card-details">
                   <span className="portfolio-card-subtitle">Building</span>
                   <h4 className="portfolio-card-title">
-                    <Link href="/pages/innerpage/project-details">Building Construction</Link>
+                    <Link href="/project-details">Building Construction</Link>
                   </h4>
                   <p className="portofolio-card-text">
                     Building since 09,01,2024
                   </p>
-                  <Link href="/pages/innerpage/project-details" className="btn-with-icon">
+                  <Link href="/project-details" className="btn-with-icon">
                     VIEW DETAILS
                     <span className="btn-icon">
                       <i className="ri-arrow-right-up-line"></i>
@@ -147,7 +162,10 @@ const PortfolioTwo = () => {
             <div className="col-lg-4">
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <img src="/main-assets/img/project/project2_2.png" alt="img" />
+                  <img
+                    src="/main-assets/img/project/project2_2.png"
+                    alt="img"
+                  />
                   <span className="portfolio-card-number">02</span>
                   <Link
                     className="icon-btn popup-image"
@@ -159,12 +177,12 @@ const PortfolioTwo = () => {
                 <div className="portfolio-card-details">
                   <span className="portfolio-card-subtitle">Construction</span>
                   <h4 className="portfolio-card-title">
-                    <Link href="/pages/innerpage/project-details">General Construction</Link>
+                    <Link href="/project-details">General Construction</Link>
                   </h4>
                   <p className="portofolio-card-text">
                     Building since 09,01,2024
                   </p>
-                  <Link href="/pages/innerpage/project-details" className="btn-with-icon">
+                  <Link href="/project-details" className="btn-with-icon">
                     VIEW DETAILS
                     <span className="btn-icon">
                       <i className="ri-arrow-right-up-line"></i>
@@ -176,7 +194,10 @@ const PortfolioTwo = () => {
             <div className="col-lg-4">
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <img src="/main-assets/img/project/project2_3.png" alt="img" />
+                  <img
+                    src="/main-assets/img/project/project2_3.png"
+                    alt="img"
+                  />
                   <span className="portfolio-card-number">03</span>
                   <Link
                     className="icon-btn popup-image"
@@ -188,12 +209,12 @@ const PortfolioTwo = () => {
                 <div className="portfolio-card-details">
                   <span className="portfolio-card-subtitle">Remodeling</span>
                   <h4 className="portfolio-card-title">
-                    <Link href="/pages/innerpage/project-details">Renovation & Remodeling</Link>
+                    <Link href="/project-details">Renovation & Remodeling</Link>
                   </h4>
                   <p className="portofolio-card-text">
                     Building since 09,01,2024
                   </p>
-                  <Link href="/pages/innerpage/project-details" className="btn-with-icon">
+                  <Link href="/project-details" className="btn-with-icon">
                     VIEW DETAILS
                     <span className="btn-icon">
                       <i className="ri-arrow-right-up-line"></i>

@@ -135,37 +135,25 @@ const MultiPageMobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
 
             {/* About */}
             <li>
-              <Link
-                href={`/pages/innerpage/about`}
-                onClick={handleMobileMenuClose}
-              >
+              <Link href={`/about`} onClick={handleMobileMenuClose}>
                 {t("nav.about")}
               </Link>
             </li>
 
             <li>
-              <Link
-                href={`/pages/innerpage/project`}
-                onClick={handleMobileMenuClose}
-              >
+              <Link href={`/project`} onClick={handleMobileMenuClose}>
                 {t("pages.projectPage")}
               </Link>
             </li>
 
             <li>
-              <Link
-                href={`/pages/innerpage/blog`}
-                onClick={handleMobileMenuClose}
-              >
+              <Link href={`/blog`} onClick={handleMobileMenuClose}>
                 {t("nav.blog")}
               </Link>
             </li>
 
             <li>
-              <Link
-                href={`/pages/innerpage/contact`}
-                onClick={handleMobileMenuClose}
-              >
+              <Link href={`/contact`} onClick={handleMobileMenuClose}>
                 {t("nav.contact")}
               </Link>
             </li>

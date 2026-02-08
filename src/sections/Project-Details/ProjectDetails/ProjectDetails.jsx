@@ -375,9 +375,7 @@ const ProjectDetailsContent = () => {
               >
                 <div className="portfolio-card style2">
                   <div className="portfolio-card-thumb">
-                    <Link
-                      href={`/pages/innerpage/project-details?id=${projId}`}
-                    >
+                    <Link href={`/project-details?id=${projId}`}>
                       <img
                         src={projectImagesData[projId]}
                         alt={tProjects(`${projId}.title`)}
@@ -392,9 +390,7 @@ const ProjectDetailsContent = () => {
                       {tProjects(`${projId}.category`)}
                     </span>
                     <h4 className="portfolio-card-title">
-                      <Link
-                        href={`/pages/innerpage/project-details?id=${projId}`}
-                      >
+                      <Link href={`/project-details?id=${projId}`}>
                         {tProjects(`${projId}.title`)}
                       </Link>
                     </h4>
@@ -402,7 +398,7 @@ const ProjectDetailsContent = () => {
                       {tProjects(`${projId}.date`)}
                     </p>
                     <Link
-                      href={`/pages/innerpage/project-details?id=${projId}`}
+                      href={`/project-details?id=${projId}`}
                       className="btn-with-icon"
                     >
                       {t("relatedProjects.viewDetails")}

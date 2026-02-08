@@ -79,7 +79,7 @@ const Portfolio = () => {
               <div key={index}>
                 <div className="portfolio-card" style={{ margin: "0px 1rem" }}>
                   <div className="portfolio-card-thumb">
-                    <Link href="/pages/innerpage/project-details">
+                    <Link href="/project-details">
                       <img src={image} alt={`Project ${index + 1}`} />
                     </Link>
                     <button
@@ -93,7 +93,7 @@ const Portfolio = () => {
                     <div className="media-left">
                       <span className="portfolio-card-subtitle">Building</span>
                       <h4 className="portfolio-card-title">
-                        <Link href="/pages/innerpage/project-details">
+                        <Link href="/project-details">
                           General Construction
                         </Link>
                       </h4>
@@ -102,7 +102,7 @@ const Portfolio = () => {
                       </p>
                     </div>
                   </div>
-                  <Link href="/pages/innerpage/project-details" className="btn">
+                  <Link href="/project-details" className="btn">
                     Explore Service <i className="ri-arrow-right-up-line"></i>
                   </Link>
                 </div>

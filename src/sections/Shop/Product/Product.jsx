@@ -492,13 +492,13 @@ const Product = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/pages/innerpage/blog">02</Link>
+                    <Link href="/blog">02</Link>
                   </li>
                   <li>
-                    <Link href="/pages/innerpage/blog">03</Link>
+                    <Link href="/blog">03</Link>
                   </li>
                   <li>
-                    <Link href="/pages/innerpage/blog">
+                    <Link href="/blog">
                       <i className="ri-arrow-right-line"></i>
                     </Link>
                   </li>
@@ -521,27 +521,27 @@ const Product = () => {
                   <h3 className="widget_title">Product Categories</h3>
                   <ul>
                     <li>
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog">
                         Construction <span>12</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog">
                         Architecture <span>7</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog">
                         Business <span>5</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog">
                         Engineering <span>3</span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog">
                         Building <span>2</span>
                       </Link>
                     </li>
@@ -581,14 +581,14 @@ const Product = () => {
                 <div className="widget widget_tag_cloud">
                   <h3 className="widget_title">Popular Tags</h3>
                   <div className="tagcloud">
-                    <Link href="/pages/innerpage/blog">Architecture</Link>
-                    <Link href="/pages/innerpage/blog">Building</Link>
-                    <Link href="/pages/innerpage/blog">Home</Link>
-                    <Link href="/pages/innerpage/blog">Factory</Link>
-                    <Link href="/pages/innerpage/blog">Construction</Link>
-                    <Link href="/pages/innerpage/blog">Business</Link>
-                    <Link href="/pages/innerpage/blog">Design</Link>
-                    <Link href="/pages/innerpage/blog">Industry</Link>
+                    <Link href="/blog">Architecture</Link>
+                    <Link href="/blog">Building</Link>
+                    <Link href="/blog">Home</Link>
+                    <Link href="/blog">Factory</Link>
+                    <Link href="/blog">Construction</Link>
+                    <Link href="/blog">Business</Link>
+                    <Link href="/blog">Design</Link>
+                    <Link href="/blog">Industry</Link>
                   </div>
                 </div>
               </aside>

@@ -183,7 +183,7 @@ const BlogFour = () => {
                     data-aos-delay={300 + (index % 3) * 100}
                     data-aos-duration="500"
                   >
-                    <Link href="/pages/innerpage/blog-details">
+                    <Link href="/blog-details">
                       <span>{blog.day}</span>
                       {blog.month}
                     </Link>
@@ -206,12 +206,8 @@ const BlogFour = () => {
                     data-aos-delay={300 + (index % 3) * 100}
                     data-aos-duration="500"
                   >
-                    <Link href="/pages/innerpage/blog">
-                      {t(`blogs.${blog.id}.author`)}
-                    </Link>
-                    <Link href="/pages/innerpage/blog">
-                      {t(`blogs.${blog.id}.category`)}
-                    </Link>
+                    <Link href="/blog">{t(`blogs.${blog.id}.author`)}</Link>
+                    <Link href="/blog">{t(`blogs.${blog.id}.category`)}</Link>
                   </div>
 
                   {/* Title */}
@@ -222,7 +218,7 @@ const BlogFour = () => {
                     data-aos-delay={350 + (index % 3) * 100}
                     data-aos-duration="500"
                   >
-                    <Link href="/pages/innerpage/blog-details">
+                    <Link href="/blog-details">
                       {t(`blogs.${blog.id}.title`)}
                     </Link>
                   </h3>
@@ -240,7 +236,7 @@ const BlogFour = () => {
 
                   {/* Button */}
                   <Link
-                    href="/pages/innerpage/blog-details"
+                    href="/blog-details"
                     className="btn"
                     style={cardStyles.btn}
                     data-aos="fade-up"
@@ -267,18 +263,18 @@ const BlogFour = () => {
         >
           <ul>
             <li data-aos="zoom-in" data-aos-delay="550" data-aos-duration="400">
-              <Link className="active" href="/pages/innerpage/blog">
+              <Link className="active" href="/blog">
                 01
               </Link>
             </li>
             <li data-aos="zoom-in" data-aos-delay="600" data-aos-duration="400">
-              <Link href="/pages/innerpage/blog">02</Link>
+              <Link href="/blog">02</Link>
             </li>
             <li data-aos="zoom-in" data-aos-delay="650" data-aos-duration="400">
-              <Link href="/pages/innerpage/blog">03</Link>
+              <Link href="/blog">03</Link>
             </li>
             <li data-aos="zoom-in" data-aos-delay="700" data-aos-duration="400">
-              <Link href="/pages/innerpage/blog">
+              <Link href="/blog">
                 <i className={`ri-arrow-${isRTL ? "left" : "right"}-line`}></i>
               </Link>
             </li>

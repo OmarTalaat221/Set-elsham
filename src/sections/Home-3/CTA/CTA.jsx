@@ -36,7 +36,7 @@ const CTA = () => {
             <h3 className="cta-title text-white">{t("title2")}</h3>
           </div>
           <div className="btn-wrap justify-content-center">
-            <Link href="/pages/innerpage/contact" className="btn">
+            <Link href="/contact" className="btn">
               {t("button")}{" "}
               <i
                 className={

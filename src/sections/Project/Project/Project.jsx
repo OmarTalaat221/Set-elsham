@@ -105,9 +105,7 @@ const Project = () => {
             >
               <div className="portfolio-card style2">
                 <div className="portfolio-card-thumb">
-                  <Link
-                    href={`/pages/innerpage/project-details?id=${project.key}`}
-                  >
+                  <Link href={`/project-details?id=${project.key}`}>
                     <img
                       src={project.src}
                       alt={t(`projects.${project.key}.title`)}
@@ -128,9 +126,7 @@ const Project = () => {
                     {t(`projects.${project.key}.category`)}
                   </span>
                   <h4 className="portfolio-card-title">
-                    <Link
-                      href={`/pages/innerpage/project-details?id=${project.key}`}
-                    >
+                    <Link href={`/project-details?id=${project.key}`}>
                       {t(`projects.${project.key}.title`)}
                     </Link>
                   </h4>
@@ -138,7 +134,7 @@ const Project = () => {
                     {t(`projects.${project.key}.date`)}
                   </p>
                   <Link
-                    href={`/pages/innerpage/project-details?id=${project.key}`}
+                    href={`/project-details?id=${project.key}`}
                     className="btn-with-icon"
                   >
                     {t("viewDetails")}

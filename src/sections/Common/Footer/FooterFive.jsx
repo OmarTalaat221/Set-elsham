@@ -54,13 +54,15 @@ const FooterFive = () => {
                 <div className="menu-all-pages-container grid-style">
                   <ul className="menu">
                     <li>
-                      <Link href="/pages/innerpage/about">About Us</Link>
+                      <Link href="/about">About Us</Link>
                     </li>
                     <li>
                       <Link href="/pages/innerpage/service">What We Do</Link>
                     </li>
                     <li>
-                      <Link href="/pages/innerpage/service">News & Article</Link>
+                      <Link href="/pages/innerpage/service">
+                        News & Article
+                      </Link>
                     </li>
                     <li>
                       <Link href="/pages/innerpage/service">Success Story</Link>
@@ -80,10 +82,10 @@ const FooterFive = () => {
                       <Link href="/pages/innerpage/service">Testimonials</Link>
                     </li>
                     <li>
-                      <Link href="/pages/innerpage/contact">Privacy Policy</Link>
+                      <Link href="/contact">Privacy Policy</Link>
                     </li>
                     <li>
-                      <Link href="/pages/innerpage/contact">Terms of use</Link>
+                      <Link href="/contact">Terms of use</Link>
                     </li>
                   </ul>
                 </div>
@@ -93,12 +95,12 @@ const FooterFive = () => {
               <div className="widget footer-widget widget-contact">
                 <h3 className="widget_title">Office Address</h3>
                 <p className="contact-text">
-                  Losangle, Street Road 24, New York, USA - 67452
+                  Al Sali, Al Mashael District, Riyadh
                 </p>
                 <h3 className="widget_title">Email Address</h3>
                 <p className="text-white footer-text">Get in Touch !</p>
                 <p className="footer-text">
-                  <Link href="mailto:support@gmail.com">support@gmail.com</Link>
+                  <Link href="mailto:info@mtrix.sa">info@mtrix.sa</Link>
                 </p>
               </div>
             </div>
@@ -141,9 +143,9 @@ const FooterFive = () => {
             </div>
             <div className="col-auto">
               <div className="footer-links">
-                <Link href="/pages/innerpage/contact">Terms & Condition</Link>
-                <Link href="/pages/innerpage/contact">Privacy Policy</Link>
-                <Link href="/pages/innerpage/contact">Contact Us</Link>
+                <Link href="/contact">Terms & Condition</Link>
+                <Link href="/contact">Privacy Policy</Link>
+                <Link href="/contact">Contact Us</Link>
               </div>
             </div>
           </div>

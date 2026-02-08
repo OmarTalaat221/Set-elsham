@@ -118,7 +118,7 @@ const HeaderTwo = () => {
               {t("sidebar.address")}
             </p>
             <p className="footer-text">
-              <Link href="mailto:support@gmail.com">
+              <Link href="mailto:info@mtrix.sa">
                 <i className="ri-mail-line space-right-sidebar-icon"></i>
                 {t("sidebar.email")}
               </Link>
@@ -140,7 +140,7 @@ const HeaderTwo = () => {
             {/* <div className="recent-post-wrap mt-40">
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href={`/pages/innerpage/blog-details`}>
+                  <Link href={`/blog-details`}>
                     <img
                       src="/main-assets/img/blog/recent-post1.png"
                       alt="Blog Image"
@@ -153,16 +153,16 @@ const HeaderTwo = () => {
                   <h4 className="post-title">
                     <Link
                       className="text-inherit"
-                      href={`/pages/innerpage/blog-details`}
+                      href={`/blog-details`}
                     >
                       {t("sidebar.recentPosts.post1.title")}
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href={`/pages/innerpage/blog`}>
+                    <Link href={`/blog`}>
                       {t("sidebar.recentPosts.post1.author")}
                     </Link>
-                    <Link href={`/pages/innerpage/blog`}>
+                    <Link href={`/blog`}>
                       {t("sidebar.recentPosts.post1.time")}
                     </Link>
                   </div>
@@ -170,7 +170,7 @@ const HeaderTwo = () => {
               </div>
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href={`/pages/innerpage/blog-details`}>
+                  <Link href={`/blog-details`}>
                     <img
                       src="/main-assets/img/blog/recent-post2.png"
                       alt="Blog Image"
@@ -183,16 +183,16 @@ const HeaderTwo = () => {
                   <h4 className="post-title">
                     <Link
                       className="text-inherit"
-                      href={`/pages/innerpage/blog-details`}
+                      href={`/blog-details`}
                     >
                       {t("sidebar.recentPosts.post2.title")}
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href={`/pages/innerpage/blog`}>
+                    <Link href={`/blog`}>
                       {t("sidebar.recentPosts.post2.author")}
                     </Link>
-                    <Link href={`/pages/innerpage/blog`}>
+                    <Link href={`/blog`}>
                       {t("sidebar.recentPosts.post2.time")}
                     </Link>
                   </div>
@@ -200,7 +200,7 @@ const HeaderTwo = () => {
               </div>
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href={`/pages/innerpage/blog-details`}>
+                  <Link href={`/blog-details`}>
                     <img
                       src="/main-assets/img/blog/recent-post4.png"
                       alt="Blog Image"
@@ -213,16 +213,16 @@ const HeaderTwo = () => {
                   <h4 className="post-title">
                     <Link
                       className="text-inherit"
-                      href={`/pages/innerpage/blog-details`}
+                      href={`/blog-details`}
                     >
                       {t("sidebar.recentPosts.post3.title")}
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href={`/pages/innerpage/blog`}>
+                    <Link href={`/blog`}>
                       {t("sidebar.recentPosts.post3.author")}
                     </Link>
-                    <Link href={`/pages/innerpage/blog`}>
+                    <Link href={`/blog`}>
                       {t("sidebar.recentPosts.post3.time")}
                     </Link>
                   </div>
@@ -265,35 +265,23 @@ const HeaderTwo = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          className="text-lg!"
-                          href={`/pages/innerpage/about`}
-                        >
+                        <Link className="text-lg!" href={`/about`}>
                           {t("nav.about")}
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          className="text-lg!"
-                          href={`/pages/innerpage/project`}
-                        >
+                        <Link className="text-lg!" href={`/project`}>
                           {t("pages.projectPage")}
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          className="text-lg!"
-                          href={`/pages/innerpage/blog`}
-                        >
+                        <Link className="text-lg!" href={`/blog`}>
                           {t("nav.blog")}
                         </Link>
                       </li>
 
                       <li>
-                        <Link
-                          className="text-lg!"
-                          href={`/pages/innerpage/contact`}
-                        >
+                        <Link className="text-lg!" href={`/contact`}>
                           {t("nav.contact")}
                         </Link>
                       </li>
@@ -316,7 +304,7 @@ const HeaderTwo = () => {
                           <li>
                             <Link
                               className="text-lg!"
-                              href={`/pages/innerpage/project`}
+                              href={`/project`}
                             >
                               {t("pages.projectPage")}
                             </Link>
@@ -324,7 +312,7 @@ const HeaderTwo = () => {
                           <li>
                             <Link
                               className="text-lg!"
-                              href={`/pages/innerpage/project-details`}
+                              href={`/project-details`}
                             >
                               {t("pages.projectDetails")}
                             </Link>
@@ -390,7 +378,7 @@ const HeaderTwo = () => {
                       {/* <li>
                         <Link
                           className="text-lg!"
-                          href={`/pages/innerpage/blog`}
+                          href={`/blog`}
                         >
                           {t("nav.blog")}
                         </Link>
@@ -408,7 +396,7 @@ const HeaderTwo = () => {
                   </div>
                 </div>
                 <div
-                  className={`col-auto d-xl-block d-none ${
+                  className={`col-auto d-lg-block d-none ${
                     isRTL ? "space-right" : "space-left"
                   }`}
                 >
@@ -426,22 +414,15 @@ const HeaderTwo = () => {
                         >
                           {t("contact.callUs")}
                         </h6>
-                        <Link className="link" href="tel:+2590256215">
+                        <Link className="link" href="tel:+966580669091">
                           {t("contact.phone")}
                         </Link>
                       </div>
                     </div>
-                    <Link
-                      href={`/pages/innerpage/about`}
-                      className="btn d-xxl-flex d-none"
-                    >
+                    <Link href={`/contact`} className="btn d-lg-flex d-none">
                       {t("buttons.getInTouch")}{" "}
                       <i
-                        className={
-                          isRTL
-                            ? "ri-arrow-left-up-line"
-                            : "ri-arrow-right-up-line"
-                        }
+                        className={`d-xl-flex d-none ${isRTL ? "ri-arrow-left-up-line" : "ri-arrow-right-up-line"}`}
                       ></i>
                     </Link>
 

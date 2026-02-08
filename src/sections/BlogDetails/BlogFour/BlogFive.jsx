@@ -266,7 +266,7 @@ const BlogDetailContent = () => {
                   style={{ width: "100%", height: "auto" }}
                 />
                 <div className="blog-date">
-                  <Link href="/pages/innerpage/blog">
+                  <Link href="/blog">
                     <span>{currentBlog.day}</span>
                     {currentBlog.month}
                   </Link>
@@ -282,12 +282,8 @@ const BlogDetailContent = () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  <Link href="/pages/innerpage/blog">
-                    {t(`blogs.${blogId}.author`)}
-                  </Link>
-                  <Link href="/pages/innerpage/blog">
-                    {t(`blogs.${blogId}.category`)}
-                  </Link>
+                  <Link href="/blog">{t(`blogs.${blogId}.author`)}</Link>
+                  <Link href="/blog">{t(`blogs.${blogId}.category`)}</Link>
                 </div>
 
                 {/* Title */}
@@ -316,13 +312,11 @@ const BlogDetailContent = () => {
                   <div className="row justify-content-between">
                     <div className="col-md-auto">
                       <div className="tagcloud">
-                        <Link href="/pages/innerpage/blog">
+                        <Link href="/blog">
                           {t(`blogs.${blogId}.category`)}
                         </Link>
-                        <Link href="/pages/innerpage/blog">
-                          {isRTL ? "أخشاب" : "Wood"}
-                        </Link>
-                        <Link href="/pages/innerpage/blog">
+                        <Link href="/blog">{isRTL ? "أخشاب" : "Wood"}</Link>
+                        <Link href="/blog">
                           {isRTL ? "تصنيع" : "Manufacturing"}
                         </Link>
                       </div>
@@ -374,9 +368,7 @@ const BlogDetailContent = () => {
                       data-aos-delay={100 + index * 50}
                     >
                       <div className="media-img">
-                        <Link
-                          href={`/pages/innerpage/blog-details?id=${post.id}`}
-                        >
+                        <Link href={`/blog-details?id=${post.id}`}>
                           <img
                             src={post.image}
                             alt={t(`blogs.${post.id}.title`)}
@@ -393,16 +385,16 @@ const BlogDetailContent = () => {
                         <h4 className="post-title">
                           <Link
                             className="text-inherit"
-                            href={`/pages/innerpage/blog-details?id=${post.id}`}
+                            href={`/blog-details?id=${post.id}`}
                           >
                             {t(`blogs.${post.id}.title`)}
                           </Link>
                         </h4>
                         <div className="recent-post-meta">
-                          <Link href="/pages/innerpage/blog">
+                          <Link href="/blog">
                             {t(`blogs.${post.id}.author`)}
                           </Link>
-                          <Link href="/pages/innerpage/blog">
+                          <Link href="/blog">
                             {post.day} {post.month} {post.year}
                           </Link>
                         </div>

@@ -102,13 +102,13 @@ const HeaderOne = () => {
               </Link>
             </p>
             <p className="contact-text">
-              <i className="ri-map-pin-line space-right-sidebar-icon"></i>{" "}
-              Losangle, Street Road 24, New York, USA - 67452
+              <i className="ri-map-pin-line space-right-sidebar-icon"></i> Al
+              Sali, Al Mashael District, Riyadh
             </p>
             <p className="footer-text">
-              <Link href="mailto:support@gmail.com">
+              <Link href="mailto:info@mtrix.sa">
                 <i className="ri-mail-line space-right-sidebar-icon"></i>
-                support@gmail.com
+                info@mtrix.sa
               </Link>
             </p>
             <div className="social-btn style3 mt-30">
@@ -128,7 +128,7 @@ const HeaderOne = () => {
             <div className="recent-post-wrap mt-40">
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     <img
                       src="/main-assets/img/blog/recent-post1.png"
                       alt="Blog Image"
@@ -139,22 +139,19 @@ const HeaderOne = () => {
                 </div>
                 <div className="media-body">
                   <h4 className="post-title">
-                    <Link
-                      className="text-inherit"
-                      href="/pages/innerpage/blog-details"
-                    >
+                    <Link className="text-inherit" href="/blog-details">
                       Best features of Building construction work
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href="/pages/innerpage/blog">By Nicholes</Link>
-                    <Link href="/pages/innerpage/blog">30 min ago</Link>
+                    <Link href="/blog">By Nicholes</Link>
+                    <Link href="/blog">30 min ago</Link>
                   </div>
                 </div>
               </div>
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     <img
                       src="/main-assets/img/blog/recent-post2.png"
                       alt="Blog Image"
@@ -165,22 +162,19 @@ const HeaderOne = () => {
                 </div>
                 <div className="media-body">
                   <h4 className="post-title">
-                    <Link
-                      className="text-inherit"
-                      href="/pages/innerpage/blog-details"
-                    >
+                    <Link className="text-inherit" href="/blog-details">
                       The beast team is a around and how we make it
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href="/pages/innerpage/blog">By Nicholes</Link>
-                    <Link href="/pages/innerpage/blog">2 days ago</Link>
+                    <Link href="/blog">By Nicholes</Link>
+                    <Link href="/blog">2 days ago</Link>
                   </div>
                 </div>
               </div>
               <div className="recent-post">
                 <div className="media-img">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     <img
                       src="/main-assets/img/blog/recent-post4.png"
                       alt="Blog Image"
@@ -191,16 +185,13 @@ const HeaderOne = () => {
                 </div>
                 <div className="media-body">
                   <h4 className="post-title">
-                    <Link
-                      className="text-inherit"
-                      href="/pages/innerpage/blog-details"
-                    >
+                    <Link className="text-inherit" href="/blog-details">
                       A well designed construction website is user accessible
                     </Link>
                   </h4>
                   <div className="recent-post-meta">
-                    <Link href="/pages/innerpage/blog">By Nicholes</Link>
-                    <Link href="/pages/innerpage/blog">3 week ago</Link>
+                    <Link href="/blog">By Nicholes</Link>
+                    <Link href="/blog">3 week ago</Link>
                   </div>
                 </div>
               </div>
@@ -284,7 +275,7 @@ const HeaderOne = () => {
                         <Link href="/">HOME</Link>
                       </li>
                       <li>
-                        <Link href="/pages/innerpage/about">ABOUT</Link>
+                        <Link href="/about">ABOUT</Link>
                       </li>
                       <li>
                         <Link href="/pages/innerpage/service">SERVICES</Link>
@@ -293,14 +284,10 @@ const HeaderOne = () => {
                         <Link href="#">PAGES</Link>
                         <ul className="sub-menu">
                           <li>
-                            <Link href="/pages/innerpage/project">
-                              Project Page
-                            </Link>
+                            <Link href="/project">Project Page</Link>
                           </li>
                           <li>
-                            <Link href="/pages/innerpage/project-details">
-                              Project Details
-                            </Link>
+                            <Link href="/project-details">Project Details</Link>
                           </li>
                           <li>
                             <Link href="/pages/innerpage/team">Team Page</Link>
@@ -334,11 +321,11 @@ const HeaderOne = () => {
                         </ul>
                       </li>
                       <li>
-                        <Link href="/pages/innerpage/blog">Blogs</Link>
+                        <Link href="/blog">Blogs</Link>
                       </li>
 
                       <li>
-                        <Link href="/pages/innerpage/contact">CONTACT</Link>
+                        <Link href="/contact">CONTACT</Link>
                       </li>
                     </ul>
                   </nav>
@@ -356,10 +343,7 @@ const HeaderOne = () => {
                   className={`col-auto d-xl-block d-none ${locale === "ar" ? "space-right" : "space-left"}`}
                 >
                   <div className="header-button">
-                    <Link
-                      href="/pages/innerpage/about"
-                      className="btn header-one-extra-style"
-                    >
+                    <Link href="/about" className="btn header-one-extra-style">
                       GET IN TOUCH <i className="ri-arrow-right-up-line"></i>
                     </Link>
                     <button
@@ -391,8 +375,8 @@ const HeaderOne = () => {
               </div>
               <div className="navbar-right-desc-details">
                 <h6 className="title">Call us any time</h6>
-                <Link className="link" href="tel:+2590256215">
-                  +123 556 8824
+                <Link className="link" href="tel:+966580669091">
+                  +966 58 066 9091
                 </Link>
               </div>
             </div>

@@ -15,7 +15,7 @@
       "feature1": "Manufacturing all types of natural and industrial wood",
       "feature2": "Modern production lines with international specifications",
       "feature3": "Specialized team of professional engineers and technicians",
-      "phone": "+20 123 456 7890",
+      "phone": "+966 54 044 2677",
       "needHelp": "Need Help?",
       "founder": "Founder of Matrix Factory",
       "sideText": "We are committed to providing high-quality wood products that meet our customers' needs, while ensuring the best prices and fast delivery.",
@@ -169,17 +169,27 @@
       "subtitle": "Our Team",
       "title": "Meet With Our Expert Team",
       "viewAll": "View All Team",
-      "member1": {
-        "name": "Ahmed Hassan",
-        "position": "CEO & Founder"
-      },
-      "member2": {
-        "name": "Mohamed Ali",
-        "position": "Production Engineer"
-      },
-      "member3": {
-        "name": "Khaled Mahmoud",
-        "position": "Sales Manager"
+      "members": {
+        "member1": {
+          "name": "Ahmed Al-Rashid",
+          "position": "CEO & Founder",
+          "bio": "Visionary leader with 15+ years of experience in wood manufacturing and business development."
+        },
+        "member2": {
+          "name": "Mohammed Al-Qahtani",
+          "position": "Operations Director",
+          "bio": "Expert in production management and quality control with extensive industry experience."
+        },
+        "member3": {
+          "name": "Khalid Al-Dosari",
+          "position": "Technical Director",
+          "bio": "Specialist in modern woodworking technologies and innovative manufacturing solutions."
+        },
+        "member4": {
+          "name": "Faisal Al-Harbi",
+          "position": "Sales Manager",
+          "bio": "Building strong client relationships and delivering exceptional customer service."
+        }
       }
     },
     "cta": {
@@ -243,7 +253,7 @@
       "since": "Since 2017",
       "availableTitle": "We Are Available",
       "workDays": "Sat - Thu",
-      "workHours": "9:00 AM - 6:00 PM"
+      "workHours": "7:00 AM - 5:00 PM"
     },
     "links": {
       "title": "Useful Links",
@@ -302,15 +312,15 @@
     },
     "contact": {
       "callUs": "Call us any time",
-      "phone": "+123 556 8824"
+      "phone": "+966 58 066 9091"
     },
     "buttons": {
       "getInTouch": "GET IN TOUCH"
     },
     "sidebar": {
       "about": "A small business can be better than a big business because of agility and adaptability due to their size and scale.",
-      "address": "Losangle, Street Road 24, New York, USA - 67452",
-      "email": "support@gmail.com",
+      "address": "Al Sali, Al Mashael District, Riyadh",
+      "email": "info@mtrix.sa",
       "recentPosts": {
         "post1": {
           "title": "Best features of Building construction work",
@@ -707,8 +717,8 @@
       },
       "phone": {
         "label": "Phone",
-        "value1": "+20 123 456 7890",
-        "value2": "+20 109 876 5432"
+        "value1": "+966 54 044 2677",
+        "value2": "+966 58 066 9091"
       },
       "email": {
         "label": "Email",
@@ -717,7 +727,7 @@
       "workHours": {
         "label": "Working Hours",
         "days": "Saturday - Thursday",
-        "hours": "9:00 AM - 6:00 PM",
+        "hours": "7:00 AM - 5:00 PM",
         "friday": "Friday: Closed"
       }
     },
@@ -792,25 +802,83 @@
       }
     }
   },
+
   "contactPage": {
     "offices": {
       "office1": {
         "title": "Main Office - Riyadh",
-        "phone": "+966 11 234 5678",
-        "email": "riyadh@matrixwood.com",
-        "hours": "Sun - Thu 9:00 AM - 6:00 PM"
+        "phone": "+966 54 044 2677",
+        "phone2": "+966 58 066 9091",
+        "email": "info@mtrix.sa",
+        "hours": "Sat - Thu: 7:00 AM - 5:00 PM",
+        "address": "Al Sali, Al Mashael District, Riyadh"
       },
       "office2": {
-        "title": "Jeddah Branch",
-        "phone": "+966 12 345 6789",
-        "email": "jeddah@matrixwood.com",
-        "hours": "Sun - Thu 10:00 AM - 7:00 PM"
+        "title": "Manufacturing Unit",
+        "phone": "+966 54 044 2677",
+        "email": "info@mtrix.sa",
+        "hours": "Sat - Thu: 8:00 AM - 5:00 PM",
+        "address": "Riyadh Industrial Area"
       },
       "office3": {
-        "title": "Dammam Branch",
-        "phone": "+966 13 456 7890",
-        "email": "dammam@matrixwood.com",
-        "hours": "Sun - Thu 9:30 AM - 5:30 PM"
+        "title": "Customer Service",
+        "phone": "+966 58 066 9091",
+        "email": "info@mtrix.sa",
+        "hours": "Sat - Thu: 9:00 AM - 8:00 PM",
+        "address": "Available 24/7 Online"
+      }
+    },
+    "contact": {
+      "form": {
+        "subtitle": "Get Free Quote",
+        "title": "Have a project in mind?",
+        "fields": {
+          "name": "Your Full Name",
+          "email": "Email Address",
+          "phone": "Phone Number",
+          "selectService": "Select Service",
+          "message": "Write your message..."
+        },
+        "services": {
+          "woodManufacturing": "Wood Manufacturing",
+          "doorsWindows": "Doors & Windows",
+          "furniture": "Home Furniture",
+          "decorations": "Wood Decorations",
+          "wholesale": "Wholesale Supply",
+          "customProject": "Custom Project"
+        },
+        "button": "Submit Now",
+        "success": "Your message has been sent successfully!",
+        "error": "An error occurred, please try again."
+      },
+      "info": {
+        "title": "Get in Touch",
+        "subtitle": "Contact Information",
+        "address": {
+          "label": "Factory Address",
+          "value": "Al Sali, Al Mashael District, Riyadh"
+        },
+        "phone": {
+          "label": "Phone",
+          "value1": "+966 54 044 2677",
+          "value2": "+966 58 066 9091"
+        },
+        "email": {
+          "label": "Email",
+          "value": "info@mtrix.sa"
+        },
+        "workHours": {
+          "label": "Working Hours",
+          "days": "Saturday - Thursday",
+          "hours": "7:00 AM - 5:00 PM",
+          "friday": "Friday: Closed"
+        }
+      },
+      "cta": {
+        "title": "Start Your Project With Us Today",
+        "subtitle": "We Turn Your Ideas Into Reality",
+        "description": "Whether you're looking for custom furniture manufacturing or luxury wooden decorations, our team of experts is ready to turn your vision into reality.",
+        "button": "Get Free Consultation"
       }
     }
   }

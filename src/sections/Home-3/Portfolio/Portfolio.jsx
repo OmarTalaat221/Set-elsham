@@ -114,7 +114,7 @@
 //           </div>
 //           <div className="col-lg-auto">
 //             <div className="sec-btn">
-//               <Link href="/pages/innerpage/project" className="btn">
+//               <Link href="/project" className="btn">
 //                 <span className="btn-text">{t("viewAll")}</span>
 //                 <span className="btn-icon">
 //                   <i
@@ -188,7 +188,7 @@
 
 //                     <div className="portfolio-card-details">
 //                       <h4 className="portfolio-card-title">
-//                         <Link href="/pages/innerpage/project-details">
+//                         <Link href="/project-details">
 //                           {t(`${item.key}.title`)}
 //                         </Link>
 //                       </h4>
@@ -205,7 +205,7 @@
 //                       </div>
 //                       <div className="portfolio-card-footer">
 //                         <Link
-//                           href="/pages/innerpage/project-details"
+//                           href="/project-details"
 //                           className="btn"
 //                         >
 //                           <span className="btn-text">
@@ -358,7 +358,7 @@ const Portfolio = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={() => swiperRef?.slidePrev()}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-[var(--theme-color)] hover:bg-[var(--theme-color)]! hover:text-[var(--white-color)]! transition-all duration-300 group"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-md hover:shadow-lg flex items-center justify-center text-[var(--theme-color)] hover:bg-[var(--theme-color)]! hover:text-[var(--white-color)]! transition-all duration-300 group"
               aria-label="Previous"
             >
               {isRTL ? (
@@ -369,7 +369,7 @@ const Portfolio = () => {
             </button>
             <button
               onClick={() => swiperRef?.slideNext()}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[var(--theme-color)] shadow-lg hover:shadow-xl flex items-center justify-center text-white hover:bg-[var(--black-color)] transition-all duration-300"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[var(--theme-color)] shadow-md hover:shadow-lg flex items-center justify-center text-white hover:bg-[var(--black-color)] transition-all duration-300"
               aria-label="Next"
             >
               {isRTL ? (
@@ -410,30 +410,61 @@ const Portfolio = () => {
           >
             {portfolioItems.map((item, index) => (
               <SwiperSlide key={index}>
-                <Link href="/pages/innerpage/project-details">
-                  <div className="group relative bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
-                    {/* Image Container */}
-                    <div className="relative h-[400px] overflow-hidden">
-                      <img
-                        src={item.imgSrc}
-                        alt=""
-                        className="w-full h-[400px]! object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                        <button
-                          onClick={(e) => handleOpenGallery(e, index)}
-                          className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl text-slate-900 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 hover:bg-[var(--theme-color)]! hover:text-[var(--white-color)]!"
-                        >
-                          <i className="ri-eye-line"></i>
-                        </button>
-                      </div>
-                      {/* Floating Number */}
-                      <div className="absolute top-6 left-6 w-12 h-12 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center font-serif text-slate-900 shadow-lg">
-                        {String(index + 1).padStart(2, "0")}
-                      </div>
+                <div className="group relative bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                  {/* Image Container */}
+                  <div className="relative h-[400px] overflow-hidden">
+                    <img
+                      src={item.imgSrc}
+                      alt=""
+                      className="w-full h-[400px]! object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+
+                    {/* Desktop Overlay with Two Buttons */}
+                    <div className="hidden md:flex absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 items-center justify-center gap-4 backdrop-blur-[2px]">
+                      {/* View Gallery Button */}
+                      <button
+                        onClick={(e) => handleOpenGallery(e, index)}
+                        className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl text-slate-900 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 hover:bg-[var(--theme-color)]! hover:text-[var(--white-color)]!"
+                      >
+                        <i className="ri-eye-line"></i>
+                      </button>
+
+                      {/* View Details Button */}
+                      <Link
+                        href="/project-details"
+                        className="w-16 h-16 bg-[var(--theme-color)] flex items-center justify-center text-2xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75 hover:bg-slate-900!"
+                      >
+                        <i className="ri-arrow-right-up-line"></i>
+                      </Link>
+                    </div>
+
+                    {/* Mobile Buttons - Top Right */}
+                    <div
+                      className={`md:hidden absolute top-4 ${isRTL ? "right-4" : "right-4"} flex flex-col gap-2 z-10`}
+                    >
+                      {/* View Gallery Button */}
+                      <button
+                        onClick={(e) => handleOpenGallery(e, index)}
+                        className="w-11 h-11 bg-white/90 backdrop-blur-sm  flex items-center justify-center text-lg text-slate-900 shadow-lg"
+                      >
+                        <i className="ri-eye-line"></i>
+                      </button>
+
+                      {/* View Details Button */}
+                      <Link
+                        href="/project-details"
+                        className="w-11 h-11 bg-[var(--theme-color)]  flex items-center justify-center text-lg text-white shadow-lg"
+                      >
+                        <i className="ri-arrow-right-up-line"></i>
+                      </Link>
+                    </div>
+
+                    {/* Floating Number */}
+                    <div className="absolute top-6 left-6 w-12 h-12 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center font-serif text-slate-900 shadow-lg">
+                      {String(index + 1).padStart(2, "0")}
                     </div>
                   </div>
-                </Link>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

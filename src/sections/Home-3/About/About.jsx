@@ -96,7 +96,7 @@ const About = () => {
                       <Link className="link" href="tel:+201234567890">
                         {t("phone")}
                       </Link>
-                      <h6 className="title">{t("needHelp")}</h6>
+                      <h6 className="title text-start!">{t("needHelp")}</h6>
                     </div>
                   </div>
                   <div className="about-author-wrap">
@@ -155,7 +155,7 @@ const About = () => {
               </div>
               <p>{t("sideText")}</p>
               <div className="btn-group mt-35">
-                <Link href="/pages/innerpage/about" className="btn">
+                <Link href="/about" className="btn">
                   {t("button")}
                   <i
                     className={

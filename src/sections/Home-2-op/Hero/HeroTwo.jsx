@@ -5,11 +5,17 @@ const Hero = () => {
     <div className="hero-wrapper hero-2" id="hero-sec">
       <div
         className="section-animation-shape1-1 shape-mockup animation-infinite"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape1.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape1.png')",
+        }}
       ></div>
       <div
         className="section-animation-shape1-2 shape-mockup animation-infinite"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape1.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape1.png')",
+        }}
       ></div>
       <div
         className="hero-slider2 global-carousel"
@@ -41,7 +47,10 @@ const Hero = () => {
                     data-ani="slideinleft"
                     data-ani-delay="0.4s"
                   >
-                    <img src="/main-assets/img/hero/hero_shape_1_1.png" alt="img" />
+                    <img
+                      src="/main-assets/img/hero/hero_shape_1_1.png"
+                      alt="img"
+                    />
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -63,7 +72,7 @@ const Hero = () => {
                         Explore More - Explore More -
                       </span>
                     </div>
-                    <Link href="/pages/innerpage/contact" className="hero-tag_icon">
+                    <Link href="/contact" className="hero-tag_icon">
                       <i className="ri-arrow-right-up-line"></i>
                     </Link>
                   </div>
@@ -91,7 +100,10 @@ const Hero = () => {
                     data-ani="slideinleft"
                     data-ani-delay="0.4s"
                   >
-                    <img src="/main-assets/img/hero/hero_thumb_2_1.png" alt="img" />
+                    <img
+                      src="/main-assets/img/hero/hero_thumb_2_1.png"
+                      alt="img"
+                    />
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -113,7 +125,7 @@ const Hero = () => {
                         Explore More - Explore More -
                       </span>
                     </div>
-                    <Link href="/pages/innerpage/contact" className="hero-tag_icon">
+                    <Link href="/contact" className="hero-tag_icon">
                       <i className="ri-arrow-right-up-line"></i>
                     </Link>
                   </div>
@@ -141,7 +153,10 @@ const Hero = () => {
                     data-ani="slideinleft"
                     data-ani-delay="0.4s"
                   >
-                    <img src="/main-assets/img/hero/hero_thumb_2_2.png" alt="img" />
+                    <img
+                      src="/main-assets/img/hero/hero_thumb_2_2.png"
+                      alt="img"
+                    />
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -163,7 +178,7 @@ const Hero = () => {
                         Explore More - Explore More -
                       </span>
                     </div>
-                    <Link href="/pages/innerpage/contact" className="hero-tag_icon">
+                    <Link href="/contact" className="hero-tag_icon">
                       <i className="ri-arrow-right-up-line"></i>
                     </Link>
                   </div>

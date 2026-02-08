@@ -41,7 +41,7 @@ const Testimonial = () => {
     <div className="testimonial-area-3 py-16 overflow-hidden">
       <div className="container">
         {/* Header */}
-        <div className="row pb-0 justify-content-between align-items-end">
+        <div className="row pb-0 justify-content-between items-center">
           <div className="col-lg-7">
             <div
               className={`title-area pb-0! mb-0! ${
@@ -67,7 +67,7 @@ const Testimonial = () => {
           <div className="col-lg-auto">
             <div className="d-flex align-items-center gap-3">
               {/* Counter Section */}
-              <div className="sec-btn btn-wrap d-none d-lg-flex">
+              {/* <div className="sec-btn btn-wrap d-none d-lg-flex">
                 <div className="client-group-thumb">
                   <img
                     src="/main-assets/img/normal/client_group_1-2.png"
@@ -83,7 +83,7 @@ const Testimonial = () => {
                   </h3>
                   <p className="testi-counter-text">{t("successCounter")}</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Navigation Buttons */}
               <div className="d-flex align-items-center gap-3">

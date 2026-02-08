@@ -164,7 +164,7 @@ const Blog = () => {
               </div>
               {/* View All Button - Hidden on mobile */}
               {/* <div className="sec-btn d-none d-md-block mb-0!">
-                <Link href="/pages/innerpage/blog" className="btn">
+                <Link href="/blog" className="btn">
                   {t("viewAll")}{" "}
                   <i
                     className={
@@ -195,7 +195,7 @@ const Blog = () => {
                   <div className="blog-img">
                     <img src={post.image} alt={t(`${post.key}.title`)} />
                     <div className="blog-date">
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog-details">
                         <span>{post.day}</span>
                         {getMonth(post.month)}
                       </Link>
@@ -204,25 +204,20 @@ const Blog = () => {
                   </div>
                   <div className="blog-content">
                     <div className="blog-meta">
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog-details">
                         {t(`${post.key}.author`)}
                       </Link>
-                      <Link href="/pages/innerpage/blog">
+                      <Link href="/blog-details">
                         {t(`${post.key}.category`)}
                       </Link>
                     </div>
                     <h3 className="blog-title line-clamp-1">
-                      <Link href="/pages/innerpage/blog-details">
-                        {t(`${post.key}.title`)}
-                      </Link>
+                      <Link href="/blog-details">{t(`${post.key}.title`)}</Link>
                     </h3>
                     <p className="blog-text line-clamp-2">
                       {t(`${post.key}.excerpt`)}
                     </p>
-                    <Link
-                      href="/pages/innerpage/blog-details"
-                      className="btn style2"
-                    >
+                    <Link href="/blog-details" className="btn style2">
                       {t("moreDetails")}{" "}
                       <i
                         className={
@@ -241,7 +236,7 @@ const Blog = () => {
 
         {/* View All Button - Mobile Only */}
         {/* <div className="d-md-none text-center mt-4" data-aos="fade-up">
-          <Link href="/pages/innerpage/blog" className="btn">
+          <Link href="/blog" className="btn">
             {t("viewAll")}{" "}
             <i
               className={

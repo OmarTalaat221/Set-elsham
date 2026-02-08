@@ -5,14 +5,21 @@ const TeamThree = () => {
     <div className="team-area-1 space shape-mockup-wrap">
       <div
         className="section-animation-shape1-1 shape-mockup animation-infinite background-image"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape2.png')", bottom: '0px' }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape2.png')",
+          bottom: "0px",
+        }}
       ></div>
       <div className="container">
         <div className="row justify-content-between align-items-center">
           <div className="col-lg-7 col-md-7">
             <div className="title-area content-text-extra-style">
               <span className="sub-title">
-                <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/section-subtitle-icon.svg"
+                  alt="img"
+                />
                 Our Team
               </span>
               <h2 className="sec-title">Meet our leadership</h2>
@@ -20,7 +27,7 @@ const TeamThree = () => {
           </div>
           <div className="col-md-auto">
             <div className="sec-btn">
-              <Link href="/pages/innerpage/about" className="btn">
+              <Link href="/about" className="btn">
                 View All Members <i className="ri-arrow-right-up-line"></i>
               </Link>
             </div>
@@ -31,11 +38,16 @@ const TeamThree = () => {
           <div className="col-lg-4 col-md-6">
             <div
               className="team-card"
-              style={{ backgroundImage: "url('/main-assets/img/bg/team-card-bg1-1.png')" }}
+              style={{
+                backgroundImage:
+                  "url('/main-assets/img/bg/team-card-bg1-1.png')",
+              }}
             >
               <div className="team-card_content max-width-reset-team">
                 <h4 className="team-card_title">
-                  <Link href="/pages/innerpage/team-details">Penelopa Miller</Link>
+                  <Link href="/pages/innerpage/team-details">
+                    Penelopa Miller
+                  </Link>
                 </h4>
                 <span className="team-card_desig">Head of Production</span>
                 <div className="team-social_wrap">
@@ -66,7 +78,10 @@ const TeamThree = () => {
           <div className="col-lg-4 col-md-6">
             <div
               className="team-card"
-              style={{ backgroundImage: "url('/main-assets/img/bg/team-card-bg1-1.png')" }}
+              style={{
+                backgroundImage:
+                  "url('/main-assets/img/bg/team-card-bg1-1.png')",
+              }}
             >
               <div className="team-card_content max-width-reset-team">
                 <h4 className="team-card_title">
@@ -101,7 +116,10 @@ const TeamThree = () => {
           <div className="col-lg-4 col-md-6">
             <div
               className="team-card"
-              style={{ backgroundImage: "url('/main-assets/img/bg/team-card-bg1-1.png')" }}
+              style={{
+                backgroundImage:
+                  "url('/main-assets/img/bg/team-card-bg1-1.png')",
+              }}
             >
               <div className="team-card_content max-width-reset-team">
                 <h4 className="team-card_title">

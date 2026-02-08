@@ -16,7 +16,7 @@ const Hero = () => {
 
   const heroImages = [
     // "https://res.cloudinary.com/dkc5klynm/image/upload/v1769674231/collab-media-VGjQgLN4B78-unsplash_ks6vrj.webp",
-    "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456573/considerate-agency-64_nESiE6q8-unsplash_jdfq9d.jpg",
+    "https://res.cloudinary.com/dkc5klynm/image/upload/v1770560125/pexels-mandiri-abadi-396768996-14805031_tgsffs.jpg",
     // "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456578/pickawood-6tAIO3pxde4-unsplash_ifdxus.jpg",
     "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456582/lajos-szabo-lzW4Zv95-Ts-unsplash_hdcyce.jpg",
     "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456571/pickawood-_l9Znw_mxgs-unsplash_gjnbjn.jpg",
@@ -77,7 +77,7 @@ const Hero = () => {
 
         {/* Custom Navigation Buttons */}
         <button
-          className="hero-swiper-prev absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--theme-color)] backdrop-blur-sm rounded-full p-3 hover:bg-black/60 transition-all duration-300 border border-white/20"
+          className="hero-swiper-prev md:flex hidden absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--theme-color)] backdrop-blur-sm rounded-full p-3 hover:bg-black/60 transition-all duration-300 border border-white/20"
           aria-label="Previous slide"
         >
           <i
@@ -89,7 +89,7 @@ const Hero = () => {
           ></i>
         </button>
         <button
-          className="hero-swiper-next absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--theme-color)] backdrop-blur-sm rounded-full p-3 hover:bg-black/60 transition-all duration-300 border border-white/20 "
+          className="hero-swiper-next md:flex hidden absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--theme-color)] backdrop-blur-sm rounded-full p-3 hover:bg-black/60 transition-all duration-300 border border-white/20 "
           aria-label="Next slide"
         >
           <i
@@ -108,7 +108,7 @@ const Hero = () => {
       </div>
 
       <div
-        className="hero-bg-shape3-1 shape-mockup jump flex items-center gap-2 xl:bottom-[2%] xl:left-[3%] lg:bottom-[-2%] lg:left-[3%] md:bottom-[2%] md:left-[3%] sm:bottom-[2%] sm:left-[3%] bottom-[2%] left-[3%]"
+        className="hero-bg-shape3-1 shape-mockup jump flex items-center gap-2 xl:bottom-[-2%] xl:left-[3%] lg:bottom-[-2%] lg:left-[3%] md:bottom-[-2%] md:left-[3%] sm:bottom-[2%] sm:left-[3%] bottom-[2%] left-[3%]"
         style={{ position: "absolute" }}
       >
         <img

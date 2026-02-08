@@ -127,7 +127,7 @@ const WhyChoose = () => {
                             </li>
                           </ul>
                         </div>
-                        <div className="btn-group mt-35">
+                        {/* <div className="btn-group mt-35">
                           <Link href="/pages/innerpage/service" className="btn">
                             {t("moreDetails")}{" "}
                             <i
@@ -138,7 +138,7 @@ const WhyChoose = () => {
                               }
                             ></i>
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>

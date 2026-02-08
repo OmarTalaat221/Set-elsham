@@ -9,7 +9,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { useLocale } from "next-intl";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -19,54 +19,94 @@ import "swiper/css/pagination";
 const teamMembers = [
   {
     id: 1,
-    name: "سارة جونسون",
-    position: "المديرة التنفيذية والمؤسِّسة",
-    bio: "قيادية برؤية استراتيجية بخبرة +15 سنة في الابتكار التقني وبناء الأعمال.",
+    key: "member1",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400&h=500",
+      "https://i.pinimg.com/736x/25/b9/c9/25b9c99d1a7f5bcc86d09ee85d82ee02.jpg",
     socials: [
-      { platform: "linkedin", icon: <Linkedin size={16} />, url: "#" },
-      { platform: "instagram", icon: <Instagram size={16} />, url: "#" },
-      { platform: "email", icon: <Mail size={16} />, url: "mailto:" },
+      {
+        platform: "linkedin",
+        icon: <Linkedin size={16} />,
+        url: "https://www.linkedin.com/",
+      },
+      {
+        platform: "instagram",
+        icon: <Instagram size={16} />,
+        url: "https://www.instagram.com/",
+      },
+      {
+        platform: "email",
+        icon: <Mail size={16} />,
+        url: "mailto:info@mtrix.sa",
+      },
     ],
   },
   {
     id: 2,
-    name: "مايكل تشين",
-    position: "المدير التقني CTO",
-    bio: "خبير في البنية القابلة للتوسّع والتقنيات الناشئة—وشغفه الابتكار.",
+    key: "member2",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=500",
+      "https://i.pinimg.com/736x/9e/db/42/9edb42beac7992b2c7a5f0a7bffc5441.jpg",
     socials: [
-      { platform: "linkedin", icon: <Linkedin size={16} />, url: "#" },
-      { platform: "instagram", icon: <Instagram size={16} />, url: "#" },
-      { platform: "facebook", icon: <Facebook size={16} />, url: "#" },
+      {
+        platform: "linkedin",
+        icon: <Linkedin size={16} />,
+        url: "https://www.linkedin.com/",
+      },
+      {
+        platform: "instagram",
+        icon: <Instagram size={16} />,
+        url: "https://www.instagram.com/",
+      },
+      {
+        platform: "facebook",
+        icon: <Facebook size={16} />,
+        url: "https://www.facebook.com/",
+      },
     ],
   },
   {
     id: 3,
-    name: "إيميلي رودريغيز",
-    position: "مديرة التصميم",
-    bio: "مصممة حائزة جوائز، تصنع تجارب استخدام جميلة وسهلة الفهم.",
+    key: "member3",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=400&h=500",
+      "https://i.pinimg.com/736x/99/41/f6/9941f61de6519275317a5460180541ac.jpg",
     socials: [
-      { platform: "instagram", icon: <Instagram size={16} />, url: "#" },
-      { platform: "linkedin", icon: <Linkedin size={16} />, url: "#" },
-      { platform: "email", icon: <Mail size={16} />, url: "mailto:" },
+      {
+        platform: "instagram",
+        icon: <Instagram size={16} />,
+        url: "https://www.instagram.com/",
+      },
+      {
+        platform: "linkedin",
+        icon: <Linkedin size={16} />,
+        url: "https://www.linkedin.com/",
+      },
+      {
+        platform: "email",
+        icon: <Mail size={16} />,
+        url: "mailto:info@mtrix.sa",
+      },
     ],
   },
   {
     id: 4,
-    name: "ديفيد تومبسون",
-    position: "رئيس العمليات",
-    bio: "خبير عمليات يضمن تسليمًا سلسًا وتجربة عميل ممتازة بدون دراما.",
+    key: "member4",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=500",
+      "https://i.pinimg.com/1200x/6e/a2/db/6ea2db384503cbd6ea3e5787dc393ffa.jpg",
     socials: [
-      { platform: "linkedin", icon: <Linkedin size={16} />, url: "#" },
-      { platform: "instagram", icon: <Instagram size={16} />, url: "#" },
-      { platform: "email", icon: <Mail size={16} />, url: "mailto:" },
+      {
+        platform: "linkedin",
+        icon: <Linkedin size={16} />,
+        url: "https://www.linkedin.com/",
+      },
+      {
+        platform: "instagram",
+        icon: <Instagram size={16} />,
+        url: "https://www.instagram.com/",
+      },
+      {
+        platform: "email",
+        icon: <Mail size={16} />,
+        url: "mailto:info@mtrix.sa",
+      },
     ],
   },
 ];
@@ -140,7 +180,7 @@ export default function TeamSection() {
             {/* Custom Navigation Buttons */}
             <button
               onClick={() => swiperRef?.slidePrev()}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg hover:shadow-xl flex items-center justify-center text-[var(--theme-color)] hover:bg-[var(--theme-color)]! hover:text-white transition-all duration-300 group"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-md hover:shadow-lg flex items-center justify-center text-[var(--theme-color)] hover:bg-[var(--theme-color)]! hover:text-white transition-all duration-300 group"
               aria-label="Previous"
             >
               {isRTL ? (
@@ -151,7 +191,7 @@ export default function TeamSection() {
             </button>
             <button
               onClick={() => swiperRef?.slideNext()}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[var(--theme-color)]! shadow-lg hover:shadow-xl flex items-center justify-center text-[var(--white-color)] hover:bg-[var(--white-color)]! hover:text-[var(--theme-color)]! transition-all duration-300"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[var(--theme-color)]! shadow-md hover:shadow-lg flex items-center justify-center text-[var(--white-color)] hover:bg-[var(--white-color)]! hover:text-[var(--theme-color)]! transition-all duration-300"
               aria-label="Next"
             >
               {isRTL ? (
@@ -166,17 +206,17 @@ export default function TeamSection() {
         {/* Swiper */}
         <div data-aos="fade-up" data-aos-delay="200">
           <Swiper
-            key={locale} // 👈 مهم جداً - يعيد تحميل Swiper عند تغيير اللغة
+            key={locale}
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={24}
             slidesPerView={1}
             onSwiper={setSwiperRef}
-            dir={isRTL ? "rtl" : "ltr"} // 👈 اتجاه السوايبر
+            dir={isRTL ? "rtl" : "ltr"}
             autoplay={{
               delay: 3500,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
-              reverseDirection: isRTL, // 👈 عكس اتجاه الـ autoplay في RTL
+              reverseDirection: isRTL,
             }}
             pagination={{
               clickable: true,
@@ -210,7 +250,7 @@ export default function TeamSection() {
                     <div className="relative w-full h-full overflow-hidden">
                       <img
                         src={member.image}
-                        alt={member.name}
+                        alt={t(`members.${member.key}.name`)}
                         className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
                       />
 
@@ -223,9 +263,9 @@ export default function TeamSection() {
 
                     {/* Position Badge */}
                     <div className="absolute top-4 sm:top-5 md:top-6 left-4 sm:left-5 md:left-6 right-4 sm:right-5 md:right-6 z-20">
-                      <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/95 backdrop-blur-md rounded-full shadow-lg">
-                        <span className="text-[10px] sm:text-xs md:text-sm font-semibold text-[var(--black-color)]">
-                          {member.position}
+                      <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-black/30 backdrop-blur-sm rounded-full shadow-lg">
+                        <span className="text-[10px] sm:text-xs md:text-sm font-semibold text-white">
+                          {t(`members.${member.key}.position`)}
                         </span>
                       </div>
                     </div>
@@ -234,11 +274,11 @@ export default function TeamSection() {
                     <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 md:p-6 lg:p-8 z-10">
                       {/* Name & Bio */}
                       <div className="mb-3 sm:mb-4">
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1 sm:mb-2 line-clamp-1">
-                          {member.name}
+                        <h3 className="inline-block text-lg! sm:text-xl! md:text-2xl! font-bold text-white mb-1 sm:mb-2 px-3 py-1 rounded-full">
+                          {t(`members.${member.key}.name`)}
                         </h3>
-                        <p className="text-white/90! text-xs sm:text-sm leading-relaxed line-clamp-2">
-                          {member.bio}
+                        <p className="text-white! text-xs! sm:text-sm! leading-relaxed line-clamp-2 backdrop-blur-sm bg-black/20 px-3 py-1.5 rounded-lg inline-block mt-2">
+                          {t(`members.${member.key}.bio`)}
                         </p>
                       </div>
 
@@ -251,6 +291,7 @@ export default function TeamSection() {
 
                           return (
                             <a
+                              target="_blank"
                               key={idx}
                               href={social.url}
                               onMouseEnter={() => setHoveredSocial(socialKey)}

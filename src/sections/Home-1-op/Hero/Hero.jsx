@@ -5,17 +5,25 @@ const Hero = () => {
     <div
       className="hero-wrapper hero-1"
       id="hero-sec"
-      style={{ backgroundImage: "url('/main-assets/img/hero/hero_bg_1_1.png')" }}
+      style={{
+        backgroundImage: "url('/main-assets/img/hero/hero_bg_1_1.png')",
+      }}
     >
       <div className="hero-bg-shape1-1"></div>
       <div className="hero-bg-shape1-2"></div>
       <div
         className="section-animation-shape1-1 shape-mockup animation-infinite"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape1.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape1.png')",
+        }}
       ></div>
       <div
         className="section-animation-shape1-2 shape-mockup animation-infinite"
-        style={{ backgroundImage: "url('/main-assets/img/shape/global-line-shape1.png')" }}
+        style={{
+          backgroundImage:
+            "url('/main-assets/img/shape/global-line-shape1.png')",
+        }}
       ></div>
       <div className="hero-slider1">
         <div className="hero-slide">
@@ -32,7 +40,7 @@ const Hero = () => {
                   </p>
 
                   <div className="btn-group">
-                    <Link href="/pages/innerpage/about" className="btn style2">
+                    <Link href="/about" className="btn style2">
                       Discover More <i className="ri-arrow-right-up-line"></i>
                     </Link>
                   </div>
@@ -58,7 +66,7 @@ const Hero = () => {
                   </p>
 
                   <div className="btn-group">
-                    <Link href="/pages/innerpage/about" className="btn style2">
+                    <Link href="/about" className="btn style2">
                       Discover More <i className="ri-arrow-right-up-line"></i>
                     </Link>
                   </div>
@@ -84,7 +92,7 @@ const Hero = () => {
                   </p>
 
                   <div className="btn-group">
-                    <Link href="/pages/innerpage/about" className="btn style2">
+                    <Link href="/about" className="btn style2">
                       Discover More <i className="ri-arrow-right-up-line"></i>
                     </Link>
                   </div>
@@ -124,12 +132,16 @@ const Hero = () => {
       <div
         className="hero-experience-wrap"
         style={{
-          backgroundImage: "url('/main-assets/img/hero/hero_experience_wrap_bg_1_1.png')",
+          backgroundImage:
+            "url('/main-assets/img/hero/hero_experience_wrap_bg_1_1.png')",
         }}
       >
         <span className="shadow-text">Business Experience</span>
         <div className="hero-experience-icon">
-          <img src="/main-assets/img/hero/hero_experience_wrap_icon_1_1.png" alt="img" />
+          <img
+            src="/main-assets/img/hero/hero_experience_wrap_icon_1_1.png"
+            alt="img"
+          />
         </div>
         <h2 className="hero-experience-counter">
           <span className="counter-number">40</span>+
@@ -137,7 +149,10 @@ const Hero = () => {
         <p className="hero-experience-text">Years we have been doing this</p>
         <div className="media">
           <div className="icon">
-            <img src="/main-assets/img/hero/hero_experience_wrap_icon_1_2.png" alt="img" />
+            <img
+              src="/main-assets/img/hero/hero_experience_wrap_icon_1_2.png"
+              alt="img"
+            />
           </div>
           <Link className="link-btn" href="landing-assets/about">
             Let’s work together{" "}

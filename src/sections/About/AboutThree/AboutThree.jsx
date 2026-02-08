@@ -177,7 +177,7 @@ const AboutThree = () => {
               data-aos-duration="1000"
               data-aos-delay="600"
             >
-              <Link href="/pages/innerpage/contact" className="btn">
+              <Link href="/contact" className="btn">
                 {t("button")}{" "}
                 <i
                   className={

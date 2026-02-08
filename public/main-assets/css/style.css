@@ -10096,17 +10096,17 @@ li.trackback {
   }
 }
 
-@media (max-width: 1299px) {
+/* @media (max-width: 1299px) {
   .hero-style3 {
     padding: 150px 0 250px;
   }
-}
+} */
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .hero-style3 {
     padding: 130px 0 200px;
   }
-}
+} */
 
 @media (max-width: 575px) {
   .hero-style3 .hero-title {

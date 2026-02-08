@@ -27,7 +27,7 @@ const Blog = () => {
           </div>
           <div className="col-md-auto">
             <div className="sec-btn">
-              <Link href="/pages/innerpage/blog" className="btn">
+              <Link href="/blog" className="btn">
                 View All News <i className="ri-arrow-right-up-line"></i>
               </Link>
             </div>
@@ -52,7 +52,7 @@ const Blog = () => {
                   alt="blog image"
                 />
                 <div className="blog-date">
-                  <Link href="/pages/innerpage/blog">
+                  <Link href="/blog">
                     <span>17</span>JUN
                   </Link>
                   <div className="year">2024</div>
@@ -60,11 +60,11 @@ const Blog = () => {
               </div>
               <div className="blog-content">
                 <div className="blog-meta">
-                  <Link href="/pages/innerpage/blog">By Rebecca</Link>
-                  <Link href="/pages/innerpage/blog">Construction</Link>
+                  <Link href="/blog">By Rebecca</Link>
+                  <Link href="/blog">Construction</Link>
                 </div>
                 <h3 className="blog-title">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     How to hire a contractor home renovation service
                   </Link>
                 </h3>
@@ -72,10 +72,7 @@ const Blog = () => {
                   Tortor posuere ac ut consequat. Tellusi elem isis etum sag
                   ittis vitae et leo duis ut diam odio ut sem
                 </p>
-                <Link
-                  href="/pages/innerpage/blog-details"
-                  className="btn style2"
-                >
+                <Link href="/blog-details" className="btn style2">
                   More Details <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>
@@ -90,7 +87,7 @@ const Blog = () => {
                   alt="blog image"
                 />
                 <div className="blog-date">
-                  <Link href="/pages/innerpage/blog">
+                  <Link href="/blog">
                     <span>17</span>JUN
                   </Link>
                   <div className="year">2024</div>
@@ -98,11 +95,11 @@ const Blog = () => {
               </div>
               <div className="blog-content">
                 <div className="blog-meta">
-                  <Link href="/pages/innerpage/blog">By Rebecca</Link>
-                  <Link href="/pages/innerpage/blog">Construction</Link>
+                  <Link href="/blog">By Rebecca</Link>
+                  <Link href="/blog">Construction</Link>
                 </div>
                 <h3 className="blog-title">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     Started to develop a specific testing programs
                   </Link>
                 </h3>
@@ -110,10 +107,7 @@ const Blog = () => {
                   Tortor posuere ac ut consequat. Tellusi elem isis etum sag
                   ittis vitae et leo duis ut diam odio ut sem
                 </p>
-                <Link
-                  href="/pages/innerpage/blog-details"
-                  className="btn style2"
-                >
+                <Link href="/blog-details" className="btn style2">
                   More Details <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>
@@ -128,7 +122,7 @@ const Blog = () => {
                   alt="blog image"
                 />
                 <div className="blog-date">
-                  <Link href="/pages/innerpage/blog">
+                  <Link href="/blog">
                     <span>17</span>JUN
                   </Link>
                   <div className="year">2024</div>
@@ -136,11 +130,11 @@ const Blog = () => {
               </div>
               <div className="blog-content">
                 <div className="blog-meta">
-                  <Link href="/pages/innerpage/blog">By Rebecca</Link>
-                  <Link href="/pages/innerpage/blog">Construction</Link>
+                  <Link href="/blog">By Rebecca</Link>
+                  <Link href="/blog">Construction</Link>
                 </div>
                 <h3 className="blog-title">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     How to stay motivated until a project is finished
                   </Link>
                 </h3>
@@ -148,10 +142,7 @@ const Blog = () => {
                   Tortor posuere ac ut consequat. Tellusi elem isis etum sag
                   ittis vitae et leo duis ut diam odio ut sem
                 </p>
-                <Link
-                  href="/pages/innerpage/blog-details"
-                  className="btn style2"
-                >
+                <Link href="/blog-details" className="btn style2">
                   More Details <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>
@@ -166,7 +157,7 @@ const Blog = () => {
                   alt="blog image"
                 />
                 <div className="blog-date">
-                  <Link href="/pages/innerpage/blog">
+                  <Link href="/blog">
                     <span>17</span>JUN
                   </Link>
                   <div className="year">2024</div>
@@ -174,11 +165,11 @@ const Blog = () => {
               </div>
               <div className="blog-content">
                 <div className="blog-meta">
-                  <Link href="/pages/innerpage/blog">By Rebecca</Link>
-                  <Link href="/pages/innerpage/blog">Construction</Link>
+                  <Link href="/blog">By Rebecca</Link>
+                  <Link href="/blog">Construction</Link>
                 </div>
                 <h3 className="blog-title">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     How to hire a contractor home renovation service
                   </Link>
                 </h3>
@@ -186,10 +177,7 @@ const Blog = () => {
                   Tortor posuere ac ut consequat. Tellusi elem isis etum sag
                   ittis vitae et leo duis ut diam odio ut sem
                 </p>
-                <Link
-                  href="/pages/innerpage/blog-details"
-                  className="btn style2"
-                >
+                <Link href="/blog-details" className="btn style2">
                   More Details <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>
@@ -204,7 +192,7 @@ const Blog = () => {
                   alt="blog image"
                 />
                 <div className="blog-date">
-                  <Link href="/pages/innerpage/blog">
+                  <Link href="/blog">
                     <span>17</span>JUN
                   </Link>
                   <div className="year">2024</div>
@@ -212,11 +200,11 @@ const Blog = () => {
               </div>
               <div className="blog-content">
                 <div className="blog-meta">
-                  <Link href="/pages/innerpage/blog">By Rebecca</Link>
-                  <Link href="/pages/innerpage/blog">Construction</Link>
+                  <Link href="/blog">By Rebecca</Link>
+                  <Link href="/blog">Construction</Link>
                 </div>
                 <h3 className="blog-title">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     Started to develop a specific testing programs
                   </Link>
                 </h3>
@@ -224,10 +212,7 @@ const Blog = () => {
                   Tortor posuere ac ut consequat. Tellusi elem isis etum sag
                   ittis vitae et leo duis ut diam odio ut sem
                 </p>
-                <Link
-                  href="/pages/innerpage/blog-details"
-                  className="btn style2"
-                >
+                <Link href="/blog-details" className="btn style2">
                   More Details <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>
@@ -242,7 +227,7 @@ const Blog = () => {
                   alt="blog image"
                 />
                 <div className="blog-date">
-                  <Link href="/pages/innerpage/blog">
+                  <Link href="/blog">
                     <span>17</span>JUN
                   </Link>
                   <div className="year">2024</div>
@@ -250,11 +235,11 @@ const Blog = () => {
               </div>
               <div className="blog-content">
                 <div className="blog-meta">
-                  <Link href="/pages/innerpage/blog">By Rebecca</Link>
-                  <Link href="/pages/innerpage/blog">Construction</Link>
+                  <Link href="/blog">By Rebecca</Link>
+                  <Link href="/blog">Construction</Link>
                 </div>
                 <h3 className="blog-title">
-                  <Link href="/pages/innerpage/blog-details">
+                  <Link href="/blog-details">
                     How to stay motivated until a project is finished
                   </Link>
                 </h3>
@@ -262,10 +247,7 @@ const Blog = () => {
                   Tortor posuere ac ut consequat. Tellusi elem isis etum sag
                   ittis vitae et leo duis ut diam odio ut sem
                 </p>
-                <Link
-                  href="/pages/innerpage/blog-details"
-                  className="btn style2"
-                >
+                <Link href="/blog-details" className="btn style2">
                   More Details <i className="ri-arrow-right-up-line"></i>
                 </Link>
               </div>
