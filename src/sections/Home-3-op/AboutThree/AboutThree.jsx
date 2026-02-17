@@ -72,7 +72,7 @@ const AboutThree = () => {
               <div className="video-wrap about-img-1">
                 <img src="/main-assets/img/normal/about_3-1.png" alt="img" />
                 <Link
-                  href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ"
+                  href="https://www.youtube.com/watch?v=cnVuVtbbZgs"
                   className="play-btn style6 popup-video"
                 >
                   <i className="ri-play-fill"></i>

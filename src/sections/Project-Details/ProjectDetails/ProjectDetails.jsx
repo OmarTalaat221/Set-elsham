@@ -58,7 +58,7 @@ const ProjectDetailsContent = () => {
     const iframe = document.getElementById("youtube-video");
     if (iframe) {
       iframe.src =
-        "https://www.youtube.com/embed/Mp8IXI1kzvQ?si=UQVMsmBriHPfD6Vf";
+        "https://www.youtube.com/embed/cnVuVtbbZgs?si=UQVMsmBriHPfD6Vf";
     }
     setIsActive(true);
     document.body.style.overflow = "hidden";

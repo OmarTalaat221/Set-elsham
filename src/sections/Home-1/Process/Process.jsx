@@ -11,10 +11,10 @@ const Process = () => {
     const iframe = document.getElementById("youtube-video");
     if (iframe) {
       iframe.src =
-        "https://www.youtube.com/embed/Mp8IXI1kzvQ?si=UQVMsmBriHPfD6Vf";
+        "https://www.youtube.com/embed/cnVuVtbbZgs?si=UQVMsmBriHPfD6Vf";
     }
     setIsActive(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
   return (
     <>
@@ -22,7 +22,9 @@ const Process = () => {
         className="process-area-1 space-top bg-attachment process-bg-half shape-mockup-wrap background-image"
         data-overlay="title"
         data-opacity="8"
-        style={{ backgroundImage: "url('/main-assets/img/bg/process-bg1-1.png')" }}
+        style={{
+          backgroundImage: "url('/main-assets/img/bg/process-bg1-1.png')",
+        }}
       >
         <div className="process_shape_1-1 movingX shape-mockup d-lg-block d-none"></div>
         <div className="process_shape_1-2 moving shape-mockup d-lg-block d-none"></div>
@@ -39,7 +41,10 @@ const Process = () => {
             <div className="col-lg-4 col-md-6">
               <div className="title-area content-text-extra-style">
                 <span className="sub-title text-white">
-                  <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                  <img
+                    src="/main-assets/img/icon/section-subtitle-icon.svg"
+                    alt="img"
+                  />
                   Work Process
                 </span>
                 <h2 className="sec-title text-white">

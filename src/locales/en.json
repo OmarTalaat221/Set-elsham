@@ -34,10 +34,10 @@
         "feature": "Using the latest European manufacturing machines"
       },
       "service2": {
-        "tabTitle": "Doors & Windows",
-        "title": "Wooden Doors & Windows Manufacturing",
-        "description": "We design and manufacture wooden doors and windows with modern and classic designs.",
-        "feature": "Custom designs according to customer requirements"
+        "tabTitle": "Aluminum & Glass",
+        "title": "Aluminum & Glass Manufacturing & Installation",
+        "description": "We provide integrated aluminum and glass solutions with the highest standards of quality and precision.",
+        "feature": "Modern designs with excellent thermal and sound insulation"
       },
       "service3": {
         "tabTitle": "Home Furniture",
@@ -698,7 +698,7 @@
       },
       "services": {
         "woodManufacturing": "Wood Manufacturing",
-        "doorsWindows": "Doors & Windows",
+        "aluminumGlass": "Aluminum & Glass",
         "furniture": "Home Furniture",
         "decorations": "Wood Decorations",
         "wholesale": "Wholesale Supply",
@@ -841,7 +841,7 @@
         },
         "services": {
           "woodManufacturing": "Wood Manufacturing",
-          "doorsWindows": "Doors & Windows",
+          "aluminumGlass": "Aluminum & Glass",
           "furniture": "Home Furniture",
           "decorations": "Wood Decorations",
           "wholesale": "Wholesale Supply",

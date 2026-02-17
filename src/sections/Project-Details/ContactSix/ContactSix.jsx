@@ -218,7 +218,7 @@ const ContactSix = () => {
                             {t("form.services.woodManufacturing")}
                           </option>
                           <option value="doors-windows">
-                            {t("form.services.doorsWindows")}
+                            {t("form.services.aluminumGlass")}
                           </option>
                           <option value="furniture">
                             {t("form.services.furniture")}

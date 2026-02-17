@@ -11,6 +11,7 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import AOSProvider from "../components/AOSProvider";
+import Preloader from "../components/Preloader/Preloader";
 // import AOSProvider from "~/components/AOSProvider";
 export const metadata = {
   title: "Matrix || Wood Factory",
@@ -30,6 +31,8 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body>
+        <Preloader />
+
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AOSProvider>{children}</AOSProvider>
         </NextIntlClientProvider>

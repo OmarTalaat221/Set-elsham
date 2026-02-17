@@ -12,7 +12,7 @@ const Video = () => {
         <div className="row">
           <div className="col-lg-12">
             <Link
-              href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ"
+              href="https://www.youtube.com/watch?v=cnVuVtbbZgs"
               className="popup-video play-btn-wrap style2"
             >
               Play Video

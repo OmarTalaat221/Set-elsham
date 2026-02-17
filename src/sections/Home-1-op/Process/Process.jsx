@@ -6,7 +6,9 @@ const Process = () => {
       className="process-area-1 space-top bg-attachment process-bg-half"
       data-overlay="title"
       data-opacity="8"
-      style={{ backgroundImage: "url('/main-assets/img/bg/process-bg1-1.png')" }}
+      style={{
+        backgroundImage: "url('/main-assets/img/bg/process-bg1-1.png')",
+      }}
     >
       <div className="process_shape_1-1 movingX shape-mockup d-lg-block d-none"></div>
       <div className="process_shape_1-2 moving shape-mockup d-lg-block d-none"></div>
@@ -22,7 +24,10 @@ const Process = () => {
           <div className="col-lg-4 col-md-6">
             <div className="title-area text-md-start text-center">
               <span className="sub-title text-white">
-                <img src="/main-assets/img/icon/section-subtitle-icon.svg" alt="img" />
+                <img
+                  src="/main-assets/img/icon/section-subtitle-icon.svg"
+                  alt="img"
+                />
                 Work Process
               </span>
               <h2 className="sec-title text-white">
@@ -33,7 +38,7 @@ const Process = () => {
           <div className="col-md-auto">
             <div className="sec-btn text-center">
               <Link
-                href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ"
+                href="https://www.youtube.com/watch?v=cnVuVtbbZgs"
                 className="popup-video play-btn-wrap"
               >
                 Play Video

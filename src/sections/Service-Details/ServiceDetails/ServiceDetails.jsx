@@ -12,10 +12,10 @@ const ServiceDetails = () => {
     const iframe = document.getElementById("youtube-video");
     if (iframe) {
       iframe.src =
-        "https://www.youtube.com/embed/Mp8IXI1kzvQ?si=UQVMsmBriHPfD6Vf";
+        "https://www.youtube.com/embed/cnVuVtbbZgs?si=UQVMsmBriHPfD6Vf";
     }
     setIsActive(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   // progress bar js code
@@ -79,7 +79,10 @@ const ServiceDetails = () => {
                   <div className="col-xl-4 col-lg-6">
                     <div className="service-card style4">
                       <div className="service-card_icon">
-                        <img src="/main-assets/img/icon/service-icon1-1.png" alt="img" />
+                        <img
+                          src="/main-assets/img/icon/service-icon1-1.png"
+                          alt="img"
+                        />
                       </div>
                       <div className="service-card_content item-decoration">
                         <h4 className="service-card_title">
@@ -96,7 +99,10 @@ const ServiceDetails = () => {
                   <div className="col-xl-4 col-lg-6">
                     <div className="service-card style4">
                       <div className="service-card_icon">
-                        <img src="/main-assets/img/icon/service-icon1-2.png" alt="img" />
+                        <img
+                          src="/main-assets/img/icon/service-icon1-2.png"
+                          alt="img"
+                        />
                       </div>
                       <div className="service-card_content item-decoration">
                         <h4 className="service-card_title">
@@ -113,7 +119,10 @@ const ServiceDetails = () => {
                   <div className="col-xl-4 col-lg-6">
                     <div className="service-card style4">
                       <div className="service-card_icon">
-                        <img src="/main-assets/img/icon/service-icon1-3.png" alt="img" />
+                        <img
+                          src="/main-assets/img/icon/service-icon1-3.png"
+                          alt="img"
+                        />
                       </div>
                       <div className="service-card_content item-decoration">
                         <h4 className="service-card_title">
@@ -135,7 +144,10 @@ const ServiceDetails = () => {
                         <h2 className="sec-title2">Awesome Benefits</h2>
                       </div>
                       <div className="process-thumb2-1">
-                        <img src="/main-assets/img/normal/process-thumb2-1.png" alt="img" />
+                        <img
+                          src="/main-assets/img/normal/process-thumb2-1.png"
+                          alt="img"
+                        />
                       </div>
                     </div>
                     <div className="col-lg-6">
@@ -197,7 +209,9 @@ const ServiceDetails = () => {
                 {/* solution and planing section */}
                 <div className="row align-items-end gy-40 justify-content-between">
                   <div className="col-xl-6">
-                    <h2 className="fw-semibold service-text-adjustment">Solutions & Planning</h2>
+                    <h2 className="fw-semibold service-text-adjustment">
+                      Solutions & Planning
+                    </h2>
                     <p>
                       Industry's standard dummy text ever since the 1500s, when
                       an unknown printer took a galley of type and scrambled it
