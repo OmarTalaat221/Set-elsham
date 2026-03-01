@@ -81,10 +81,10 @@ const GalleryViewer = ({
           <i className="ri-arrow-right-s-line"></i>
         </button>
 
-        {/* Counter */}
+        {/* Counter
         <div className="gallery-counter">
           {photoIndex + 1} / {images.length}
-        </div>
+        </div> */}
       </div>
     </div>
   );

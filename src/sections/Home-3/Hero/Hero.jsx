@@ -19,7 +19,7 @@ const Hero = () => {
     "https://res.cloudinary.com/dkc5klynm/image/upload/v1770560125/pexels-mandiri-abadi-396768996-14805031_tgsffs.jpg",
     // "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456578/pickawood-6tAIO3pxde4-unsplash_ifdxus.jpg",
     "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456582/lajos-szabo-lzW4Zv95-Ts-unsplash_hdcyce.jpg",
-    "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456571/pickawood-_l9Znw_mxgs-unsplash_gjnbjn.jpg",
+    // "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456571/pickawood-_l9Znw_mxgs-unsplash_gjnbjn.jpg",
   ];
   return (
     <div className="hero-wrapper hero-3 pb-12 relative" id="hero">

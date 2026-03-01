@@ -1,5 +1,201 @@
 {
   "home": {
+    "organizationalPyramid": {
+      "subtitle": "Our Team",
+      "title": "Organizational Structure",
+      "departments": "Departments",
+      "totalTeam": "Total Team",
+      "departmentsCount": "Departments",
+      "managers": "Managers",
+      "manager": "Manager",
+      "staff": "Staff",
+      "callNow": "Call Now",
+      "email": "Email",
+      "members": "members",
+      "ceo": {
+        "title": "CEO",
+        "name": "Ahmed Mohamed",
+        "position": "Chief Executive Officer",
+        "bio": "Over 20 years of experience in company management and strategic leadership.",
+        "phone": "+201234567890",
+        "email": "ceo@company.com"
+      },
+      "departmentsList": {
+        "marketing_quality": {
+          "name": "Marketing & Quality",
+          "icon": "ri-bar-chart-grouped-line",
+          "managers": {
+            "manager1": {
+              "name": "Sara Ahmed",
+              "position": "Marketing Manager",
+              "bio": "Specialized in digital marketing and brand building.",
+              "phone": "+201234567891",
+              "email": "sara@company.com"
+            },
+            "manager2": {
+              "name": "Mohamed Ali",
+              "position": "Quality Manager",
+              "bio": "Holds multiple ISO certifications with 15 years experience.",
+              "phone": "+201234567892",
+              "email": "mohamed@company.com"
+            }
+          },
+          "staff": {
+            "staff1": {
+              "name": "Laila Mahmoud",
+              "position": "Graphic Designer",
+              "bio": "Creative designer.",
+              "phone": "+201234567920",
+              "email": "laila@company.com"
+            },
+            "staff2": {
+              "name": "Youssef Samy",
+              "position": "Digital Marketer",
+              "bio": "Digital ads specialist.",
+              "phone": "+201234567921",
+              "email": "youssef@company.com"
+            }
+          }
+        },
+        "hr": {
+          "name": "Human Resources",
+          "icon": "ri-team-line",
+          "managers": {
+            "manager1": {
+              "name": "Fatma Hassan",
+              "position": "HR Manager",
+              "bio": "Specialized in HR development.",
+              "phone": "+201234567893",
+              "email": "fatma@company.com"
+            }
+          },
+          "staff": {
+            "staff1": {
+              "name": "Omar Khaled",
+              "position": "Recruitment Specialist",
+              "bio": "Responsible for recruitment.",
+              "phone": "+201234567894",
+              "email": "omar@company.com"
+            },
+            "staff2": {
+              "name": "Noura Samir",
+              "position": "Training Specialist",
+              "bio": "Responsible for training.",
+              "phone": "+201234567895",
+              "email": "noura@company.com"
+            },
+            "staff3": {
+              "name": "Ahmed Fathy",
+              "position": "Personnel Officer",
+              "bio": "Personnel affairs.",
+              "phone": "+201234567896",
+              "email": "ahmed.f@company.com"
+            }
+          }
+        },
+        "engineers": {
+          "name": "Engineers",
+          "icon": "ri-tools-line",
+          "managers": {
+            "manager1": {
+              "name": "Kareem Mahmoud",
+              "position": "Chief Engineer",
+              "bio": "Architect with 12 years experience.",
+              "phone": "+201234567896",
+              "email": "kareem@company.com"
+            },
+            "manager2": {
+              "name": "Yasmine Fouad",
+              "position": "Design Engineer",
+              "bio": "Interior design specialist.",
+              "phone": "+201234567897",
+              "email": "yasmine@company.com"
+            },
+            "manager3": {
+              "name": "Hossam Adel",
+              "position": "Production Engineer",
+              "bio": "Production lines manager.",
+              "phone": "+201234567898",
+              "email": "hossam@company.com"
+            }
+          },
+          "staff": {
+            "staff1": {
+              "name": "Ahmed Saeed",
+              "position": "Carpenter",
+              "bio": "Professional carpenter.",
+              "phone": "+201234567900",
+              "email": "ahmed.s@company.com"
+            },
+            "staff2": {
+              "name": "Mahmoud Hussein",
+              "position": "Installer",
+              "bio": "Installation specialist.",
+              "phone": "+201234567901",
+              "email": "mahmoud@company.com"
+            },
+            "staff3": {
+              "name": "Ali Mohamed",
+              "position": "Painter",
+              "bio": "Paint technician.",
+              "phone": "+201234567902",
+              "email": "ali@company.com"
+            },
+            "staff4": {
+              "name": "Khaled Abdullah",
+              "position": "CNC Technician",
+              "bio": "CNC specialist.",
+              "phone": "+201234567903",
+              "email": "khaled@company.com"
+            },
+            "staff5": {
+              "name": "Samy Ahmed",
+              "position": "Maintenance",
+              "bio": "Maintenance officer.",
+              "phone": "+201234567904",
+              "email": "samy@company.com"
+            },
+            "staff6": {
+              "name": "Tarek Hassan",
+              "position": "Welder",
+              "bio": "Welding technician.",
+              "phone": "+201234567905",
+              "email": "tarek@company.com"
+            },
+            "staff7": {
+              "name": "Mostafa Kamal",
+              "position": "Electrician",
+              "bio": "Electrical technician.",
+              "phone": "+201234567906",
+              "email": "mostafa@company.com"
+            }
+          }
+        }
+      }
+    },
+    "categories": {
+      "subtitle": "Our Categories",
+      "title": "What We Offer",
+      "description": "We provide comprehensive solutions tailored to meet your unique needs, from classic furniture restoration to complete interior transformations.",
+      "learnMore": "Learn More",
+      "viewAll": "View All Categories",
+      "furniture": {
+        "title": "Furniture & Antique",
+        "description": "Expert restoration and preservation of classic furniture pieces and valuable antiques."
+      },
+      "fitout": {
+        "title": "Fitout",
+        "description": "Complete interior fitout solutions for commercial and residential spaces."
+      },
+      "upgrade": {
+        "title": "Upgrade",
+        "description": "Modernize and enhance your existing spaces with our upgrade services."
+      },
+      "new": {
+        "title": "New Build",
+        "description": "Fresh designs and builds for new construction projects from concept to completion."
+      }
+    },
     "hero": {
       "shadowText": "Matrix",
       "vision": "Our Vision",
@@ -736,6 +932,91 @@
       "subtitle": "We Turn Your Ideas Into Reality",
       "description": "Whether you're looking for custom furniture manufacturing or luxury wooden decorations, our team of experts is ready to turn your vision into reality.",
       "button": "Get Free Consultation"
+    }
+  },
+
+  "projects": {
+    "categoriesSubtitle": "Our Categories",
+    "categoriesTitle": "Explore Our Work",
+    "categoriesDescription": "We provide comprehensive solutions tailored to meet your unique needs, from classic furniture restoration to complete interior transformations.",
+    "exploreProjects": "Explore Projects",
+    "projectsCount": "Projects",
+    "backToCategories": "Back to Categories",
+    "viewDetails": "View Details",
+    "featured": "Featured",
+    "noProjects": "No Projects Found",
+    "noProjectsDescription": "There are no projects matching your current filter.",
+    "otherCategories": "Explore Other Categories",
+
+    "filters": {
+      "all": "All Projects",
+      "featured": "Featured",
+      "recent": "Recent"
+    },
+
+    "stats": {
+      "projects": "Completed Projects",
+      "years": "Years Experience",
+      "satisfaction": "Client Satisfaction",
+      "clients": "Happy Clients"
+    },
+
+    "categories": {
+      "furniture": {
+        "title": "Furniture & Antique",
+        "description": "Expert restoration and preservation of classic furniture pieces and valuable antiques with meticulous attention to detail."
+      },
+      "fitout": {
+        "title": "Fitout",
+        "description": "Complete interior fitout solutions for commercial and residential spaces, from concept to completion."
+      },
+      "upgrade": {
+        "title": "Upgrade",
+        "description": "Modernize and enhance your existing spaces with our professional upgrade and renovation services."
+      },
+      "new": {
+        "title": "New Build",
+        "description": "Fresh designs and builds for new construction projects, bringing your vision to life."
+      }
+    },
+
+    "projectItems": {
+      "furniture1": {
+        "title": "Victorian Chair Restoration",
+        "description": "Complete restoration of a 19th century Victorian armchair while preserving its original character."
+      },
+      "furniture2": {
+        "title": "Antique Cabinet Repair",
+        "description": "Detailed repair and refinishing of an oak cabinet using traditional techniques."
+      },
+      "furniture3": {
+        "title": "Classic Table Refurbish",
+        "description": "Full refurbishment of a mahogany dining table with luxury finishing."
+      },
+      "fitout1": {
+        "title": "Office Space Design",
+        "description": "Modern office fitout for a tech company with contemporary and comfortable design."
+      },
+      "fitout2": {
+        "title": "Retail Store Setup",
+        "description": "Complete retail space transformation with attractive customer-focused design."
+      },
+      "upgrade1": {
+        "title": "Kitchen Renovation",
+        "description": "Full kitchen upgrade with modern amenities and luxury finishes."
+      },
+      "upgrade2": {
+        "title": "Bathroom Remodel",
+        "description": "Luxury bathroom renovation project with latest designs and materials."
+      },
+      "newbuild1": {
+        "title": "Modern Villa",
+        "description": "New construction of a contemporary villa with unique design and high-quality materials."
+      },
+      "newbuild2": {
+        "title": "Commercial Building",
+        "description": "New commercial space development with complete interior fitout."
+      }
     }
   },
   "blogPage": {

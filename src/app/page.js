@@ -13,6 +13,8 @@ import WhyChoose from "~/sections/Home-3/WhyChoose";
 import FooterTwo from "~/sections/Common/Footer/FooterTwo";
 import Blog from "~/sections/Home-2/Blog";
 import Scroll from "~/sections/Common/Scroll";
+import Categories from "~/sections/Home-3/Categories";
+import OrganizationalPyramid from "~/sections/Home-3/OrganizationalPyramid";
 // import "./globals.css";
 
 export default function HomePage() {
@@ -20,15 +22,18 @@ export default function HomePage() {
     <div style={{ overflow: "hidden" }}>
       <HeaderTwo />
       <Hero />
+      <OrganizationalPyramid />
       <About />
       <WhyChoose />
       <Process />
-      <Portfolio />
+      <Categories />
+
+      {/* <Portfolio /> */}
       <Counter />
       {/* <Contact /> */}
       <Testimonial />
       <Client />
-      <Team />
+      {/* <Team /> */}
       <CTA />
       <Blog />
       <FooterTwo />

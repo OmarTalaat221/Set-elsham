@@ -40,7 +40,7 @@ const Counter = () => {
   ];
 
   return (
-    <div className="counter-area-1 space-bottom" ref={counterRef}>
+    <div className="counter-area-1 space-bottom mt-[60px]" ref={counterRef}>
       <div className="container">
         <div
           className="row justify-content-between gy-40"

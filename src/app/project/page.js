@@ -1,16 +1,21 @@
-import BreadcumbSeven from "~/sections/Project/BreadcumbSeven";
-import Project from "~/sections/Project/Project";
-import HeaderOne from "~/sections/Common/Header/HeaderOne";
+// app/[locale]/project/page.jsx
+import HeaderTwo from "~/sections/Common/Header/HeaderTwo";
 import FooterTwo from "~/sections/Common/Footer/FooterTwo";
 import Scroll from "~/sections/Common/Scroll";
 import Breadcumb from "~/sections/About/Breadcumb";
-import HeaderTwo from "~/sections/Common/Header/HeaderTwo";
-export default function ProjectPage() {
+import ProjectCategories from "~/sections/ProjectCategories";
+
+export const metadata = {
+  title: "Our Projects | Company Name",
+  description: "Explore our projects across different categories",
+};
+
+export default function ProjectsPage() {
   return (
     <div>
       <HeaderTwo />
-      <Breadcumb pageKey="project" />
-      <Project />
+      <Breadcumb pageKey="projects" />
+      <ProjectCategories />
       <FooterTwo />
       <Scroll />
     </div>
