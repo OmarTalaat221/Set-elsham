@@ -1,5 +1,5 @@
 import BlogFour from "~/sections/Blog/BlogFour";
-import HeaderOne from "~/sections/Common/Header/HeaderOne";
+
 import FooterTwo from "~/sections/Common/Footer/FooterTwo";
 import Scroll from "~/sections/Common/Scroll";
 import Breadcumb from "~/sections/About/Breadcumb";
