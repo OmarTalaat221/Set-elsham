@@ -114,9 +114,9 @@ const AppDownloadSection = () => {
                 <img
                   src="https://res.cloudinary.com/dp7jfs375/image/upload/v1772631289/Rectangle_20068_2x_ddsyju.png"
                   alt="Set Al Sham Mobile App"
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                  className="absolute left-[70%] top-1/2 -translate-x-1/2 -translate-y-1/2
                              w-[260px] sm:w-[300px] md:w-[360px] lg:w-[420px] xl:w-[480px]
-                             h-auto max-w-none
+                             h-auto max-w-none!
                              pointer-events-none"
                   style={{
                     filter: "drop-shadow(0 25px 50px rgba(0,0,0,0.15))",

@@ -4,6 +4,7 @@ import React from "react";
 import PageBanner from "../../components/PagesBanner";
 import GalleryTabsSection from "../../sections/Gallery/GalleryTabsSection";
 import ScrollTopButton from "~/sections/Common/Scroll";
+import FooterTwo from "~/sections/Common/Footer/FooterTwo";
 
 const Gallery = () => {
   return (
@@ -33,6 +34,8 @@ const Gallery = () => {
       </PageBanner>
 
       <GalleryTabsSection />
+      <FooterTwo />
+
       <ScrollTopButton />
     </>
   );

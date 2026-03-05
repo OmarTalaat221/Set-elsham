@@ -6,6 +6,8 @@ import ContactForm from "~/sections/Contact/ContactForm";
 import GoogleMap from "~/sections/Contact/GoogleMap";
 import ContactInfoBar from "~/sections/Contact/ContactInfoBar";
 import ReviewsSection from "~/sections/Home/ReviewsSection";
+import FooterTwo from "~/sections/Common/Footer/FooterTwo";
+
 export default function ContactPage() {
   return (
     <>
@@ -74,6 +76,7 @@ export default function ContactPage() {
         showGoogleRating={true}
         showUnderline={false}
       />
+      <FooterTwo />
       <Scroll />
     </>
   );
