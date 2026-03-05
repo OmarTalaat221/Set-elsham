@@ -492,8 +492,9 @@
       "about": "من نحن",
       "services": "خدماتنا",
       "pages": "الصفحات",
-      "blog": "المقالات",
-      "contact": "اتصل بنا"
+      "blog": "الأخبار",
+      "contact": "اتصل بنا",
+      "gallery": "المعرض"
     },
     "pages": {
       "projectPage": "المشاريع",

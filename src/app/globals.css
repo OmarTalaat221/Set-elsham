@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -7,13 +9,24 @@
 }
 
 * {
-  font-family: "Cairo", sans-serif;
+  font-family: "Almarai", sans-serif;
 }
 
 html {
-  font-family: "Cairo", sans-serif;
+  font-family: "Almarai", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer !important;
 }
 
 p {
   margin-bottom: 0 !important;
+}
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
 }

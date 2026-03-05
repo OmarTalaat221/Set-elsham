@@ -22,7 +22,7 @@ const Hero = () => {
     // "https://res.cloudinary.com/dkc5klynm/image/upload/v1770456571/pickawood-_l9Znw_mxgs-unsplash_gjnbjn.jpg",
   ];
   return (
-    <div className="hero-wrapper hero-3 pb-12 relative" id="hero">
+    <div className="hero-wrapper pb-12 relative" id="hero">
       {/* Swiper Background Slider */}
       <div className="absolute inset-0 w-full h-full">
         <Swiper
