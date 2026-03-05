@@ -14,17 +14,17 @@ import TeamSection from "~/sections/Home-3/Team";
 export default function AboutPage() {
   return (
     <>
-      <HeaderTwo />
-      <Breadcumb />
-      <AboutThree />
+      {/* <HeaderTwo /> */}
+      {/* <Breadcumb /> */}
+      {/* <AboutThree /> */}
       <WhyChooseThree />
-      <ProcessThree />
+      {/* <ProcessThree />
       <Portfolio />
       <Counter />
       <Testimonial />
       <TeamSection />
-      <ClientThree />
-      <Blog />
+      <ClientThree /> */}
+      {/* <Blog /> */}
       <FooterTwo />
       <Scroll />
     </>
